@@ -3,8 +3,8 @@ import {
   PRE_MERGER_WARDS_BY_CODE,
   PRE_MERGER_WARDS_BY_DISTRICT_CODE,
   PRE_MERGER_WARDS_BY_ID,
-} from "../data/pre-merger-wards";
-import { WARDS, WARDS_BY_CODE, WARDS_BY_ID, WARDS_BY_PROVINCE_CODE } from "../data/wards";
+} from "../data/pre/wards";
+import { WARDS, WARDS_BY_CODE, WARDS_BY_ID, WARDS_BY_PROVINCE_CODE } from "../data/current/wards";
 import { EMPTY_ARRAY } from "../utils/empty";
 
 export const wards = {

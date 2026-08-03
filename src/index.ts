@@ -1,6 +1,6 @@
-export { districts } from "./actions/districts.actions";
-export { provinces } from "./actions/provinces.actions";
-export { wards } from "./actions/wards.actions";
+export { districts } from "./lookups/districts";
+export { provinces } from "./lookups/provinces";
+export { wards } from "./lookups/wards";
 
 export type {
   PreMergerDistrict,
@@ -8,4 +8,4 @@ export type {
   PreMergerWard,
   Province,
   Ward,
-} from "./schema";
+} from "./types";

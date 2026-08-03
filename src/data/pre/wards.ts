@@ -1,6 +1,6 @@
-import type { PreMergerWard } from "../schema";
-import { deepFreeze } from "../utils/deep-freeze";
-import { valuesSortedByKey } from "../utils/values-sorted-by-key";
+import type { PreMergerWard } from "../../types";
+import { deepFreeze } from "../../utils/deep-freeze";
+import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> = {
   "001": [

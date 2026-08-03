@@ -3,7 +3,7 @@ import {
   PRE_MERGER_DISTRICTS_BY_CODE,
   PRE_MERGER_DISTRICTS_BY_ID,
   PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE,
-} from "../data/pre-merger-districts";
+} from "../data/pre/districts";
 import { EMPTY_ARRAY } from "../utils/empty";
 
 export const districts = {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { provinces } from "../../src/actions/provinces.actions";
+import { provinces } from "../../src/lookups/provinces";
 import { COUNTS, PROVINCE_HN } from "../fixtures";
 
 describe("provinces", () => {

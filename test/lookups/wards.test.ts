@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { wards } from "../../src/actions/wards.actions";
+import { wards } from "../../src/lookups/wards";
 import { EMPTY_ARRAY } from "../../src/utils/empty";
 import { COUNTS, PRE_WARD_CONG_VI, WARD_BA_DINH } from "../fixtures";
 

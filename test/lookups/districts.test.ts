@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { districts } from "../../src/actions/districts.actions";
+import { districts } from "../../src/lookups/districts";
 import { EMPTY_ARRAY } from "../../src/utils/empty";
 import { COUNTS, PRE_DISTRICT_BA_DINH } from "../fixtures";
 

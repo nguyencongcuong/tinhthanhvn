@@ -1,6 +1,6 @@
-import type { PreMergerDistrict } from "../schema";
-import { deepFreeze } from "../utils/deep-freeze";
-import { valuesSortedByKey } from "../utils/values-sorted-by-key";
+import type { PreMergerDistrict } from "../../types";
+import { deepFreeze } from "../../utils/deep-freeze";
+import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDistrict[]> = {
   "01": [

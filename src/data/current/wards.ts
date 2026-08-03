@@ -1,6 +1,6 @@
-import type { Ward } from "../schema";
-import { deepFreeze } from "../utils/deep-freeze";
-import { valuesSortedByKey } from "../utils/values-sorted-by-key";
+import type { Ward } from "../../types";
+import { deepFreeze } from "../../utils/deep-freeze";
+import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
   "01": [

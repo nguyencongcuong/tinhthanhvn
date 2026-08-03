@@ -1,5 +1,5 @@
-import type { Province } from "../schema";
-import { deepFreeze } from "../utils/deep-freeze";
+import type { Province } from "../../types";
+import { deepFreeze } from "../../utils/deep-freeze";
 
 export const PROVINCES: Province[] = [
   {

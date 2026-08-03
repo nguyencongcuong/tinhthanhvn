@@ -1,5 +1,5 @@
-import type { PreMergerProvince } from "../schema";
-import { deepFreeze } from "../utils/deep-freeze";
+import type { PreMergerProvince } from "../../types";
+import { deepFreeze } from "../../utils/deep-freeze";
 
 export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
   {
