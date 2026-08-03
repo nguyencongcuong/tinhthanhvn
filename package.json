@@ -1,11 +1,19 @@
 {
   "name": "vn-geo",
-  "module": "index.ts",
+  "version": "1.0.0",
+  "description": "Lookup Vietnam provinces & wards post-2025 merger, with old-to-new province name mapping.",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node && tsc"
   },
-  "peerDependencies": {
+  "devDependencies": {
+    "@types/bun": "latest",
     "typescript": "^5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
