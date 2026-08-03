@@ -35,5 +35,6 @@
     // Build files
     "rootDir": "./src",
     "outDir": "./dist"
-  }
+  },
+  "exclude": ["**/*.test.ts"]
 }
