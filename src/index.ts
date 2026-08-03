@@ -1,3 +1,4 @@
-export function welcome(name: string) {
-  console.log(`Hello ${name} via Bun!`);
-}
+export { provinces } from "./actions/provinces.actions";
+export { wards } from "./actions/wards.actions";
+
+export type { PostMergerProvince, PostMergerWard } from "./schema"
