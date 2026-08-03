@@ -15,6 +15,12 @@ export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
     type: "Tỉnh",
   },
   {
+    code: "95",
+    name: "Bạc Liêu",
+    province_id: 62,
+    type: "Tỉnh",
+  },
+  {
     code: "24",
     name: "Bắc Giang",
     province_id: 15,
@@ -24,12 +30,6 @@ export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
     code: "06",
     name: "Bắc Kạn",
     province_id: 4,
-    type: "Tỉnh",
-  },
-  {
-    code: "95",
-    name: "Bạc Liêu",
-    province_id: 62,
     type: "Tỉnh",
   },
   {
@@ -75,16 +75,16 @@ export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
     type: "Tỉnh",
   },
   {
-    code: "92",
-    name: "Cần Thơ",
-    province_id: 59,
-    type: "Thành phố",
-  },
-  {
     code: "04",
     name: "Cao Bằng",
     province_id: 3,
     type: "Tỉnh",
+  },
+  {
+    code: "92",
+    name: "Cần Thơ",
+    province_id: 59,
+    type: "Thành phố",
   },
   {
     code: "48",
@@ -171,16 +171,16 @@ export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
     type: "Tỉnh",
   },
   {
-    code: "79",
-    name: "Hồ Chí Minh",
-    province_id: 50,
-    type: "Thành phố",
-  },
-  {
     code: "17",
     name: "Hoà Bình",
     province_id: 11,
     type: "Tỉnh",
+  },
+  {
+    code: "79",
+    name: "Hồ Chí Minh",
+    province_id: 50,
+    type: "Thành phố",
   },
   {
     code: "33",
@@ -213,12 +213,6 @@ export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
     type: "Tỉnh",
   },
   {
-    code: "68",
-    name: "Lâm Đồng",
-    province_id: 44,
-    type: "Tỉnh",
-  },
-  {
     code: "20",
     name: "Lạng Sơn",
     province_id: 13,
@@ -228,6 +222,12 @@ export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
     code: "10",
     name: "Lào Cai",
     province_id: 6,
+    type: "Tỉnh",
+  },
+  {
+    code: "68",
+    name: "Lâm Đồng",
+    province_id: 44,
     type: "Tỉnh",
   },
   {
