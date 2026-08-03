@@ -1,57 +1,38 @@
-import { z } from "zod";
+export type PreMergerProvince = {
+  province_id: number;
+  code: string;
+  name: string;
+  type: string;
+};
 
-export const PreMergerProvinceS = z
-  .object({
-    province_id: z.number().positive(),
-    code: z.string(),
-    name: z.string(),
-    type: z.string(),
-  })
-  .strict();
+export type PreMergerDistrict = {
+  district_id: number;
+  code: string;
+  name: string;
+  type: string;
+  province_code: string;
+};
 
-export const PreMergerDistrictS = z
-  .object({
-    district_id: z.number().positive(),
-    code: z.string(),
-    name: z.string(),
-    type: z.string(),
-    province_code: z.string(),
-  })
-  .strict();
+export type PreMergerWard = {
+  ward_id: number;
+  code: string;
+  name: string;
+  type: string;
+  district_code: string;
+  province_code: string;
+};
 
-export const PreMergerWardS = z
-  .object({
-    ward_id: z.number().positive(),
-    code: z.string(),
-    name: z.string(),
-    type: z.string(),
-    district_code: z.string(),
-    province_code: z.string(),
-  })
-  .strict();
+export type PostMergerProvince = {
+  province_id: number;
+  code: string;
+  name: string;
+  type: string;
+};
 
-export const PostMergerProvinceS = z
-  .object({
-    province_id: z.number().positive(),
-    code: z.string(),
-    name: z.string(),
-    type: z.string(),
-  })
-  .strict();
-
-export const PostMergerWardS = z
-  .object({
-    ward_id: z.number().positive(),
-    code: z.string(),
-    name: z.string(),
-    type: z.string(),
-    province_code: z.string(),
-  })
-  .strict();
-
-export type PreMergerProvince = z.infer<typeof PreMergerProvinceS>;
-export type PreMergerDistrict = z.infer<typeof PreMergerDistrictS>;
-export type PreMergerWard = z.infer<typeof PreMergerWardS>;
-
-export type PostMergerProvince = z.infer<typeof PostMergerProvinceS>;
-export type PostMergerWard = z.infer<typeof PostMergerWardS>;
+export type PostMergerWard = {
+  ward_id: number;
+  code: string;
+  name: string;
+  type: string;
+  province_code: string;
+};
