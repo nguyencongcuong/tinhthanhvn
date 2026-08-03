@@ -1,4 +1,5 @@
 import type { PostMergerWard } from "../schema";
+import { deepFreeze } from "../utils/deep-freeze";
 
 export const POST_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PostMergerWard[]> = {
   "01": [
@@ -23327,3 +23328,8 @@ export const POST_MERGER_WARDS_BY_ID = new Map<number, PostMergerWard>(
 export const POST_MERGER_WARDS_BY_CODE = new Map<string, PostMergerWard>(
   POST_MERGER_WARDS.map((ward) => [ward.code, ward]),
 );
+
+deepFreeze(POST_MERGER_WARDS_BY_PROVINCE_CODE);
+deepFreeze(POST_MERGER_WARDS);
+deepFreeze(POST_MERGER_WARDS_BY_ID);
+deepFreeze(POST_MERGER_WARDS_BY_CODE);

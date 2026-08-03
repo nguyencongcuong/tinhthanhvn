@@ -1,4 +1,5 @@
 import type { PreMergerDistrict } from "../schema";
+import { deepFreeze } from "../utils/deep-freeze";
 
 export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDistrict[]> = {
   "01": [
@@ -5010,3 +5011,8 @@ export const PRE_MERGER_DISTRICTS_BY_CODE = new Map<string, PreMergerDistrict>(
 export const PRE_MERGER_DISTRICTS_BY_ID = new Map<number, PreMergerDistrict>(
   PRE_MERGER_DISTRICTS.map((district) => [district.district_id, district]),
 );
+
+deepFreeze(PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE);
+deepFreeze(PRE_MERGER_DISTRICTS);
+deepFreeze(PRE_MERGER_DISTRICTS_BY_CODE);
+deepFreeze(PRE_MERGER_DISTRICTS_BY_ID);

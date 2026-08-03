@@ -1,4 +1,5 @@
 import type { PostMergerProvince } from "../schema";
+import { deepFreeze } from "../utils/deep-freeze";
 
 export const POST_MERGER_PROVINCES: PostMergerProvince[] = [
   {
@@ -214,3 +215,7 @@ export const POST_MERGER_PROVINCES_BY_CODE = new Map<string, PostMergerProvince>
 export const POST_MERGER_PROVINCES_BY_ID = new Map<number, PostMergerProvince>(
   POST_MERGER_PROVINCES.map((province) => [province.province_id, province]),
 );
+
+deepFreeze(POST_MERGER_PROVINCES);
+deepFreeze(POST_MERGER_PROVINCES_BY_CODE);
+deepFreeze(POST_MERGER_PROVINCES_BY_ID);
