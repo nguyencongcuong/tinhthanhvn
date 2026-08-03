@@ -33,18 +33,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 8,
     },
     {
-      code: "09676",
-      name: "Bất Bạt",
-      province_code: "01",
-      type: "Xã",
-      ward_id: 83,
-    },
-    {
       code: "00583",
       name: "Bát Tràng",
       province_code: "01",
       type: "Xã",
       ward_id: 111,
+    },
+    {
+      code: "09676",
+      name: "Bất Bạt",
+      province_code: "01",
+      type: "Xã",
+      ward_id: 83,
     },
     {
       code: "10141",
@@ -68,6 +68,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 25,
     },
     {
+      code: "10330",
+      name: "Chuyên Mỹ",
+      province_code: "01",
+      type: "Xã",
+      ward_id: 59,
+    },
+    {
       code: "10237",
       name: "Chương Dương",
       province_code: "01",
@@ -80,13 +87,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "01",
       type: "Phường",
       ward_id: 73,
-    },
-    {
-      code: "10330",
-      name: "Chuyên Mỹ",
-      province_code: "01",
-      type: "Xã",
-      ward_id: 59,
     },
     {
       code: "09634",
@@ -684,18 +684,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 116,
     },
     {
-      code: "00484",
-      name: "Thư Lâm",
-      province_code: "01",
-      type: "Xã",
-      ward_id: 113,
-    },
-    {
       code: "00562",
       name: "Thuận An",
       province_code: "01",
       type: "Xã",
       ward_id: 110,
+    },
+    {
+      code: "00484",
+      name: "Thư Lâm",
+      province_code: "01",
+      type: "Xã",
+      ward_id: 113,
     },
     {
       code: "00598",
@@ -740,18 +740,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 125,
     },
     {
-      code: "00592",
-      name: "Từ Liêm",
-      province_code: "01",
-      type: "Phường",
-      ward_id: 35,
-    },
-    {
       code: "09604",
       name: "Tùng Thiện",
       province_code: "01",
       type: "Phường",
       ward_id: 88,
+    },
+    {
+      code: "00592",
+      name: "Từ Liêm",
+      province_code: "01",
+      type: "Phường",
+      ward_id: 35,
     },
     {
       code: "00313",
@@ -775,18 +775,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 66,
     },
     {
-      code: "10354",
-      name: "Vân Đình",
-      province_code: "01",
-      type: "Xã",
-      ward_id: 65,
-    },
-    {
       code: "00196",
       name: "Văn Miếu - Quốc Tử Giám",
       province_code: "01",
       type: "Phường",
       ward_id: 11,
+    },
+    {
+      code: "10354",
+      name: "Vân Đình",
+      province_code: "01",
+      type: "Xã",
+      ward_id: 65,
     },
     {
       code: "09664",
@@ -924,18 +924,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 143,
     },
     {
-      code: "01366",
-      name: "Cần Yên",
-      province_code: "04",
-      type: "Xã",
-      ward_id: 151,
-    },
-    {
       code: "01789",
       name: "Canh Tân",
       province_code: "04",
       type: "Xã",
       ward_id: 162,
+    },
+    {
+      code: "01366",
+      name: "Cần Yên",
+      province_code: "04",
+      type: "Xã",
+      ward_id: 151,
     },
     {
       code: "01327",
@@ -1022,18 +1022,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 158,
     },
     {
-      code: "01351",
-      name: "Hưng Đạo",
-      province_code: "04",
-      type: "Xã",
-      ward_id: 136,
-    },
-    {
       code: "01354",
       name: "Huy Giáp",
       province_code: "04",
       type: "Xã",
       ward_id: 142,
+    },
+    {
+      code: "01351",
+      name: "Hưng Đạo",
+      province_code: "04",
+      type: "Xã",
+      ward_id: 136,
     },
     {
       code: "01336",
@@ -1290,20 +1290,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 232,
     },
     {
-      code: "00991",
-      name: "Bắc Mê",
-      province_code: "08",
-      type: "Xã",
-      ward_id: 259,
-    },
-    {
-      code: "01153",
-      name: "Bắc Quang",
-      province_code: "08",
-      type: "Xã",
-      ward_id: 282,
-    },
-    {
       code: "00832",
       name: "Bạch Đích",
       province_code: "08",
@@ -1330,6 +1316,20 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "08",
       type: "Xã",
       ward_id: 299,
+    },
+    {
+      code: "00991",
+      name: "Bắc Mê",
+      province_code: "08",
+      type: "Xã",
+      ward_id: 259,
+    },
+    {
+      code: "01153",
+      name: "Bắc Quang",
+      province_code: "08",
+      type: "Xã",
+      ward_id: 282,
     },
     {
       code: "01180",
@@ -1479,13 +1479,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 205,
     },
     {
-      code: "01084",
-      name: "Hồ Thầu",
-      province_code: "08",
-      type: "Xã",
-      ward_id: 294,
-    },
-    {
       code: "02353",
       name: "Hoà An",
       province_code: "08",
@@ -1498,6 +1491,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "08",
       type: "Xã",
       ward_id: 297,
+    },
+    {
+      code: "01084",
+      name: "Hồ Thầu",
+      province_code: "08",
+      type: "Xã",
+      ward_id: 294,
     },
     {
       code: "02608",
@@ -1570,18 +1570,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 199,
     },
     {
-      code: "02266",
-      name: "Lâm Bình",
-      province_code: "08",
-      type: "Xã",
-      ward_id: 184,
-    },
-    {
       code: "00937",
       name: "Lao Chải",
       province_code: "08",
       type: "Xã",
       ward_id: 266,
+    },
+    {
+      code: "02266",
+      name: "Lâm Bình",
+      province_code: "08",
+      type: "Xã",
+      ward_id: 184,
     },
     {
       code: "01192",
@@ -1596,13 +1596,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "08",
       type: "Xã",
       ward_id: 272,
-    },
-    {
-      code: "02434",
-      name: "Lực Hành",
-      province_code: "08",
-      type: "Xã",
-      ward_id: 215,
     },
     {
       code: "00715",
@@ -1624,6 +1617,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "08",
       type: "Xã",
       ward_id: 252,
+    },
+    {
+      code: "02434",
+      name: "Lực Hành",
+      province_code: "08",
+      type: "Xã",
+      ward_id: 215,
     },
     {
       code: "00847",
@@ -1850,6 +1850,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 239,
     },
     {
+      code: "00808",
+      name: "Tát Ngà",
+      province_code: "08",
+      type: "Xã",
+      ward_id: 244,
+    },
+    {
       code: "02320",
       name: "Tân An",
       province_code: "08",
@@ -1906,13 +1913,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 291,
     },
     {
-      code: "00808",
-      name: "Tát Ngà",
-      province_code: "08",
-      type: "Xã",
-      ward_id: 244,
-    },
-    {
       code: "02494",
       name: "Thái Bình",
       province_code: "08",
@@ -1934,13 +1934,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 207,
     },
     {
-      code: "00829",
-      name: "Thắng Mố",
-      province_code: "08",
-      type: "Xã",
-      ward_id: 245,
-    },
-    {
       code: "01033",
       name: "Thàng Tín",
       province_code: "08",
@@ -1953,6 +1946,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "08",
       type: "Xã",
       ward_id: 267,
+    },
+    {
+      code: "00829",
+      name: "Thắng Mố",
+      province_code: "08",
+      type: "Xã",
+      ward_id: 245,
     },
     {
       code: "01090",
@@ -3025,18 +3025,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 418,
     },
     {
-      code: "04183",
-      name: "Mường Lầm",
-      province_code: "14",
-      type: "Xã",
-      ward_id: 451,
-    },
-    {
       code: "04246",
       name: "Mường Lạn",
       province_code: "14",
       type: "Xã",
       ward_id: 463,
+    },
+    {
+      code: "04183",
+      name: "Mường Lầm",
+      province_code: "14",
+      type: "Xã",
+      ward_id: 451,
     },
     {
       code: "04240",
@@ -3279,13 +3279,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 504,
     },
     {
-      code: "02839",
-      name: "Bắc Hà",
-      province_code: "15",
-      type: "Xã",
-      ward_id: 547,
-    },
-    {
       code: "03046",
       name: "Bản Hồ",
       province_code: "15",
@@ -3354,6 +3347,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "15",
       type: "Xã",
       ward_id: 525,
+    },
+    {
+      code: "02839",
+      name: "Bắc Hà",
+      province_code: "15",
+      type: "Xã",
+      ward_id: 547,
     },
     {
       code: "02674",
@@ -3510,20 +3510,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 465,
     },
     {
-      code: "04381",
-      name: "Lâm Giang",
-      province_code: "15",
-      type: "Xã",
-      ward_id: 484,
-    },
-    {
-      code: "04318",
-      name: "Lâm Thượng",
-      province_code: "15",
-      type: "Xã",
-      ward_id: 490,
-    },
-    {
       code: "02647",
       name: "Lào Cai",
       province_code: "15",
@@ -3536,6 +3522,20 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "15",
       type: "Xã",
       ward_id: 556,
+    },
+    {
+      code: "04381",
+      name: "Lâm Giang",
+      province_code: "15",
+      type: "Xã",
+      ward_id: 484,
+    },
+    {
+      code: "04318",
+      name: "Lâm Thượng",
+      province_code: "15",
+      type: "Xã",
+      ward_id: 490,
     },
     {
       code: "04660",
@@ -3622,6 +3622,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 495,
     },
     {
+      code: "04273",
+      name: "Nam Cường",
+      province_code: "15",
+      type: "Phường",
+      ward_id: 503,
+    },
+    {
       code: "03076",
       name: "Nậm Chày",
       province_code: "15",
@@ -3634,13 +3641,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "15",
       type: "Xã",
       ward_id: 558,
-    },
-    {
-      code: "04273",
-      name: "Nam Cường",
-      province_code: "15",
-      type: "Phường",
-      ward_id: 503,
     },
     {
       code: "03085",
@@ -3797,6 +3797,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 559,
     },
     {
+      code: "02908",
+      name: "Tằng Loỏng",
+      province_code: "15",
+      type: "Xã",
+      ward_id: 513,
+    },
+    {
       code: "04429",
       name: "Tân Hợp",
       province_code: "15",
@@ -3809,13 +3816,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "15",
       type: "Xã",
       ward_id: 492,
-    },
-    {
-      code: "02908",
-      name: "Tằng Loỏng",
-      province_code: "15",
-      type: "Xã",
-      ward_id: 513,
     },
     {
       code: "04717",
@@ -3981,13 +3981,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 598,
     },
     {
-      code: "01843",
-      name: "Bắc Kạn",
-      province_code: "19",
-      type: "Phường",
-      ward_id: 643,
-    },
-    {
       code: "05528",
       name: "Bách Quang",
       province_code: "19",
@@ -4000,6 +3993,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "19",
       type: "Xã",
       ward_id: 640,
+    },
+    {
+      code: "01843",
+      name: "Bắc Kạn",
+      province_code: "19",
+      type: "Phường",
+      ward_id: 643,
     },
     {
       code: "01864",
@@ -4030,18 +4030,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 605,
     },
     {
-      code: "02008",
-      name: "Cẩm Giàng",
-      province_code: "19",
-      type: "Xã",
-      ward_id: 638,
-    },
-    {
       code: "01879",
       name: "Cao Minh",
       province_code: "19",
       type: "Xã",
       ward_id: 620,
+    },
+    {
+      code: "02008",
+      name: "Cẩm Giàng",
+      province_code: "19",
+      type: "Xã",
+      ward_id: 638,
     },
     {
       code: "02020",
@@ -4268,18 +4268,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 564,
     },
     {
-      code: "05860",
-      name: "Phổ Yên",
-      province_code: "19",
-      type: "Phường",
-      ward_id: 581,
-    },
-    {
       code: "01849",
       name: "Phong Quang",
       province_code: "19",
       type: "Xã",
       ward_id: 641,
+    },
+    {
+      code: "05860",
+      name: "Phổ Yên",
+      province_code: "19",
+      type: "Phường",
+      ward_id: 581,
     },
     {
       code: "05908",
@@ -4352,13 +4352,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 607,
     },
     {
-      code: "05851",
-      name: "Quân Chu",
-      province_code: "19",
-      type: "Xã",
-      ward_id: 578,
-    },
-    {
       code: "05482",
       name: "Quan Triều",
       province_code: "19",
@@ -4378,6 +4371,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "19",
       type: "Xã",
       ward_id: 592,
+    },
+    {
+      code: "05851",
+      name: "Quân Chu",
+      province_code: "19",
+      type: "Xã",
+      ward_id: 578,
     },
     {
       code: "05455",
@@ -4429,13 +4429,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 587,
     },
     {
-      code: "05725",
-      name: "Thần Sa",
-      province_code: "19",
-      type: "Xã",
-      ward_id: 615,
-    },
-    {
       code: "05881",
       name: "Thành Công",
       province_code: "19",
@@ -4455,6 +4448,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "19",
       type: "Xã",
       ward_id: 652,
+    },
+    {
+      code: "05725",
+      name: "Thần Sa",
+      province_code: "19",
+      type: "Xã",
+      ward_id: 615,
     },
     {
       code: "01921",
@@ -4485,18 +4485,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 593,
     },
     {
-      code: "02176",
-      name: "Trần Phú",
-      province_code: "19",
-      type: "Xã",
-      ward_id: 647,
-    },
-    {
       code: "05746",
       name: "Tràng Xá",
       province_code: "19",
       type: "Xã",
       ward_id: 617,
+    },
+    {
+      code: "02176",
+      name: "Trần Phú",
+      province_code: "19",
+      type: "Xã",
+      ward_id: 647,
     },
     {
       code: "05581",
@@ -4513,27 +4513,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 583,
     },
     {
-      code: "05680",
-      name: "Văn Hán",
-      province_code: "19",
-      type: "Xã",
-      ward_id: 595,
-    },
-    {
-      code: "05665",
-      name: "Văn Lăng",
-      province_code: "19",
-      type: "Xã",
-      ward_id: 596,
-    },
-    {
-      code: "02143",
-      name: "Văn Lang",
-      province_code: "19",
-      type: "Xã",
-      ward_id: 644,
-    },
-    {
       code: "05845",
       name: "Vạn Phú",
       province_code: "19",
@@ -4546,6 +4525,27 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "19",
       type: "Phường",
       ward_id: 582,
+    },
+    {
+      code: "05680",
+      name: "Văn Hán",
+      province_code: "19",
+      type: "Xã",
+      ward_id: 595,
+    },
+    {
+      code: "02143",
+      name: "Văn Lang",
+      province_code: "19",
+      type: "Xã",
+      ward_id: 644,
+    },
+    {
+      code: "05665",
+      name: "Văn Lăng",
+      province_code: "19",
+      type: "Xã",
+      ward_id: 596,
     },
     {
       code: "01981",
@@ -4998,13 +4998,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 700,
     },
     {
-      code: "06154",
-      name: "Văn Lãng",
-      province_code: "20",
-      type: "Xã",
-      ward_id: 684,
-    },
-    {
       code: "06505",
       name: "Vạn Linh",
       province_code: "20",
@@ -5012,11 +5005,11 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 712,
     },
     {
-      code: "06415",
-      name: "Vân Nham",
+      code: "06154",
+      name: "Văn Lãng",
       province_code: "20",
       type: "Xã",
-      ward_id: 702,
+      ward_id: 684,
     },
     {
       code: "06253",
@@ -5024,6 +5017,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "20",
       type: "Xã",
       ward_id: 677,
+    },
+    {
+      code: "06415",
+      name: "Vân Nham",
+      province_code: "20",
+      type: "Xã",
+      ward_id: 702,
     },
     {
       code: "06367",
@@ -5105,18 +5105,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 774,
     },
     {
-      code: "06793",
-      name: "Cẩm Phả",
-      province_code: "22",
-      type: "Phường",
-      ward_id: 748,
-    },
-    {
       code: "06658",
       name: "Cao Xanh",
       province_code: "22",
       type: "Phường",
       ward_id: 740,
+    },
+    {
+      code: "06793",
+      name: "Cẩm Phả",
+      province_code: "22",
+      type: "Phường",
+      ward_id: 748,
     },
     {
       code: "06781",
@@ -5450,6 +5450,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 780,
     },
     {
+      code: "07462",
+      name: "Bảo Đài",
+      province_code: "24",
+      type: "Xã",
+      ward_id: 800,
+    },
+    {
       code: "07210",
       name: "Bắc Giang",
       province_code: "24",
@@ -5462,13 +5469,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "24",
       type: "Xã",
       ward_id: 799,
-    },
-    {
-      code: "07462",
-      name: "Bảo Đài",
-      province_code: "24",
-      type: "Xã",
-      ward_id: 800,
     },
     {
       code: "07573",
@@ -5499,13 +5499,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 851,
     },
     {
-      code: "07519",
-      name: "Cẩm Lý",
-      province_code: "24",
-      type: "Xã",
-      ward_id: 795,
-    },
-    {
       code: "07738",
       name: "Cảnh Thụy",
       province_code: "24",
@@ -5518,6 +5511,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "24",
       type: "Xã",
       ward_id: 867,
+    },
+    {
+      code: "07519",
+      name: "Cẩm Lý",
+      province_code: "24",
+      type: "Xã",
+      ward_id: 795,
     },
     {
       code: "09313",
@@ -5674,18 +5674,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 832,
     },
     {
-      code: "09529",
-      name: "Lâm Thao",
-      province_code: "24",
-      type: "Xã",
-      ward_id: 870,
-    },
-    {
       code: "07375",
       name: "Lạng Giang",
       province_code: "24",
       type: "Xã",
       ward_id: 801,
+    },
+    {
+      code: "09529",
+      name: "Lâm Thao",
+      province_code: "24",
+      type: "Xã",
+      ward_id: 870,
     },
     {
       code: "09334",
@@ -5863,6 +5863,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 788,
     },
     {
+      code: "09433",
+      name: "Song Liễu",
+      province_code: "24",
+      type: "Phường",
+      ward_id: 845,
+    },
+    {
       code: "07615",
       name: "Sơn Động",
       province_code: "24",
@@ -5875,13 +5882,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "24",
       type: "Xã",
       ward_id: 785,
-    },
-    {
-      code: "09433",
-      name: "Song Liễu",
-      province_code: "24",
-      type: "Phường",
-      ward_id: 845,
     },
     {
       code: "09208",
@@ -6024,6 +6024,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 794,
     },
     {
+      code: "07663",
+      name: "Tuấn Đạo",
+      province_code: "24",
+      type: "Xã",
+      ward_id: 873,
+    },
+    {
       code: "07774",
       name: "Tự Lạn",
       province_code: "24",
@@ -6038,11 +6045,11 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 837,
     },
     {
-      code: "07663",
-      name: "Tuấn Đạo",
+      code: "09238",
+      name: "Văn Môn",
       province_code: "24",
       type: "Xã",
-      ward_id: 873,
+      ward_id: 855,
     },
     {
       code: "07798",
@@ -6050,13 +6057,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "24",
       type: "Phường",
       ward_id: 823,
-    },
-    {
-      code: "09238",
-      name: "Văn Môn",
-      province_code: "24",
-      type: "Xã",
-      ward_id: 855,
     },
     {
       code: "07621",
@@ -6166,18 +6166,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 882,
     },
     {
-      code: "07996",
-      name: "Bằng Luân",
-      province_code: "25",
-      type: "Xã",
-      ward_id: 901,
-    },
-    {
       code: "05245",
       name: "Bao La",
       province_code: "25",
       type: "Xã",
       ward_id: 1005,
+    },
+    {
+      code: "07996",
+      name: "Bằng Luân",
+      province_code: "25",
+      type: "Xã",
+      ward_id: 901,
     },
     {
       code: "08935",
@@ -6208,13 +6208,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 970,
     },
     {
-      code: "08341",
-      name: "Cẩm Khê",
-      province_code: "25",
-      type: "Xã",
-      ward_id: 908,
-    },
-    {
       code: "05047",
       name: "Cao Dương",
       province_code: "25",
@@ -6234,6 +6227,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "25",
       type: "Xã",
       ward_id: 980,
+    },
+    {
+      code: "08341",
+      name: "Cẩm Khê",
+      province_code: "25",
+      type: "Xã",
+      ward_id: 908,
     },
     {
       code: "08035",
@@ -6719,6 +6719,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 995,
     },
     {
+      code: "08848",
+      name: "Sông Lô",
+      province_code: "25",
+      type: "Xã",
+      ward_id: 941,
+    },
+    {
       code: "08866",
       name: "Sơn Đông",
       province_code: "25",
@@ -6731,13 +6738,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "25",
       type: "Xã",
       ward_id: 936,
-    },
-    {
-      code: "08848",
-      name: "Sông Lô",
-      province_code: "25",
-      type: "Xã",
-      ward_id: 941,
     },
     {
       code: "08869",
@@ -6873,18 +6873,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1017,
     },
     {
-      code: "09112",
-      name: "Thổ Tang",
-      province_code: "25",
-      type: "Xã",
-      ward_id: 958,
-    },
-    {
       code: "08479",
       name: "Thọ Văn",
       province_code: "25",
       type: "Xã",
       ward_id: 915,
+    },
+    {
+      code: "09112",
+      name: "Thổ Tang",
+      province_code: "25",
+      type: "Xã",
+      ward_id: 958,
     },
     {
       code: "04828",
@@ -6971,11 +6971,11 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 920,
     },
     {
-      code: "08380",
-      name: "Vân Bán",
+      code: "08461",
+      name: "Vạn Xuân",
       province_code: "25",
       type: "Xã",
-      ward_id: 913,
+      ward_id: 916,
     },
     {
       code: "08134",
@@ -6992,6 +6992,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 923,
     },
     {
+      code: "08380",
+      name: "Vân Bán",
+      province_code: "25",
+      type: "Xã",
+      ward_id: 913,
+    },
+    {
       code: "07918",
       name: "Vân Phú",
       province_code: "25",
@@ -7004,13 +7011,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "25",
       type: "Xã",
       ward_id: 1013,
-    },
-    {
-      code: "08461",
-      name: "Vạn Xuân",
-      province_code: "25",
-      type: "Xã",
-      ward_id: 916,
     },
     {
       code: "07900",
@@ -7260,6 +7260,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1049,
     },
     {
+      code: "11473",
+      name: "Bạch Đằng",
+      province_code: "31",
+      type: "Phường",
+      ward_id: 1026,
+    },
+    {
       code: "10678",
       name: "Bắc An Phụ",
       province_code: "31",
@@ -7272,13 +7279,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "31",
       type: "Xã",
       ward_id: 1128,
-    },
-    {
-      code: "11473",
-      name: "Bạch Đằng",
-      province_code: "31",
-      type: "Phường",
-      ward_id: 1026,
     },
     {
       code: "10966",
@@ -7337,6 +7337,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1042,
     },
     {
+      code: "11086",
+      name: "Đại Sơn",
+      province_code: "31",
+      type: "Xã",
+      ward_id: 1118,
+    },
+    {
       code: "11948",
       name: "Đặc khu Bạch Long Vĩ",
       province_code: "31",
@@ -7349,13 +7356,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "31",
       type: "Xã",
       ward_id: 1070,
-    },
-    {
-      code: "11086",
-      name: "Đại Sơn",
-      province_code: "31",
-      type: "Xã",
-      ward_id: 1118,
     },
     {
       code: "11455",
@@ -7484,18 +7484,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1096,
     },
     {
-      code: "11689",
-      name: "Hưng Đạo",
-      province_code: "31",
-      type: "Phường",
-      ward_id: 1041,
-    },
-    {
       code: "11809",
       name: "Hùng Thắng",
       province_code: "31",
       type: "Xã",
       ward_id: 1061,
+    },
+    {
+      code: "11689",
+      name: "Hưng Đạo",
+      province_code: "31",
+      type: "Phường",
+      ward_id: 1041,
     },
     {
       code: "10945",
@@ -7820,18 +7820,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1023,
     },
     {
-      code: "10993",
-      name: "Thượng Hồng",
-      province_code: "31",
-      type: "Xã",
-      ward_id: 1111,
-    },
-    {
       code: "11560",
       name: "Thuỷ Nguyên",
       province_code: "31",
       type: "Phường",
       ward_id: 1022,
+    },
+    {
+      code: "10993",
+      name: "Thượng Hồng",
+      province_code: "31",
+      type: "Xã",
+      ward_id: 1111,
     },
     {
       code: "11755",
@@ -7883,6 +7883,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1115,
     },
     {
+      code: "10909",
+      name: "Tuệ Tĩnh",
+      province_code: "31",
+      type: "Xã",
+      ward_id: 1105,
+    },
+    {
       code: "11074",
       name: "Tứ Kỳ",
       province_code: "31",
@@ -7895,13 +7902,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "31",
       type: "Phường",
       ward_id: 1079,
-    },
-    {
-      code: "10909",
-      name: "Tuệ Tĩnh",
-      province_code: "31",
-      type: "Xã",
-      ward_id: 1105,
     },
     {
       code: "10543",
@@ -8354,13 +8354,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1203,
     },
     {
-      code: "12595",
-      name: "Ngự Thiên",
-      province_code: "33",
-      type: "Xã",
-      ward_id: 1214,
-    },
-    {
       code: "12532",
       name: "Nguyễn Du",
       province_code: "33",
@@ -8380,6 +8373,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "33",
       type: "Xã",
       ward_id: 1167,
+    },
+    {
+      code: "12595",
+      name: "Ngự Thiên",
+      province_code: "33",
+      type: "Xã",
+      ward_id: 1214,
     },
     {
       code: "11986",
@@ -8522,6 +8522,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1212,
     },
     {
+      code: "12865",
+      name: "Thụy Anh",
+      province_code: "33",
+      type: "Xã",
+      ward_id: 1183,
+    },
+    {
       code: "13222",
       name: "Thư Trì",
       province_code: "33",
@@ -8541,13 +8548,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "33",
       type: "Phường",
       ward_id: 1141,
-    },
-    {
-      code: "12865",
-      name: "Thụy Anh",
-      province_code: "33",
-      type: "Xã",
-      ward_id: 1183,
     },
     {
       code: "12970",
@@ -8634,18 +8634,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1160,
     },
     {
-      code: "12019",
-      name: "Văn Giang",
-      province_code: "33",
-      type: "Xã",
-      ward_id: 1173,
-    },
-    {
       code: "13219",
       name: "Vạn Xuân",
       province_code: "33",
       type: "Xã",
       ward_id: 1239,
+    },
+    {
+      code: "12019",
+      name: "Văn Giang",
+      province_code: "33",
+      type: "Xã",
+      ward_id: 1173,
     },
     {
       code: "12238",
@@ -9462,18 +9462,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1285,
     },
     {
-      code: "14053",
-      name: "Trực Ninh",
-      province_code: "37",
-      type: "Xã",
-      ward_id: 1307,
-    },
-    {
       code: "14365",
       name: "Trung Sơn",
       province_code: "37",
       type: "Phường",
       ward_id: 1343,
+    },
+    {
+      code: "14053",
+      name: "Trực Ninh",
+      province_code: "37",
+      type: "Xã",
+      ward_id: 1307,
     },
     {
       code: "13777",
@@ -9849,13 +9849,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1470,
     },
     {
-      code: "16138",
-      name: "Hồ Vương",
-      province_code: "38",
-      type: "Xã",
-      ward_id: 1402,
-    },
-    {
       code: "16063",
       name: "Hoa Lộc",
       province_code: "38",
@@ -9868,6 +9861,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "38",
       type: "Xã",
       ward_id: 1517,
+    },
+    {
+      code: "15286",
+      name: "Hoạt Giang",
+      province_code: "38",
+      type: "Xã",
+      ward_id: 1393,
     },
     {
       code: "15976",
@@ -9926,11 +9926,11 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1407,
     },
     {
-      code: "15286",
-      name: "Hoạt Giang",
+      code: "16138",
+      name: "Hồ Vương",
       province_code: "38",
       type: "Xã",
-      ward_id: 1393,
+      ward_id: 1402,
     },
     {
       code: "14869",
@@ -10269,18 +10269,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1496,
     },
     {
-      code: "16531",
-      name: "Sầm Sơn",
-      province_code: "38",
-      type: "Phường",
-      ward_id: 1376,
-    },
-    {
       code: "15553",
       name: "Sao Vàng",
       province_code: "38",
       type: "Xã",
       ward_id: 1443,
+    },
+    {
+      code: "16531",
+      name: "Sầm Sơn",
+      province_code: "38",
+      type: "Phường",
+      ward_id: 1376,
     },
     {
       code: "15022",
@@ -10374,27 +10374,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1513,
     },
     {
-      code: "16342",
-      name: "Thăng Bình",
-      province_code: "38",
-      type: "Xã",
-      ward_id: 1425,
-    },
-    {
-      code: "15643",
-      name: "Thắng Lộc",
-      province_code: "38",
-      type: "Xã",
-      ward_id: 1533,
-    },
-    {
-      code: "16309",
-      name: "Thắng Lợi",
-      province_code: "38",
-      type: "Xã",
-      ward_id: 1422,
-    },
-    {
       code: "16273",
       name: "Thanh Kỳ",
       province_code: "38",
@@ -10421,6 +10400,27 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "38",
       type: "Xã",
       ward_id: 1512,
+    },
+    {
+      code: "16342",
+      name: "Thăng Bình",
+      province_code: "38",
+      type: "Xã",
+      ward_id: 1425,
+    },
+    {
+      code: "15643",
+      name: "Thắng Lộc",
+      province_code: "38",
+      type: "Xã",
+      ward_id: 1533,
+    },
+    {
+      code: "16309",
+      name: "Thắng Lợi",
+      province_code: "38",
+      type: "Xã",
+      ward_id: 1422,
     },
     {
       code: "14908",
@@ -10626,18 +10626,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1426,
     },
     {
-      code: "15190",
-      name: "Vân Du",
-      province_code: "38",
-      type: "Xã",
-      ward_id: 1509,
-    },
-    {
       code: "16078",
       name: "Vạn Lộc",
       province_code: "38",
       type: "Xã",
       ward_id: 1399,
+    },
+    {
+      code: "15622",
+      name: "Vạn Xuân",
+      province_code: "38",
+      type: "Xã",
+      ward_id: 1532,
     },
     {
       code: "14974",
@@ -10654,11 +10654,11 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1485,
     },
     {
-      code: "15622",
-      name: "Vạn Xuân",
+      code: "15190",
+      name: "Vân Du",
       province_code: "38",
       type: "Xã",
-      ward_id: 1532,
+      ward_id: 1509,
     },
     {
       code: "15349",
@@ -10796,13 +10796,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1538,
     },
     {
-      code: "16819",
-      name: "Bắc Lý",
-      province_code: "40",
-      type: "Xã",
-      ward_id: 1576,
-    },
-    {
       code: "17707",
       name: "Bạch Hà",
       province_code: "40",
@@ -10815,6 +10808,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "40",
       type: "Xã",
       ward_id: 1556,
+    },
+    {
+      code: "16819",
+      name: "Bắc Lý",
+      province_code: "40",
+      type: "Xã",
+      ward_id: 1576,
     },
     {
       code: "17818",
@@ -11034,6 +11034,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1554,
     },
     {
+      code: "16828",
+      name: "Huồi Tụ",
+      province_code: "40",
+      type: "Xã",
+      ward_id: 1578,
+    },
+    {
       code: "18001",
       name: "Hưng Nguyên",
       province_code: "40",
@@ -11046,13 +11053,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "40",
       type: "Xã",
       ward_id: 1566,
-    },
-    {
-      code: "16828",
-      name: "Huồi Tụ",
-      province_code: "40",
-      type: "Xã",
-      ward_id: 1578,
     },
     {
       code: "16885",
@@ -11202,18 +11202,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1574,
     },
     {
-      code: "16837",
-      name: "Nậm Cắn",
-      province_code: "40",
-      type: "Xã",
-      ward_id: 1570,
-    },
-    {
       code: "17935",
       name: "Nam Đàn",
       province_code: "40",
       type: "Xã",
       ward_id: 1581,
+    },
+    {
+      code: "16837",
+      name: "Nậm Cắn",
+      province_code: "40",
+      type: "Xã",
+      ward_id: 1570,
     },
     {
       code: "16903",
@@ -11496,13 +11496,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1629,
     },
     {
-      code: "17842",
-      name: "Thần Lĩnh",
-      province_code: "40",
-      type: "Xã",
-      ward_id: 1596,
-    },
-    {
       code: "17335",
       name: "Thành Bình Thọ",
       province_code: "40",
@@ -11515,6 +11508,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "40",
       type: "Phường",
       ward_id: 1651,
+    },
+    {
+      code: "17842",
+      name: "Thần Lĩnh",
+      province_code: "40",
+      type: "Xã",
+      ward_id: 1596,
     },
     {
       code: "17989",
@@ -11587,13 +11587,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1580,
     },
     {
-      code: "17560",
-      name: "Vân Du",
-      province_code: "40",
-      type: "Xã",
-      ward_id: 1660,
-    },
-    {
       code: "17677",
       name: "Văn Hiến",
       province_code: "40",
@@ -11606,6 +11599,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "40",
       type: "Xã",
       ward_id: 1598,
+    },
+    {
+      code: "17560",
+      name: "Vân Du",
+      province_code: "40",
+      type: "Xã",
+      ward_id: 1660,
     },
     {
       code: "17611",
@@ -11694,6 +11694,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1704,
     },
     {
+      code: "18406",
+      name: "Can Lộc",
+      province_code: "42",
+      type: "Xã",
+      ward_id: 1698,
+    },
+    {
       code: "18685",
       name: "Cẩm Bình",
       province_code: "42",
@@ -11734,13 +11741,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "42",
       type: "Xã",
       ward_id: 1676,
-    },
-    {
-      code: "18406",
-      name: "Can Lộc",
-      province_code: "42",
-      type: "Xã",
-      ward_id: 1698,
     },
     {
       code: "18394",
@@ -11995,6 +11995,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1730,
     },
     {
+      code: "18754",
+      name: "Sông Trí",
+      province_code: "42",
+      type: "Phường",
+      ward_id: 1665,
+    },
+    {
       code: "18184",
       name: "Sơn Giang",
       province_code: "42",
@@ -12035,13 +12042,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "42",
       type: "Xã",
       ward_id: 1719,
-    },
-    {
-      code: "18754",
-      name: "Sông Trí",
-      province_code: "42",
-      type: "Phường",
-      ward_id: 1665,
     },
     {
       code: "18562",
@@ -12121,18 +12121,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1701,
     },
     {
-      code: "18202",
-      name: "Tứ Mỹ",
-      province_code: "42",
-      type: "Xã",
-      ward_id: 1717,
-    },
-    {
       code: "18418",
       name: "Tùng Lộc",
       province_code: "42",
       type: "Xã",
       ward_id: 1699,
+    },
+    {
+      code: "18202",
+      name: "Tứ Mỹ",
+      province_code: "42",
+      type: "Xã",
+      ward_id: 1717,
     },
     {
       code: "18601",
@@ -12846,18 +12846,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1823,
     },
     {
-      code: "20140",
-      name: "Lộc An",
-      province_code: "46",
-      type: "Xã",
-      ward_id: 1839,
-    },
-    {
       code: "20182",
       name: "Long Quảng",
       province_code: "46",
       type: "Xã",
       ward_id: 1842,
+    },
+    {
+      code: "20140",
+      name: "Lộc An",
+      province_code: "46",
+      type: "Xã",
+      ward_id: 1839,
     },
     {
       code: "19930",
@@ -13086,6 +13086,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1908,
     },
     {
+      code: "20500",
+      name: "Đại Lộc",
+      province_code: "48",
+      type: "Xã",
+      ward_id: 1920,
+    },
+    {
       code: "20333",
       name: "Đặc khu Hoàng Sa",
       province_code: "48",
@@ -13098,13 +13105,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "48",
       type: "Xã",
       ward_id: 1928,
-    },
-    {
-      code: "20500",
-      name: "Đại Lộc",
-      province_code: "48",
-      type: "Xã",
-      ward_id: 1920,
     },
     {
       code: "20551",
@@ -13415,20 +13415,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1901,
     },
     {
-      code: "20857",
-      name: "Sơn Cẩm Hà",
-      province_code: "48",
-      type: "Xã",
-      ward_id: 1884,
-    },
-    {
-      code: "20263",
-      name: "Sơn Trà",
-      province_code: "48",
-      type: "Phường",
-      ward_id: 1857,
-    },
-    {
       code: "20476",
       name: "Sông Kôn",
       province_code: "48",
@@ -13441,6 +13427,20 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "48",
       type: "Xã",
       ward_id: 1931,
+    },
+    {
+      code: "20857",
+      name: "Sơn Cẩm Hà",
+      province_code: "48",
+      type: "Xã",
+      ward_id: 1884,
+    },
+    {
+      code: "20263",
+      name: "Sơn Trà",
+      province_code: "48",
+      type: "Phường",
+      ward_id: 1857,
     },
     {
       code: "20984",
@@ -13499,6 +13499,27 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 1878,
     },
     {
+      code: "20878",
+      name: "Thạnh Bình",
+      province_code: "48",
+      type: "Xã",
+      ward_id: 1883,
+    },
+    {
+      code: "20209",
+      name: "Thanh Khê",
+      province_code: "48",
+      type: "Phường",
+      ward_id: 1854,
+    },
+    {
+      code: "20695",
+      name: "Thạnh Mỹ",
+      province_code: "48",
+      type: "Xã",
+      ward_id: 1925,
+    },
+    {
       code: "20794",
       name: "Thăng An",
       province_code: "48",
@@ -13532,27 +13553,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "48",
       type: "Xã",
       ward_id: 1897,
-    },
-    {
-      code: "20878",
-      name: "Thạnh Bình",
-      province_code: "48",
-      type: "Xã",
-      ward_id: 1883,
-    },
-    {
-      code: "20209",
-      name: "Thanh Khê",
-      province_code: "48",
-      type: "Phường",
-      ward_id: 1854,
-    },
-    {
-      code: "20695",
-      name: "Thạnh Mỹ",
-      province_code: "48",
-      type: "Xã",
-      ward_id: 1925,
     },
     {
       code: "20611",
@@ -14145,18 +14145,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2028,
     },
     {
-      code: "21292",
-      name: "Sơn Hạ",
-      province_code: "51",
-      type: "Xã",
-      ward_id: 1983,
-    },
-    {
       code: "21289",
       name: "Sơn Hà",
       province_code: "51",
       type: "Xã",
       ward_id: 1985,
+    },
+    {
+      code: "21292",
+      name: "Sơn Hạ",
+      province_code: "51",
+      type: "Xã",
+      ward_id: 1983,
     },
     {
       code: "21325",
@@ -14350,13 +14350,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2124,
     },
     {
-      code: "21697",
-      name: "Ân Hảo",
-      province_code: "52",
-      type: "Xã",
-      ward_id: 2087,
-    },
-    {
       code: "21628",
       name: "An Hòa",
       province_code: "52",
@@ -14434,13 +14427,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2098,
     },
     {
-      code: "21715",
-      name: "Ân Tường",
-      province_code: "52",
-      type: "Xã",
-      ward_id: 2084,
-    },
-    {
       code: "21616",
       name: "An Vinh",
       province_code: "52",
@@ -14460,6 +14446,20 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "52",
       type: "Phường",
       ward_id: 2139,
+    },
+    {
+      code: "21697",
+      name: "Ân Hảo",
+      province_code: "52",
+      type: "Xã",
+      ward_id: 2087,
+    },
+    {
+      code: "21715",
+      name: "Ân Tường",
+      province_code: "52",
+      type: "Xã",
+      ward_id: 2084,
     },
     {
       code: "23896",
@@ -14518,18 +14518,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2080,
     },
     {
-      code: "23947",
-      name: "Bờ Ngoong",
-      province_code: "52",
-      type: "Xã",
-      ward_id: 2117,
-    },
-    {
       code: "21640",
       name: "Bồng Sơn",
       province_code: "52",
       type: "Phường",
       ward_id: 2053,
+    },
+    {
+      code: "23947",
+      name: "Bờ Ngoong",
+      province_code: "52",
+      type: "Xã",
+      ward_id: 2117,
     },
     {
       code: "21997",
@@ -14630,18 +14630,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2126,
     },
     {
-      code: "23644",
-      name: "Đăk Roong",
-      province_code: "52",
-      type: "Xã",
-      ward_id: 2132,
-    },
-    {
       code: "23683",
       name: "Đak Sơmei",
       province_code: "52",
       type: "Xã",
       ward_id: 2156,
+    },
+    {
+      code: "23644",
+      name: "Đăk Roong",
+      province_code: "52",
+      type: "Xã",
+      ward_id: 2132,
     },
     {
       code: "23842",
@@ -14763,18 +14763,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2174,
     },
     {
-      code: "23869",
-      name: "Ia Dơk",
-      province_code: "52",
-      type: "Xã",
-      ward_id: 2166,
-    },
-    {
       code: "23872",
       name: "Ia Dom",
       province_code: "52",
       type: "Xã",
       ward_id: 2173,
+    },
+    {
+      code: "23869",
+      name: "Ia Dơk",
+      province_code: "52",
+      type: "Xã",
+      ward_id: 2166,
     },
     {
       code: "24100",
@@ -15218,18 +15218,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2151,
     },
     {
-      code: "21994",
-      name: "Vân Canh",
-      province_code: "52",
-      type: "Xã",
-      ward_id: 2088,
-    },
-    {
       code: "21703",
       name: "Vạn Đức",
       province_code: "52",
       type: "Xã",
       ward_id: 2086,
+    },
+    {
+      code: "21994",
+      name: "Vân Canh",
+      province_code: "52",
+      type: "Xã",
+      ward_id: 2088,
     },
     {
       code: "21805",
@@ -15318,6 +15318,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2241,
     },
     {
+      code: "22741",
+      name: "Bảo An",
+      province_code: "56",
+      type: "Phường",
+      ward_id: 2221,
+    },
+    {
       code: "22408",
       name: "Bắc Cam Ranh",
       province_code: "56",
@@ -15344,13 +15351,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "56",
       type: "Xã",
       ward_id: 2186,
-    },
-    {
-      code: "22741",
-      name: "Bảo An",
-      province_code: "56",
-      type: "Phường",
-      ward_id: 2221,
     },
     {
       code: "22910",
@@ -15437,18 +15437,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2203,
     },
     {
-      code: "22736",
-      name: "Đặc khu Trường Sa",
-      province_code: "56",
-      type: "Xã",
-      ward_id: 2217,
-    },
-    {
       code: "22504",
       name: "Đại Lãnh",
       province_code: "56",
       type: "Xã",
       ward_id: 2194,
+    },
+    {
+      code: "22736",
+      name: "Đặc khu Trường Sa",
+      province_code: "56",
+      type: "Xã",
+      ward_id: 2217,
     },
     {
       code: "22738",
@@ -15768,6 +15768,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2243,
     },
     {
+      code: "24301",
+      name: "Cuôr Đăng",
+      province_code: "66",
+      type: "Xã",
+      ward_id: 2262,
+    },
+    {
       code: "24340",
       name: "Cư Bao",
       province_code: "66",
@@ -15775,18 +15782,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2250,
     },
     {
-      code: "24436",
-      name: "Cư M'ta",
-      province_code: "66",
-      type: "Xã",
-      ward_id: 2290,
-    },
-    {
       code: "24280",
       name: "Cư M’gar",
       province_code: "66",
       type: "Xã",
       ward_id: 2263,
+    },
+    {
+      code: "24436",
+      name: "Cư M'ta",
+      province_code: "66",
+      type: "Xã",
+      ward_id: 2290,
     },
     {
       code: "24313",
@@ -15815,13 +15822,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "66",
       type: "Xã",
       ward_id: 2286,
-    },
-    {
-      code: "24301",
-      name: "Cuôr Đăng",
-      province_code: "66",
-      type: "Xã",
-      ward_id: 2262,
     },
     {
       code: "24454",
@@ -16272,20 +16272,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2261,
     },
     {
-      code: "22165",
-      name: "Sơn Hòa",
-      province_code: "66",
-      type: "Xã",
-      ward_id: 2332,
-    },
-    {
-      code: "22250",
-      name: "Sơn Thành",
-      province_code: "66",
-      type: "Xã",
-      ward_id: 2331,
-    },
-    {
       code: "22051",
       name: "Sông Cầu",
       province_code: "66",
@@ -16298,6 +16284,20 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "66",
       type: "Xã",
       ward_id: 2339,
+    },
+    {
+      code: "22165",
+      name: "Sơn Hòa",
+      province_code: "66",
+      type: "Xã",
+      ward_id: 2332,
+    },
+    {
+      code: "22250",
+      name: "Sơn Thành",
+      province_code: "66",
+      type: "Xã",
+      ward_id: 2331,
     },
     {
       code: "22192",
@@ -16484,27 +16484,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2352,
     },
     {
-      code: "23005",
-      name: "Bắc Bình",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2408,
-    },
-    {
-      code: "24611",
-      name: "Bắc Gia Nghĩa",
-      province_code: "68",
-      type: "Phường",
-      ward_id: 2439,
-    },
-    {
-      code: "23152",
-      name: "Bắc Ruộng",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2429,
-    },
-    {
       code: "25054",
       name: "Bảo Lâm 1",
       province_code: "68",
@@ -16545,6 +16524,27 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "68",
       type: "Xã",
       ward_id: 2377,
+    },
+    {
+      code: "23005",
+      name: "Bắc Bình",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2408,
+    },
+    {
+      code: "24611",
+      name: "Bắc Gia Nghĩa",
+      province_code: "68",
+      type: "Phường",
+      ward_id: 2439,
+    },
+    {
+      code: "23152",
+      name: "Bắc Ruộng",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2429,
     },
     {
       code: "22960",
@@ -16645,6 +16645,34 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2390,
     },
     {
+      code: "24886",
+      name: "Đam Rông 1",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2369,
+    },
+    {
+      code: "24877",
+      name: "Đam Rông 2",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2370,
+    },
+    {
+      code: "24875",
+      name: "Đam Rông 3",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2371,
+    },
+    {
+      code: "24853",
+      name: "Đam Rông 4",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2372,
+    },
+    {
       code: "23272",
       name: "Đặc khu Phú Quý",
       province_code: "68",
@@ -16680,34 +16708,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2442,
     },
     {
-      code: "24886",
-      name: "Đam Rông 1",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2369,
-    },
-    {
-      code: "24877",
-      name: "Đam Rông 2",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2370,
-    },
-    {
-      code: "24875",
-      name: "Đam Rông 3",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2371,
-    },
-    {
-      code: "24853",
-      name: "Đam Rông 4",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2372,
-    },
-    {
       code: "25007",
       name: "Đinh Trang Thượng",
       province_code: "68",
@@ -16720,13 +16720,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "68",
       type: "Xã",
       ward_id: 2363,
-    },
-    {
-      code: "24931",
-      name: "Đơn Dương",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2354,
     },
     {
       code: "24617",
@@ -16748,6 +16741,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "68",
       type: "Xã",
       ward_id: 2431,
+    },
+    {
+      code: "24931",
+      name: "Đơn Dương",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2354,
     },
     {
       code: "24717",
@@ -16813,18 +16813,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2427,
     },
     {
-      code: "22933",
-      name: "Hàm Thắng",
-      province_code: "68",
-      type: "Phường",
-      ward_id: 2394,
-    },
-    {
       code: "23122",
       name: "Hàm Thạnh",
       province_code: "68",
       type: "Xã",
       ward_id: 2421,
+    },
+    {
+      code: "22933",
+      name: "Hàm Thắng",
+      province_code: "68",
+      type: "Phường",
+      ward_id: 2394,
     },
     {
       code: "23059",
@@ -16939,18 +16939,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2353,
     },
     {
-      code: "24778",
-      name: "Lâm Viên - Đà Lạt",
-      province_code: "68",
-      type: "Phường",
-      ward_id: 2346,
-    },
-    {
       code: "24846",
       name: "Lang Biang - Đà Lạt",
       province_code: "68",
       type: "Phường",
       ward_id: 2348,
+    },
+    {
+      code: "24778",
+      name: "Lâm Viên - Đà Lạt",
+      province_code: "68",
+      type: "Phường",
+      ward_id: 2346,
     },
     {
       code: "22969",
@@ -17009,18 +17009,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2365,
     },
     {
-      code: "24703",
-      name: "Nâm Nung",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2451,
-    },
-    {
       code: "23200",
       name: "Nam Thành",
       province_code: "68",
       type: "Xã",
       ward_id: 2434,
+    },
+    {
+      code: "24703",
+      name: "Nâm Nung",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2451,
     },
     {
       code: "23158",
@@ -17149,6 +17149,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2467,
     },
     {
+      code: "23023",
+      name: "Sông Lũy",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2412,
+    },
+    {
       code: "25051",
       name: "Sơn Điền",
       province_code: "68",
@@ -17161,13 +17168,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "68",
       type: "Xã",
       ward_id: 2428,
-    },
-    {
-      code: "23023",
-      name: "Sông Lũy",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2412,
     },
     {
       code: "23188",
@@ -17196,6 +17196,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "68",
       type: "Xã",
       ward_id: 2362,
+    },
+    {
+      code: "23149",
+      name: "Tánh Linh",
+      province_code: "68",
+      type: "Xã",
+      ward_id: 2432,
     },
     {
       code: "24916",
@@ -17238,13 +17245,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "68",
       type: "Xã",
       ward_id: 2423,
-    },
-    {
-      code: "23149",
-      name: "Tánh Linh",
-      province_code: "68",
-      type: "Xã",
-      ward_id: 2432,
     },
     {
       code: "24682",
@@ -17375,18 +17375,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2480,
     },
     {
-      code: "26089",
-      name: "Bình Lộc",
-      province_code: "75",
-      type: "Phường",
-      ward_id: 2491,
-    },
-    {
       code: "25326",
       name: "Bình Long",
       province_code: "75",
       type: "Phường",
       ward_id: 2525,
+    },
+    {
+      code: "26089",
+      name: "Bình Lộc",
+      province_code: "75",
+      type: "Phường",
+      ward_id: 2491,
     },
     {
       code: "26278",
@@ -17557,48 +17557,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2507,
     },
     {
-      code: "25303",
-      name: "Lộc Hưng",
-      province_code: "75",
-      type: "Xã",
-      ward_id: 2529,
-    },
-    {
-      code: "25270",
-      name: "Lộc Ninh",
-      province_code: "75",
-      type: "Xã",
-      ward_id: 2528,
-    },
-    {
-      code: "25292",
-      name: "Lộc Quang",
-      province_code: "75",
-      type: "Xã",
-      ward_id: 2532,
-    },
-    {
-      code: "25279",
-      name: "Lộc Tấn",
-      province_code: "75",
-      type: "Xã",
-      ward_id: 2530,
-    },
-    {
-      code: "25294",
-      name: "Lộc Thành",
-      province_code: "75",
-      type: "Xã",
-      ward_id: 2527,
-    },
-    {
-      code: "25280",
-      name: "Lộc Thạnh",
-      province_code: "75",
-      type: "Xã",
-      ward_id: 2531,
-    },
-    {
       code: "26020",
       name: "Long Bình",
       province_code: "75",
@@ -17639,6 +17597,48 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "75",
       type: "Xã",
       ward_id: 2481,
+    },
+    {
+      code: "25303",
+      name: "Lộc Hưng",
+      province_code: "75",
+      type: "Xã",
+      ward_id: 2529,
+    },
+    {
+      code: "25270",
+      name: "Lộc Ninh",
+      province_code: "75",
+      type: "Xã",
+      ward_id: 2528,
+    },
+    {
+      code: "25292",
+      name: "Lộc Quang",
+      province_code: "75",
+      type: "Xã",
+      ward_id: 2532,
+    },
+    {
+      code: "25279",
+      name: "Lộc Tấn",
+      province_code: "75",
+      type: "Xã",
+      ward_id: 2530,
+    },
+    {
+      code: "25294",
+      name: "Lộc Thành",
+      province_code: "75",
+      type: "Xã",
+      ward_id: 2527,
+    },
+    {
+      code: "25280",
+      name: "Lộc Thạnh",
+      province_code: "75",
+      type: "Xã",
+      ward_id: 2531,
     },
     {
       code: "25349",
@@ -17893,13 +17893,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2546,
     },
     {
-      code: "26041",
-      name: "Trấn Biên",
-      province_code: "75",
-      type: "Phường",
-      ward_id: 2469,
-    },
-    {
       code: "26248",
       name: "Trảng Bom",
       province_code: "75",
@@ -17912,6 +17905,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "75",
       type: "Phường",
       ward_id: 2472,
+    },
+    {
+      code: "26041",
+      name: "Trấn Biên",
+      province_code: "75",
+      type: "Phường",
+      ward_id: 2469,
     },
     {
       code: "26170",
@@ -18084,13 +18084,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2567,
     },
     {
-      code: "25906",
-      name: "Bắc Tân Uyên",
-      province_code: "79",
-      type: "Xã",
-      ward_id: 2613,
-    },
-    {
       code: "27160",
       name: "Bàn Cờ",
       province_code: "79",
@@ -18117,6 +18110,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "79",
       type: "Phường",
       ward_id: 2683,
+    },
+    {
+      code: "25906",
+      name: "Bắc Tân Uyên",
+      province_code: "79",
+      type: "Xã",
+      ward_id: 2613,
     },
     {
       code: "25813",
@@ -18287,18 +18287,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2700,
     },
     {
-      code: "27664",
-      name: "Cần Giờ",
-      province_code: "79",
-      type: "Xã",
-      ward_id: 2712,
-    },
-    {
       code: "27112",
       name: "Cát Lái",
       province_code: "79",
       type: "Phường",
       ward_id: 2699,
+    },
+    {
+      code: "27664",
+      name: "Cần Giờ",
+      province_code: "79",
+      type: "Xã",
+      ward_id: 2712,
     },
     {
       code: "27058",
@@ -18469,13 +18469,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2725,
     },
     {
-      code: "26620",
-      name: "Hồ Tràm",
-      province_code: "79",
-      type: "Xã",
-      ward_id: 2581,
-    },
-    {
       code: "27211",
       name: "Hòa Bình",
       province_code: "79",
@@ -18516,6 +18509,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "79",
       type: "Xã",
       ward_id: 2721,
+    },
+    {
+      code: "26620",
+      name: "Hồ Tràm",
+      province_code: "79",
+      type: "Xã",
+      ward_id: 2581,
     },
     {
       code: "27628",
@@ -18770,18 +18770,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2701,
     },
     {
-      code: "26542",
-      name: "Phước Thắng",
-      province_code: "79",
-      type: "Phường",
-      ward_id: 2566,
-    },
-    {
       code: "25864",
       name: "Phước Thành",
       province_code: "79",
       type: "Xã",
       ward_id: 2616,
+    },
+    {
+      code: "26542",
+      name: "Phước Thắng",
+      province_code: "79",
+      type: "Phường",
+      ward_id: 2566,
     },
     {
       code: "26536",
@@ -18817,6 +18817,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "79",
       type: "Phường",
       ward_id: 2564,
+    },
+    {
+      code: "26842",
+      name: "Tăng Nhơn Phú",
+      province_code: "79",
+      type: "Phường",
+      ward_id: 2695,
     },
     {
       code: "27496",
@@ -18980,13 +18987,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2704,
     },
     {
-      code: "26842",
-      name: "Tăng Nhơn Phú",
-      province_code: "79",
-      type: "Phường",
-      ward_id: 2695,
-    },
-    {
       code: "25843",
       name: "Tây Nam",
       province_code: "79",
@@ -19029,6 +19029,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2669,
     },
     {
+      code: "26899",
+      name: "Thông Tây Hội",
+      province_code: "79",
+      type: "Phường",
+      ward_id: 2675,
+    },
+    {
       code: "26773",
       name: "Thới An",
       province_code: "79",
@@ -19041,13 +19048,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "79",
       type: "Phường",
       ward_id: 2729,
-    },
-    {
-      code: "26899",
-      name: "Thông Tây Hội",
-      province_code: "79",
-      type: "Phường",
-      ward_id: 2675,
     },
     {
       code: "25747",
@@ -19085,18 +19085,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2614,
     },
     {
-      code: "25819",
-      name: "Trừ Văn Thố",
-      province_code: "79",
-      type: "Xã",
-      ward_id: 2619,
-    },
-    {
       code: "26785",
       name: "Trung Mỹ Tây",
       province_code: "79",
       type: "Phường",
       ward_id: 2657,
+    },
+    {
+      code: "25819",
+      name: "Trừ Văn Thố",
+      province_code: "79",
+      type: "Xã",
+      ward_id: 2619,
     },
     {
       code: "27286",
@@ -19402,13 +19402,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2740,
     },
     {
-      code: "25579",
-      name: "Lộc Ninh",
-      province_code: "80",
-      type: "Xã",
-      ward_id: 2806,
-    },
-    {
       code: "27694",
       name: "Long An",
       province_code: "80",
@@ -19449,6 +19442,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "80",
       type: "Xã",
       ward_id: 2825,
+    },
+    {
+      code: "25579",
+      name: "Lộc Ninh",
+      province_code: "80",
+      type: "Xã",
+      ward_id: 2806,
     },
     {
       code: "28003",
@@ -19696,18 +19696,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2750,
     },
     {
-      code: "27826",
-      name: "Tân Thạnh",
-      province_code: "80",
-      type: "Xã",
-      ward_id: 2746,
-    },
-    {
       code: "25534",
       name: "Tân Thành",
       province_code: "80",
       type: "Xã",
       ward_id: 2813,
+    },
+    {
+      code: "27826",
+      name: "Tân Thạnh",
+      province_code: "80",
+      type: "Xã",
+      ward_id: 2746,
     },
     {
       code: "28075",
@@ -20335,18 +20335,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2880,
     },
     {
-      code: "29929",
-      name: "Tân Hộ Cơ",
-      province_code: "82",
-      type: "Xã",
-      ward_id: 2886,
-    },
-    {
       code: "28702",
       name: "Tân Hòa",
       province_code: "82",
       type: "Xã",
       ward_id: 2879,
+    },
+    {
+      code: "29929",
+      name: "Tân Hộ Cơ",
+      province_code: "82",
+      type: "Xã",
+      ward_id: 2886,
     },
     {
       code: "29926",
@@ -20890,13 +20890,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 3025,
     },
     {
-      code: "29077",
-      name: "Lộc Thuận",
-      province_code: "86",
-      type: "Xã",
-      ward_id: 3050,
-    },
-    {
       code: "29551",
       name: "Long Châu",
       province_code: "86",
@@ -20918,18 +20911,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2995,
     },
     {
-      code: "29602",
-      name: "Long Hồ",
-      province_code: "86",
-      type: "Xã",
-      ward_id: 2934,
-    },
-    {
       code: "29413",
       name: "Long Hòa",
       province_code: "86",
       type: "Xã",
       ward_id: 2977,
+    },
+    {
+      code: "29602",
+      name: "Long Hồ",
+      province_code: "86",
+      type: "Xã",
+      ward_id: 2934,
     },
     {
       code: "29518",
@@ -20951,6 +20944,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "86",
       type: "Xã",
       ward_id: 3002,
+    },
+    {
+      code: "29077",
+      name: "Lộc Thuận",
+      province_code: "86",
+      type: "Xã",
+      ward_id: 3050,
     },
     {
       code: "29857",
@@ -21149,13 +21149,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 2941,
     },
     {
-      code: "28783",
-      name: "Sơn Đông",
-      province_code: "86",
-      type: "Phường",
-      ward_id: 3008,
-    },
-    {
       code: "29386",
       name: "Song Lộc",
       province_code: "86",
@@ -21168,6 +21161,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "86",
       type: "Xã",
       ward_id: 2956,
+    },
+    {
+      code: "28783",
+      name: "Sơn Đông",
+      province_code: "86",
+      type: "Phường",
+      ward_id: 3008,
     },
     {
       code: "29719",
@@ -21697,13 +21697,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 3129,
     },
     {
-      code: "30673",
-      name: "Hội An",
-      province_code: "91",
-      type: "Xã",
-      ward_id: 3097,
-    },
-    {
       code: "30817",
       name: "Hòn Đất",
       province_code: "91",
@@ -21716,6 +21709,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "91",
       type: "Xã",
       ward_id: 3146,
+    },
+    {
+      code: "30673",
+      name: "Hội An",
+      province_code: "91",
+      type: "Xã",
+      ward_id: 3097,
     },
     {
       code: "30341",
@@ -21830,18 +21830,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 3081,
     },
     {
-      code: "30577",
-      name: "Ô Lâm",
-      province_code: "91",
-      type: "Xã",
-      ward_id: 3087,
-    },
-    {
       code: "30688",
       name: "Óc Eo",
       province_code: "91",
       type: "Xã",
       ward_id: 3102,
+    },
+    {
+      code: "30577",
+      name: "Ô Lâm",
+      province_code: "91",
+      type: "Xã",
+      ward_id: 3087,
     },
     {
       code: "30436",
@@ -22273,13 +22273,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 3212,
     },
     {
-      code: "31570",
-      name: "Hồ Đắc Kiện",
-      province_code: "92",
-      type: "Xã",
-      ward_id: 3235,
-    },
-    {
       code: "31393",
       name: "Hòa An",
       province_code: "92",
@@ -22299,6 +22292,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "92",
       type: "Xã",
       ward_id: 3218,
+    },
+    {
+      code: "31570",
+      name: "Hồ Đắc Kiện",
+      province_code: "92",
+      type: "Xã",
+      ward_id: 3235,
     },
     {
       code: "31201",
@@ -22588,18 +22588,18 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 3201,
     },
     {
-      code: "31213",
-      name: "Tân Lộc",
-      province_code: "92",
-      type: "Phường",
-      ward_id: 3170,
-    },
-    {
       code: "31741",
       name: "Tân Long",
       province_code: "92",
       type: "Xã",
       ward_id: 3245,
+    },
+    {
+      code: "31213",
+      name: "Tân Lộc",
+      province_code: "92",
+      type: "Phường",
+      ward_id: 3170,
     },
     {
       code: "31432",
@@ -22658,6 +22658,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 3200,
     },
     {
+      code: "31212",
+      name: "Thốt Nốt",
+      province_code: "92",
+      type: "Phường",
+      ward_id: 3168,
+    },
+    {
       code: "31174",
       name: "Thới An Đông",
       province_code: "92",
@@ -22691,13 +22698,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "92",
       type: "Phường",
       ward_id: 3165,
-    },
-    {
-      code: "31212",
-      name: "Thốt Nốt",
-      province_code: "92",
-      type: "Phường",
-      ward_id: 3168,
     },
     {
       code: "31582",
@@ -22982,13 +22982,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       ward_id: 3299,
     },
     {
-      code: "32092",
-      name: "Hồ Thị Kỷ",
-      province_code: "96",
-      type: "Xã",
-      ward_id: 3284,
-    },
-    {
       code: "31891",
       name: "Hòa Bình",
       province_code: "96",
@@ -23001,6 +22994,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
       province_code: "96",
       type: "Phường",
       ward_id: 3261,
+    },
+    {
+      code: "32092",
+      name: "Hồ Thị Kỷ",
+      province_code: "96",
+      type: "Xã",
+      ward_id: 3284,
     },
     {
       code: "31843",
