@@ -56800,7 +56800,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "23395",
       district_code: "611",
-      name: "Pờ Y\n",
+      name: "Pờ Y",
       province_code: "62",
       type: "Xã",
       ward_id: 6992,
