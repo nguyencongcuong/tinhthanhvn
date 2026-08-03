@@ -1,5 +1,5 @@
-import { PRE_MERGER_PROVINCES, PRE_MERGER_PROVINCES_BY_CODE, PRE_MERGER_PROVINCES_BY_ID } from "../data/pre/provinces";
 import { PROVINCES, PROVINCES_BY_CODE, PROVINCES_BY_ID } from "../data/current/provinces";
+import { PRE_MERGER_PROVINCES, PRE_MERGER_PROVINCES_BY_CODE, PRE_MERGER_PROVINCES_BY_ID } from "../data/pre/provinces";
 
 export const provinces = {
   all: () => PROVINCES,
