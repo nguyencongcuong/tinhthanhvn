@@ -6,8 +6,6 @@
       "name": "vn-geo",
       "devDependencies": {
         "@types/bun": "latest",
-      },
-      "peerDependencies": {
         "typescript": "^5",
       },
     },

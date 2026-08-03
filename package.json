@@ -1,5 +1,5 @@
 {
-  "name": "vn-geo",
+  "name": "tinhthanhvn",
   "version": "1.0.0",
   "description": "Lookup Vietnam provinces & wards post-2025 merger, with old-to-new province name mapping.",
   "module": "dist/index.js",
