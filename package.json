@@ -10,8 +10,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && bun build src/index.ts --outdir dist --target node && tsc",
+    "build": "rm -rf dist && bun build src/index.ts --outdir dist --target node && tsc -p tsconfig.build.json",
     "prepublishOnly": "bun run build",
+    "test": "bun test",
     "format": "biome check --write .",
     "lint": "biome check ."
   },
