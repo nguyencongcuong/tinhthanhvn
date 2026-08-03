@@ -10,7 +10,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target node && tsc"
+    "build": "bun build src/index.ts --outdir dist --target node && tsc",
+    "format": "biome check --write .",
+    "lint": "biome check ."
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.6",

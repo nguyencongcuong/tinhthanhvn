@@ -6,7 +6,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!!**/dist"]
+    "includes": ["**", "!!**/dist"],
+    "maxSize": 2097152
   },
   "formatter": {
     "enabled": true,
