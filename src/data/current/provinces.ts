@@ -21,16 +21,16 @@ export const PROVINCES: Province[] = [
     type: "Tỉnh",
   },
   {
-    code: "92",
-    name: "Cần Thơ",
-    province_id: 6,
-    type: "Thành phố",
-  },
-  {
     code: "04",
     name: "Cao Bằng",
     province_id: 5,
     type: "Tỉnh",
+  },
+  {
+    code: "92",
+    name: "Cần Thơ",
+    province_id: 6,
+    type: "Thành phố",
   },
   {
     code: "48",
@@ -117,12 +117,6 @@ export const PROVINCES: Province[] = [
     type: "Tỉnh",
   },
   {
-    code: "68",
-    name: "Lâm Đồng",
-    province_id: 22,
-    type: "Tỉnh",
-  },
-  {
     code: "20",
     name: "Lạng Sơn",
     province_id: 20,
@@ -132,6 +126,12 @@ export const PROVINCES: Province[] = [
     code: "15",
     name: "Lào Cai",
     province_id: 21,
+    type: "Tỉnh",
+  },
+  {
+    code: "68",
+    name: "Lâm Đồng",
+    province_id: 22,
     type: "Tỉnh",
   },
   {
