@@ -5010,7 +5010,3 @@ export const PRE_MERGER_DISTRICTS_BY_CODE = new Map<string, PreMergerDistrict>(
 export const PRE_MERGER_DISTRICTS_BY_ID = new Map<number, PreMergerDistrict>(
   PRE_MERGER_DISTRICTS.map((district) => [district.district_id, district]),
 );
-
-export const PRE_MERGER_DISTRICTS_BY_NAME = new Map<string, PreMergerDistrict>(
-  PRE_MERGER_DISTRICTS.map((district) => [district.name, district]),
-);

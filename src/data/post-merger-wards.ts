@@ -23327,7 +23327,3 @@ export const POST_MERGER_WARDS_BY_ID = new Map<number, PostMergerWard>(
 export const POST_MERGER_WARDS_BY_CODE = new Map<string, PostMergerWard>(
   POST_MERGER_WARDS.map((ward) => [ward.code, ward]),
 );
-
-export const POST_MERGER_WARDS_BY_NAME = new Map<string, PostMergerWard>(
-  POST_MERGER_WARDS.map((ward) => [ward.name, ward]),
-);

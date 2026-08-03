@@ -214,7 +214,3 @@ export const POST_MERGER_PROVINCES_BY_CODE = new Map<string, PostMergerProvince>
 export const POST_MERGER_PROVINCES_BY_ID = new Map<number, PostMergerProvince>(
   POST_MERGER_PROVINCES.map((province) => [province.province_id, province]),
 );
-
-export const POST_MERGER_PROVINCES_BY_NAME = new Map<string, PostMergerProvince>(
-  POST_MERGER_PROVINCES.map((province) => [province.name, province]),
-);

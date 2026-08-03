@@ -388,7 +388,3 @@ export const PRE_MERGER_PROVINCES_BY_CODE = new Map<string, PreMergerProvince>(
 export const PRE_MERGER_PROVINCES_BY_ID = new Map<number, PreMergerProvince>(
   PRE_MERGER_PROVINCES.map((province) => [province.province_id, province]),
 );
-
-export const PRE_MERGER_PROVINCES_BY_NAME = new Map<string, PreMergerProvince>(
-  PRE_MERGER_PROVINCES.map((province) => [province.name, province]),
-);

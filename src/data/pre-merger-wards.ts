@@ -81676,5 +81676,3 @@ export const PRE_MERGER_WARDS = Object.values(PRE_MERGER_WARDS_BY_DISTRICT_CODE)
 export const PRE_MERGER_WARDS_BY_CODE = new Map<string, PreMergerWard>(PRE_MERGER_WARDS.map(ward => [ward.code, ward]))
 
 export const PRE_MERGER_WARDS_BY_ID = new Map<number, PreMergerWard>(PRE_MERGER_WARDS.map(ward => [ward.ward_id, ward]))
-
-export const PRE_MERGER_WARDS_BY_NAME = new Map<string, PreMergerWard>(PRE_MERGER_WARDS.map(ward => [ward.name, ward]))
