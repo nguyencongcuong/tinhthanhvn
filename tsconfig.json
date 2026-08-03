@@ -34,6 +34,6 @@
 
     // Build files
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./dist"
   }
 }
