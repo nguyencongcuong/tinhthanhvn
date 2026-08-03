@@ -9,6 +9,7 @@ describe("wards", () => {
 
     expect(all).toHaveLength(COUNTS.postWards);
     expect(all).toContainEqual(POST_WARD_BA_DINH);
+    expect(all[0]?.province_code).toBe("01");
     expect(wards.all()).toBe(all);
     expect(Object.isFrozen(all)).toBe(true);
     expect(Object.isFrozen(all[0])).toBe(true);
@@ -53,6 +54,7 @@ describe("wards.pre", () => {
     expect(all).toHaveLength(COUNTS.preWards);
     expect(all.length).toBeGreaterThan(COUNTS.postWards);
     expect(all).toContainEqual(PRE_WARD_CONG_VI);
+    expect(all[0]?.district_code).toBe("001");
     expect(wards.pre.all()).toBe(all);
     expect(Object.isFrozen(all)).toBe(true);
   });

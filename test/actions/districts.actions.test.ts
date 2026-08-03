@@ -9,6 +9,7 @@ describe("districts.pre", () => {
 
     expect(all).toHaveLength(COUNTS.preDistricts);
     expect(all).toContainEqual(PRE_DISTRICT_BA_DINH);
+    expect(all[0]?.province_code).toBe("01");
     expect(districts.pre.all()).toBe(all);
     expect(Object.isFrozen(all)).toBe(true);
     expect(Object.isFrozen(all[0])).toBe(true);

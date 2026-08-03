@@ -1,5 +1,6 @@
 import type { PostMergerWard } from "../schema";
 import { deepFreeze } from "../utils/deep-freeze";
+import { valuesSortedByKey } from "../utils/values-sorted-by-key";
 
 export const POST_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PostMergerWard[]> = {
   "01": [
@@ -23319,7 +23320,7 @@ export const POST_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PostMergerWard[]
   ],
 };
 
-export const POST_MERGER_WARDS: PostMergerWard[] = Object.values(POST_MERGER_WARDS_BY_PROVINCE_CODE).flat();
+export const POST_MERGER_WARDS: PostMergerWard[] = valuesSortedByKey(POST_MERGER_WARDS_BY_PROVINCE_CODE);
 
 export const POST_MERGER_WARDS_BY_ID = new Map<number, PostMergerWard>(
   POST_MERGER_WARDS.map((ward) => [ward.ward_id, ward]),
