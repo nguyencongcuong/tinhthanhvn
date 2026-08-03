@@ -1,8 +1,16 @@
 # tinhthanhvn
 
-Lookup Vietnam provinces, districts, and wards before and after the 2025 administrative merger.
+Lookup Vietnam provinces, districts, and wards — current (post-2025 merger) and pre-merger.
+
+## Why
+
+Vietnam’s 2025 administrative merger collapsed districts and reduced provinces. This package ships both timelines so address UIs and migrations can resolve either era without juggling raw datasets.
 
 ## Install
+
+```bash
+npm install tinhthanhvn
+```
 
 ```bash
 bun add tinhthanhvn
@@ -10,56 +18,40 @@ bun add tinhthanhvn
 
 ## Usage
 
-Top-level methods use the **post-2025 merger** data (34 provinces, province → ward).
-`.pre` methods use the **pre-merger** hierarchy (63 provinces → districts → wards).
+Top-level APIs use **current** data (province → ward). Use `.pre` for the **pre-merger** hierarchy (province → district → ward).
 
 ```ts
-import { provinces, districts, wards } from "tinhthanhvn";
-import type {
-  PostMergerProvince,
-  PostMergerWard,
-  PreMergerDistrict,
-  PreMergerProvince,
-  PreMergerWard,
-} from "tinhthanhvn";
+import { provinces, wards, districts } from "tinhthanhvn";
 
-// Post-merger
-const allProvinces: PostMergerProvince[] = provinces.all();
-const haNoi = provinces.byCode("01"); // { code, name, province_id, type } | undefined
-const haNoiById = provinces.byId(13);
+provinces.byCode("01"); // Hà Nội
+wards.byProvinceCode("01");
 
-const wardsInHaNoi: PostMergerWard[] = wards.byProvinceCode("01");
-const ward = wards.byCode("00004"); // | undefined
-wards.byId(3);
-
-// Pre-merger
-const oldProvinces: PreMergerProvince[] = provinces.pre.all();
 provinces.pre.byCode("01");
-provinces.pre.byId(1);
-
-const districtsInHaNoi: PreMergerDistrict[] =
-  districts.pre.byProvinceCode("01");
-districts.pre.byCode("001");
-districts.pre.byId(1);
-districts.pre.all();
-
-const oldWardsInBaDinh: PreMergerWard[] = wards.pre.byDistrictCode("001");
-wards.pre.byCode("00007");
-wards.pre.byId(4);
-wards.pre.all();
-
-// Missing lookups
-provinces.byCode("00"); // undefined
-districts.pre.byProvinceCode("00"); // [] (frozen shared empty array)
-wards.byProvinceCode("00"); // []
+districts.pre.byProvinceCode("01");
+wards.pre.byDistrictCode("001");
 ```
 
-Returned lists and objects are deeply frozen. There are no post-merger districts — that level was removed in the 2025 merger.
+## API
+
+| Export      | Methods                                                                                       |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| `provinces` | `all`, `byCode`, `byId` · `.pre` same                                                         |
+| `wards`     | `all`, `byProvinceCode`, `byCode`, `byId` · `.pre`: `all`, `byDistrictCode`, `byCode`, `byId` |
+| `districts` | `.pre` only: `all`, `byProvinceCode`, `byCode`, `byId`                                        |
+
+Types: `Province`, `Ward`, `PreMergerProvince`, `PreMergerDistrict`, `PreMergerWard`.
+
+## Notes
+
+- 📌 Current: **34** provinces, **3321** wards (no districts)
+- 📌 Pre-merger: **63** provinces, **696** districts, **10035** wards
+- 🧊 Returned lists and objects are deeply frozen
+- ❓ Missing `byCode` / `byId` → `undefined`; missing group filters → `[]`
 
 ## Develop
 
 ```bash
 bun install
-bun run build
 bun test
+bun run build
 ```
