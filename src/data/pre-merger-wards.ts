@@ -1,6 +1,6 @@
 import type { PreMergerWard } from "../schema";
 
-export const PRE_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PreMergerWard[]> = {
+export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> = {
   '001': [
     {
       code: '00007',
@@ -81670,7 +81670,8 @@ export const PRE_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PreMergerWard[]> 
   ],
 }
 
-export const PRE_MERGER_WARDS = Object.values(PRE_MERGER_WARDS_BY_PROVINCE_CODE).flat()
+export const PRE_MERGER_WARDS = Object.values(PRE_MERGER_WARDS_BY_DISTRICT_CODE).flat()
+
 
 export const PRE_MERGER_WARDS_BY_CODE = new Map<string, PreMergerWard>(PRE_MERGER_WARDS.map(ward => [ward.code, ward]))
 
