@@ -3,9 +3,9 @@ export { provinces } from "./actions/provinces.actions";
 export { wards } from "./actions/wards.actions";
 
 export type {
-  PostMergerProvince,
-  PostMergerWard,
   PreMergerDistrict,
   PreMergerProvince,
   PreMergerWard,
+  Province,
+  Ward,
 } from "./schema";

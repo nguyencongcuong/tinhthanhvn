@@ -1,14 +1,14 @@
 import { describe, expect, test } from "bun:test";
 import { wards } from "../../src/actions/wards.actions";
 import { EMPTY_ARRAY } from "../../src/utils/empty";
-import { COUNTS, POST_WARD_BA_DINH, PRE_WARD_CONG_VI } from "../fixtures";
+import { COUNTS, PRE_WARD_CONG_VI, WARD_BA_DINH } from "../fixtures";
 
 describe("wards", () => {
-  test("all returns the frozen post-merger ward list", () => {
+  test("all returns the frozen ward list", () => {
     const all = wards.all();
 
-    expect(all).toHaveLength(COUNTS.postWards);
-    expect(all).toContainEqual(POST_WARD_BA_DINH);
+    expect(all).toHaveLength(COUNTS.wards);
+    expect(all).toContainEqual(WARD_BA_DINH);
     expect(all[0]?.province_code).toBe("01");
     expect(wards.all()).toBe(all);
     expect(Object.isFrozen(all)).toBe(true);
@@ -20,7 +20,7 @@ describe("wards", () => {
 
     expect(list.length).toBeGreaterThan(0);
     expect(list.every((ward) => ward.province_code === "01")).toBe(true);
-    expect(list).toContainEqual(POST_WARD_BA_DINH);
+    expect(list).toContainEqual(WARD_BA_DINH);
     expect(wards.byProvinceCode("01")).toBe(list);
     expect(Object.isFrozen(list)).toBe(true);
   });
@@ -30,11 +30,11 @@ describe("wards", () => {
     expect(wards.byProvinceCode("missing")).toBe(EMPTY_ARRAY);
   });
 
-  test("byCode and byId look up the same post-merger ward", () => {
-    const byCode = wards.byCode(POST_WARD_BA_DINH.code);
-    const byId = wards.byId(POST_WARD_BA_DINH.ward_id);
+  test("byCode and byId look up the same ward", () => {
+    const byCode = wards.byCode(WARD_BA_DINH.code);
+    const byId = wards.byId(WARD_BA_DINH.ward_id);
 
-    expect(byCode).toEqual(POST_WARD_BA_DINH);
+    expect(byCode).toEqual(WARD_BA_DINH);
     expect(byId).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
@@ -52,7 +52,7 @@ describe("wards.pre", () => {
     const all = wards.pre.all();
 
     expect(all).toHaveLength(COUNTS.preWards);
-    expect(all.length).toBeGreaterThan(COUNTS.postWards);
+    expect(all.length).toBeGreaterThan(COUNTS.wards);
     expect(all).toContainEqual(PRE_WARD_CONG_VI);
     expect(all[0]?.district_code).toBe("001");
     expect(wards.pre.all()).toBe(all);

@@ -1,23 +1,23 @@
 import { describe, expect, test } from "bun:test";
 import { provinces } from "../../src/actions/provinces.actions";
-import { COUNTS, POST_PROVINCE_HN } from "../fixtures";
+import { COUNTS, PROVINCE_HN } from "../fixtures";
 
 describe("provinces", () => {
-  test("all returns the frozen post-merger province list", () => {
+  test("all returns the frozen province list", () => {
     const all = provinces.all();
 
-    expect(all).toHaveLength(COUNTS.postProvinces);
-    expect(all).toContainEqual(POST_PROVINCE_HN);
+    expect(all).toHaveLength(COUNTS.provinces);
+    expect(all).toContainEqual(PROVINCE_HN);
     expect(provinces.all()).toBe(all);
     expect(Object.isFrozen(all)).toBe(true);
     expect(Object.isFrozen(all[0])).toBe(true);
   });
 
-  test("byCode and byId look up the same post-merger province", () => {
-    const byCode = provinces.byCode(POST_PROVINCE_HN.code);
-    const byId = provinces.byId(POST_PROVINCE_HN.province_id);
+  test("byCode and byId look up the same province", () => {
+    const byCode = provinces.byCode(PROVINCE_HN.code);
+    const byId = provinces.byId(PROVINCE_HN.province_id);
 
-    expect(byCode).toEqual(POST_PROVINCE_HN);
+    expect(byCode).toEqual(PROVINCE_HN);
     expect(byId).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
@@ -33,7 +33,7 @@ describe("provinces", () => {
     const all = provinces.pre.all();
 
     expect(all).toHaveLength(COUNTS.preProvinces);
-    expect(all.length).toBeGreaterThan(COUNTS.postProvinces);
+    expect(all.length).toBeGreaterThan(COUNTS.provinces);
     expect(all).toContainEqual(
       expect.objectContaining({
         code: "01",

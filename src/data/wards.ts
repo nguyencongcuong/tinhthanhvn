@@ -1,8 +1,8 @@
-import type { PostMergerWard } from "../schema";
+import type { Ward } from "../schema";
 import { deepFreeze } from "../utils/deep-freeze";
 import { valuesSortedByKey } from "../utils/values-sorted-by-key";
 
-export const POST_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PostMergerWard[]> = {
+export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
   "01": [
     {
       code: "09877",
@@ -23320,17 +23320,13 @@ export const POST_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PostMergerWard[]
   ],
 };
 
-export const POST_MERGER_WARDS: PostMergerWard[] = valuesSortedByKey(POST_MERGER_WARDS_BY_PROVINCE_CODE);
+export const WARDS: Ward[] = valuesSortedByKey(WARDS_BY_PROVINCE_CODE);
 
-export const POST_MERGER_WARDS_BY_ID = new Map<number, PostMergerWard>(
-  POST_MERGER_WARDS.map((ward) => [ward.ward_id, ward]),
-);
+export const WARDS_BY_ID = new Map<number, Ward>(WARDS.map((ward) => [ward.ward_id, ward]));
 
-export const POST_MERGER_WARDS_BY_CODE = new Map<string, PostMergerWard>(
-  POST_MERGER_WARDS.map((ward) => [ward.code, ward]),
-);
+export const WARDS_BY_CODE = new Map<string, Ward>(WARDS.map((ward) => [ward.code, ward]));
 
-deepFreeze(POST_MERGER_WARDS_BY_PROVINCE_CODE);
-deepFreeze(POST_MERGER_WARDS);
-deepFreeze(POST_MERGER_WARDS_BY_ID);
-deepFreeze(POST_MERGER_WARDS_BY_CODE);
+deepFreeze(WARDS_BY_PROVINCE_CODE);
+deepFreeze(WARDS);
+deepFreeze(WARDS_BY_ID);
+deepFreeze(WARDS_BY_CODE);

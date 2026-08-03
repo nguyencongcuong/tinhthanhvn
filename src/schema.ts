@@ -22,14 +22,14 @@ export type PreMergerWard = {
   province_code: string;
 };
 
-export type PostMergerProvince = {
+export type Province = {
   province_id: number;
   code: string;
   name: string;
   type: string;
 };
 
-export type PostMergerWard = {
+export type Ward = {
   ward_id: number;
   code: string;
   name: string;
