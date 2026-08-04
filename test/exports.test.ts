@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import pkg from "../package.json";
 
 describe("package exports", () => {
   test("declares current and pre subpaths", () => {
@@ -11,6 +12,16 @@ describe("package exports", () => {
     expect(pkg.exports?.["."]).toBeDefined();
     expect(pkg.exports?.["./current"]).toBeDefined();
     expect(pkg.exports?.["./pre"]).toBeDefined();
+  });
+
+  test("declares npm discovery metadata", () => {
+    expect(pkg.homepage).toBe("https://github.com/nguyencongcuong/tinhthanhvn#readme");
+    expect(pkg.repository).toEqual({
+      type: "git",
+      url: "git+https://github.com/nguyencongcuong/tinhthanhvn.git",
+    });
+    expect(pkg.bugs?.url).toBe("https://github.com/nguyencongcuong/tinhthanhvn/issues");
+    expect(pkg.keywords).toEqual(expect.arrayContaining(["vietnam", "provinces", "wards", "administrative"]));
   });
 });
 

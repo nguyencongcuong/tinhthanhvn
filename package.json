@@ -5,6 +5,24 @@
   "version": "1.0.1",
   "author": "Cuong Nguyen",
   "license": "MIT",
+  "homepage": "https://github.com/nguyencongcuong/tinhthanhvn#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyencongcuong/tinhthanhvn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nguyencongcuong/tinhthanhvn/issues"
+  },
+  "keywords": [
+    "vietnam",
+    "provinces",
+    "districts",
+    "wards",
+    "administrative",
+    "geography",
+    "lookup",
+    "typescript"
+  ],
   "module": "dist/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
