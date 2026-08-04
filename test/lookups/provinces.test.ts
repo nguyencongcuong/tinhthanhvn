@@ -14,20 +14,16 @@ describe("provinces", () => {
     expect(Object.isFrozen(all[0])).toBe(true);
   });
 
-  test("byCode and byId look up the same province", () => {
+  test("byCode looks up a province", () => {
     const byCode = provinces.byCode(PROVINCE_HN.code);
-    const byId = provinces.byId(PROVINCE_HN.province_id);
 
     expect(byCode).toEqual(PROVINCE_HN);
-    expect(byId).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
 
-  test("byCode and byId return undefined for unknown keys", () => {
+  test("byCode returns undefined for unknown keys", () => {
     expect(provinces.byCode("00")).toBeUndefined();
     expect(provinces.byCode("")).toBeUndefined();
-    expect(provinces.byId(-1)).toBeUndefined();
-    expect(provinces.byId(0)).toBeUndefined();
   });
 });
 
@@ -48,22 +44,18 @@ describe("pre provinces", () => {
     expect(Object.isFrozen(all)).toBe(true);
   });
 
-  test("byCode and byId look up the same pre-merger province", () => {
+  test("byCode looks up a pre-merger province", () => {
     const byCode = preProvinces.byCode("01");
 
-    expect(byCode).toMatchObject({
+    expect(byCode).toEqual({
       code: "01",
       name: "Hà Nội",
       type: "Thành phố",
     });
-    expect(byCode).toBeDefined();
-    expect(typeof byCode?.province_id).toBe("number");
-    expect(preProvinces.byId(byCode?.province_id ?? Number.NaN)).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
 
-  test("byCode and byId return undefined for unknown keys", () => {
+  test("byCode returns undefined for unknown keys", () => {
     expect(preProvinces.byCode("00")).toBeUndefined();
-    expect(preProvinces.byId(-1)).toBeUndefined();
   });
 });

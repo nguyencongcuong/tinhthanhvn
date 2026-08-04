@@ -9,14 +9,12 @@ export type PreMergerDistrictType = "Huyện" | "Quận" | "Thành phố" | "Th�
 export type PreMergerWardType = "Phường" | "Thị trấn" | "Xã";
 
 export type PreMergerProvince = {
-  province_id: number;
   code: string;
   name: string;
   type: PreMergerProvinceType;
 };
 
 export type PreMergerDistrict = {
-  district_id: number;
   code: string;
   name: string;
   type: PreMergerDistrictType;
@@ -24,7 +22,6 @@ export type PreMergerDistrict = {
 };
 
 export type PreMergerWard = {
-  ward_id: number;
   code: string;
   name: string;
   type: PreMergerWardType;
@@ -33,14 +30,12 @@ export type PreMergerWard = {
 };
 
 export type Province = {
-  province_id: number;
   code: string;
   name: string;
   type: ProvinceType;
 };
 
 export type Ward = {
-  ward_id: number;
   code: string;
   name: string;
   type: WardType;

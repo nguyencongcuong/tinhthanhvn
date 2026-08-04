@@ -38,15 +38,17 @@ wards.byDistrictCode("001");
 
 ## API
 
-| Entry             | Export      | Methods                                   |
-| ----------------- | ----------- | ----------------------------------------- |
-| `.` / `./current` | `provinces` | `all`, `byCode`, `byId`                   |
-| `.` / `./current` | `wards`     | `all`, `byProvinceCode`, `byCode`, `byId` |
-| `./pre`           | `provinces` | `all`, `byCode`, `byId`                   |
-| `./pre`           | `districts` | `all`, `byProvinceCode`, `byCode`, `byId` |
-| `./pre`           | `wards`     | `all`, `byDistrictCode`, `byCode`, `byId` |
+| Entry             | Export      | Methods                           |
+| ----------------- | ----------- | --------------------------------- |
+| `.` / `./current` | `provinces` | `all`, `byCode`                   |
+| `.` / `./current` | `wards`     | `all`, `byProvinceCode`, `byCode` |
+| `./pre`           | `provinces` | `all`, `byCode`                   |
+| `./pre`           | `districts` | `all`, `byProvinceCode`, `byCode` |
+| `./pre`           | `wards`     | `all`, `byDistrictCode`, `byCode` |
 
 Types: `Province`, `Ward`, `ProvinceType`, `WardType` from `.` / `./current`; `PreMergerProvince`, `PreMergerDistrict`, `PreMergerWard`, `PreMergerProvinceType`, `PreMergerDistrictType`, `PreMergerWardType` from `./pre`.
+
+Stable identity is the official administrative `code` (e.g. `"01"`, `"00004"`). Use it for lookups, React keys, and persistence.
 
 ## Notes
 
@@ -55,7 +57,7 @@ Current data follows [Quyết định số 19/2025/QĐ-TTg](https://congbao.chin
 - 📌 Current: **34** provinces (**6** thành phố, **28** tỉnh), **3321** wards (**687** phường, **2621** xã, **13** đặc khu) — no districts
 - 📌 Pre-merger: **63** provinces, **696** districts, **10035** wards
 - 🧊 Returned lists and objects are deeply frozen
-- ❓ Missing `byCode` / `byId` → `undefined`; missing group filters → `[]`
+- ❓ Missing `byCode` → `undefined`; missing group filters → `[]`
 
 ## Develop
 

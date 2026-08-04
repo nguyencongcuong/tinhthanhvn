@@ -9,13 +9,11 @@ export const COUNTS = {
 export const PROVINCE_HN = {
   code: "01",
   name: "Hà Nội",
-  province_id: 1,
   type: "Thành phố",
 } as const;
 
 export const PRE_DISTRICT_BA_DINH = {
   code: "001",
-  district_id: 1,
   name: "Ba Đình",
   province_code: "01",
   type: "Quận",
@@ -26,7 +24,6 @@ export const WARD_BA_DINH = {
   name: "Ba Đình",
   province_code: "01",
   type: "Phường",
-  ward_id: 1,
 } as const;
 
 export const PRE_WARD_CONG_VI = {
@@ -35,5 +32,4 @@ export const PRE_WARD_CONG_VI = {
   name: "Cống Vị",
   province_code: "01",
   type: "Phường",
-  ward_id: 4,
 } as const;

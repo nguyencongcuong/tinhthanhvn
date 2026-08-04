@@ -33,19 +33,15 @@ describe("districts", () => {
     expect(districts.byProvinceCode("missing")).toBe(EMPTY_ARRAY);
   });
 
-  test("byCode and byId look up the same district", () => {
+  test("byCode looks up a district", () => {
     const byCode = districts.byCode(PRE_DISTRICT_BA_DINH.code);
-    const byId = districts.byId(PRE_DISTRICT_BA_DINH.district_id);
 
     expect(byCode).toEqual(PRE_DISTRICT_BA_DINH);
-    expect(byId).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
 
-  test("byCode and byId return undefined for unknown keys", () => {
+  test("byCode returns undefined for unknown keys", () => {
     expect(districts.byCode("000")).toBeUndefined();
     expect(districts.byCode("")).toBeUndefined();
-    expect(districts.byId(-1)).toBeUndefined();
-    expect(districts.byId(0)).toBeUndefined();
   });
 });

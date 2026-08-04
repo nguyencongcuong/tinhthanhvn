@@ -31,20 +31,16 @@ describe("wards", () => {
     expect(wards.byProvinceCode("missing")).toBe(EMPTY_ARRAY);
   });
 
-  test("byCode and byId look up the same ward", () => {
+  test("byCode looks up a ward", () => {
     const byCode = wards.byCode(WARD_BA_DINH.code);
-    const byId = wards.byId(WARD_BA_DINH.ward_id);
 
     expect(byCode).toEqual(WARD_BA_DINH);
-    expect(byId).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
 
-  test("byCode and byId return undefined for unknown keys", () => {
+  test("byCode returns undefined for unknown keys", () => {
     expect(wards.byCode("99999")).toBeUndefined();
     expect(wards.byCode("")).toBeUndefined();
-    expect(wards.byId(-1)).toBeUndefined();
-    expect(wards.byId(0)).toBeUndefined();
   });
 });
 
@@ -75,17 +71,14 @@ describe("pre wards", () => {
     expect(preWards.byDistrictCode("missing")).toBe(EMPTY_ARRAY);
   });
 
-  test("byCode and byId look up the same pre-merger ward", () => {
+  test("byCode looks up a pre-merger ward", () => {
     const byCode = preWards.byCode(PRE_WARD_CONG_VI.code);
-    const byId = preWards.byId(PRE_WARD_CONG_VI.ward_id);
 
     expect(byCode).toEqual(PRE_WARD_CONG_VI);
-    expect(byId).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
 
-  test("byCode and byId return undefined for unknown keys", () => {
+  test("byCode returns undefined for unknown keys", () => {
     expect(preWards.byCode("99999")).toBeUndefined();
-    expect(preWards.byId(-1)).toBeUndefined();
   });
 });
