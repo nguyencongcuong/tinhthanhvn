@@ -23,11 +23,6 @@ wards.search("hanoi"); // fuzzy, accent- and space-insensitive
 - [Types](#types)
 - [Behavior notes](#behavior-notes)
 - [Data stats](#data-stats)
-- [Development](#development)
-  - [Setup](#setup)
-  - [Project layout](#project-layout)
-  - [Continuous integration](#continuous-integration)
-  - [Releasing](#releasing)
 
 ## Why
 
@@ -207,70 +202,6 @@ Current data follows [Quyết định số 19/2025/QĐ-TTg](https://congbao.chin
 | Current    | 34 (6 thành phố, 28 tỉnh) | -         | 3,321 (687 phường, 2,621 xã, 13 đặc khu) |
 | Pre-merger | 63                        | 696       | 10,035                                   |
 
-## Development
+## License
 
-This project uses [Bun](https://bun.sh) as the runtime, package manager, test runner, and bundler, [Biome](https://biomejs.dev) for linting/formatting, and [Changesets](https://github.com/changesets/changesets) for versioning and publishing to npm.
-
-### Setup
-
-```bash
-git clone https://github.com/nguyencongcuong/tinhthanhvn.git
-cd tinhthanhvn
-bun install     # install dependencies
-```
-
-| Command          | What it does                                               |
-| ---------------- | ---------------------------------------------------------- |
-| `bun test`       | Run the test suite                                         |
-| `bun run lint`   | Check formatting/lint with Biome                           |
-| `bun run format` | Auto-fix formatting/lint with Biome                        |
-| `bun run build`  | Emit `dist/` (ESM + `.d.ts`) for `.`, `./current`, `./pre` |
-
-Please run `bun run lint` and `bun test` before opening a pull request - the same checks run in CI and must pass before merging.
-
-### Project layout
-
-```
-src/
-├─ data/           # raw, generated province/district/ward records (current + pre)
-├─ lookups/        # public API: all()/byCode()/search() built on top of data/
-├─ utils/          # normalizeVietnamese, search index, deep-freeze, etc.
-├─ types.ts        # shared type definitions
-├─ index.ts         # default entry point (re-exports ./current)
-├─ current.ts       # `tinhthanhvn/current` entry point
-└─ pre.ts           # `tinhthanhvn/pre` entry point
-test/               # bun:test suites mirroring src/
-.changeset/         # pending release notes, consumed by the Release workflow
-.github/workflows/  # ci.yml (test/lint/build) and release.yml (Changesets)
-```
-
-### Continuous integration
-
-Every push and pull request targeting `master` triggers [`.github/workflows/ci.yml`](.github/workflows/ci.yml), which installs dependencies with Bun and runs `bun run lint`, `bun test`, and `bun run build`. A pull request can't be merged unless this passes.
-
-### Releasing
-
-Versioning and publishing are automated with [Changesets](https://github.com/changesets/changesets) via [`.github/workflows/release.yml`](.github/workflows/release.yml). There's no manual `npm version` or `npm publish` step.
-
-1. **Describe your change.** After making a change worth releasing, run the Changesets CLI locally and follow the prompts to pick a [semver](https://semver.org) bump (`patch`/`minor`/`major`) and write a short summary:
-
-   ```bash
-   bunx changeset
-   ```
-
-   This adds a small markdown file under `.changeset/` describing the change. Commit it alongside your code:
-
-   ```bash
-   git add .changeset/*.md
-   git commit -m "docs: add changeset for <your change>"
-   ```
-
-   Changes that don't need a release (docs typos, CI tweaks, etc.) can skip this step.
-
-2. **Open a pull request** against `master` as usual. CI runs lint/test/build on the PR.
-
-3. **Merge to `master`.** The [Release workflow](.github/workflows/release.yml) then runs automatically and:
-   - If there are unreleased changesets, it opens (or updates) a **"Version Packages"** pull request that bumps `package.json`'s version and rolls the pending changeset files into `CHANGELOG.md` (rendered with `@changesets/changelog-github`, which links each entry back to its PR/commit).
-   - Once that Version Packages PR is reviewed and merged, the workflow runs `bunx changeset publish` to publish the new version to npm and creates the matching git tag.
-
-The workflow authenticates with the repo's built-in `GITHUB_TOKEN` (for the PR/tag) and an `NPM_TOKEN` repository secret (for publishing) - no local `npm login` or manual publish is needed.
+[MIT](LICENSE.md) © [Cuong Nguyen](https://github.com/nguyencongcuong)
