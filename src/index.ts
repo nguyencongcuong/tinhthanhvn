@@ -1,4 +1,4 @@
-export { provinces, wards } from "./current";
+export { normalizeVietnamese, provinces, wards } from "./current";
 
 export type {
   PreMergerDistrict,

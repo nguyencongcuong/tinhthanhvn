@@ -26,6 +26,9 @@ import { provinces, wards } from "tinhthanhvn";
 
 provinces.byCode("01"); // Hà Nội
 wards.byProvinceCode("01");
+
+provinces.search("ha no"); // [{ code: "01", name: "Hà Nội", ... }]
+wards.search("ba dinh", { provinceCode: "01" });
 ```
 
 ```ts
@@ -34,17 +37,24 @@ import { provinces, districts, wards } from "tinhthanhvn/pre";
 provinces.byCode("01");
 districts.byProvinceCode("01");
 wards.byDistrictCode("001");
+
+districts.search("cau giay", { provinceCode: "01" });
+wards.search("cong vi", { districtCode: "001" });
 ```
+
+`search` is accent-insensitive substring match (e.g. `"ha noi"` ↔ `Hà Nội`). Source `name` fields stay as official Vietnamese spelling. Blank queries return `[]`.
+
+Also exported: `normalizeVietnamese` (same folding used by `search`).
 
 ## API
 
-| Entry             | Export      | Methods                           |
-| ----------------- | ----------- | --------------------------------- |
-| `.` / `./current` | `provinces` | `all`, `byCode`                   |
-| `.` / `./current` | `wards`     | `all`, `byProvinceCode`, `byCode` |
-| `./pre`           | `provinces` | `all`, `byCode`                   |
-| `./pre`           | `districts` | `all`, `byProvinceCode`, `byCode` |
-| `./pre`           | `wards`     | `all`, `byDistrictCode`, `byCode` |
+| Entry             | Export      | Methods                                     |
+| ----------------- | ----------- | ------------------------------------------- |
+| `.` / `./current` | `provinces` | `all`, `byCode`, `search`                   |
+| `.` / `./current` | `wards`     | `all`, `byProvinceCode`, `byCode`, `search` |
+| `./pre`           | `provinces` | `all`, `byCode`, `search`                   |
+| `./pre`           | `districts` | `all`, `byProvinceCode`, `byCode`, `search` |
+| `./pre`           | `wards`     | `all`, `byDistrictCode`, `byCode`, `search` |
 
 Types: `Province`, `Ward`, `ProvinceType`, `WardType` from `.` / `./current`; `PreMergerProvince`, `PreMergerDistrict`, `PreMergerWard`, `PreMergerProvinceType`, `PreMergerDistrictType`, `PreMergerWardType` from `./pre`.
 

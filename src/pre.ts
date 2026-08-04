@@ -1,7 +1,6 @@
 export { districts } from "./lookups/pre/districts";
 export { provinces } from "./lookups/pre/provinces";
 export { wards } from "./lookups/pre/wards";
-
 export type {
   PreMergerDistrict,
   PreMergerDistrictType,
@@ -10,3 +9,4 @@ export type {
   PreMergerWard,
   PreMergerWardType,
 } from "./types";
+export { normalizeVietnamese } from "./utils/normalize-vietnamese";
