@@ -9,7 +9,7 @@ export const COUNTS = {
 export const PROVINCE_HN = {
   code: "01",
   name: "Hà Nội",
-  province_id: 13,
+  province_id: 1,
   type: "Thành phố",
 } as const;
 
@@ -26,7 +26,7 @@ export const WARD_BA_DINH = {
   name: "Ba Đình",
   province_code: "01",
   type: "Phường",
-  ward_id: 3,
+  ward_id: 1,
 } as const;
 
 export const PRE_WARD_CONG_VI = {
