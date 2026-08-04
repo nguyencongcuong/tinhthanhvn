@@ -43,7 +43,9 @@ Types: `Province`, `Ward`, `PreMergerProvince`, `PreMergerDistrict`, `PreMergerW
 
 ## Notes
 
-- 📌 Current: **34** provinces, **3321** wards (no districts)
+Current data follows [Quyết định số 19/2025/QĐ-TTg](https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-19-2025-qd-ttg-45430.htm) (effective 01/07/2025). Here “ward” means a commune-level unit (`Phường` / `Xã` / `Đặc khu`).
+
+- 📌 Current: **34** provinces (**6** thành phố, **28** tỉnh), **3321** wards (**687** phường, **2621** xã, **13** đặc khu) — no districts
 - 📌 Pre-merger: **63** provinces, **696** districts, **10035** wards
 - 🧊 Returned lists and objects are deeply frozen
 - ❓ Missing `byCode` / `byId` → `undefined`; missing group filters → `[]`
