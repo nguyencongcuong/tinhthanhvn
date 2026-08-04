@@ -27,7 +27,8 @@ import { provinces, wards } from "tinhthanhvn";
 provinces.byCode("01"); // Hà Nội
 wards.byProvinceCode("01");
 
-provinces.search("ha no"); // [{ code: "01", name: "Hà Nội", ... }]
+provinces.search("ha no"); // Hà Nội
+provinces.search("hanoi"); // same — spaces optional
 wards.search("ba dinh", { provinceCode: "01" });
 ```
 
@@ -42,7 +43,7 @@ districts.search("cau giay", { provinceCode: "01" });
 wards.search("cong vi", { districtCode: "001" });
 ```
 
-`search` is accent-insensitive substring match (e.g. `"ha noi"` ↔ `Hà Nội`). Source `name` fields stay as official Vietnamese spelling. Blank queries return `[]`.
+`search` is accent-insensitive substring match, and also matches with spaces removed (e.g. `"ha noi"` / `"hanoi"` ↔ `Hà Nội`). Source `name` fields stay as official Vietnamese spelling — this is unaccented search, not English display names. Blank queries return `[]`.
 
 Also exported: `normalizeVietnamese` (same folding used by `search`).
 

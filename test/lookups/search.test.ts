@@ -13,6 +13,11 @@ describe("provinces.search", () => {
     expect(provinces.search("HA NOI")).toEqual(provinces.search("ha noi"));
   });
 
+  test("matches queries with spaces removed (hanoi ↔ Hà Nội)", () => {
+    expect(provinces.search("hanoi").some((province) => province.code === "01")).toBe(true);
+    expect(provinces.search("hochiminh").some((province) => province.code === "79")).toBe(true);
+  });
+
   test("returns empty array for blank queries", () => {
     expect(provinces.search("")).toEqual([]);
     expect(provinces.search("   ")).toEqual([]);
