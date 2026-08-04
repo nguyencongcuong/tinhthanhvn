@@ -44,4 +44,9 @@ describe("districts", () => {
     expect(districts.byCode("000")).toBeUndefined();
     expect(districts.byCode("")).toBeUndefined();
   });
+
+  test("byCode and byProvinceCode trim surrounding whitespace", () => {
+    expect(districts.byCode(`  ${PRE_DISTRICT_BA_DINH.code}  `)).toEqual(PRE_DISTRICT_BA_DINH);
+    expect(districts.byProvinceCode("  01  ")).toContainEqual(PRE_DISTRICT_BA_DINH);
+  });
 });

@@ -10,12 +10,14 @@ export type WardSearchOptions = {
 
 export const wards = {
   all: () => WARDS,
-  byProvinceCode: (provinceCode: string) => WARDS_BY_PROVINCE_CODE[provinceCode] ?? EMPTY_ARRAY,
-  byCode: (code: string) => WARDS_BY_CODE.get(code),
-  search: (query: string, options?: WardSearchOptions) =>
-    searchByName(
+  byProvinceCode: (provinceCode: string) => WARDS_BY_PROVINCE_CODE[provinceCode.trim()] ?? EMPTY_ARRAY,
+  byCode: (code: string) => WARDS_BY_CODE.get(code.trim()),
+  search: (query: string, options?: WardSearchOptions) => {
+    const provinceCode = options?.provinceCode?.trim();
+    return searchByName(
       WARD_NAME_INDEX,
       query,
-      options?.provinceCode === undefined ? undefined : (ward) => ward.province_code === options.provinceCode,
-    ),
+      provinceCode === undefined ? undefined : (ward) => ward.province_code === provinceCode,
+    );
+  },
 };

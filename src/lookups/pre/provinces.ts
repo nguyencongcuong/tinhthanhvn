@@ -5,6 +5,6 @@ const PRE_MERGER_PROVINCE_NAME_INDEX = buildNameSearchIndex(PRE_MERGER_PROVINCES
 
 export const provinces = {
   all: () => PRE_MERGER_PROVINCES,
-  byCode: (code: string) => PRE_MERGER_PROVINCES_BY_CODE.get(code),
+  byCode: (code: string) => PRE_MERGER_PROVINCES_BY_CODE.get(code.trim()),
   search: (query: string) => searchByName(PRE_MERGER_PROVINCE_NAME_INDEX, query),
 };

@@ -25,6 +25,10 @@ describe("provinces", () => {
     expect(provinces.byCode("00")).toBeUndefined();
     expect(provinces.byCode("")).toBeUndefined();
   });
+
+  test("byCode trims surrounding whitespace", () => {
+    expect(provinces.byCode(`  ${PROVINCE_HN.code}  `)).toEqual(PROVINCE_HN);
+  });
 });
 
 describe("pre provinces", () => {

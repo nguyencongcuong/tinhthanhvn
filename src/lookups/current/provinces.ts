@@ -5,6 +5,6 @@ const PROVINCE_NAME_INDEX = buildNameSearchIndex(PROVINCES);
 
 export const provinces = {
   all: () => PROVINCES,
-  byCode: (code: string) => PROVINCES_BY_CODE.get(code),
+  byCode: (code: string) => PROVINCES_BY_CODE.get(code.trim()),
   search: (query: string) => searchByName(PROVINCE_NAME_INDEX, query),
 };

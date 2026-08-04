@@ -42,6 +42,11 @@ describe("wards", () => {
     expect(wards.byCode("99999")).toBeUndefined();
     expect(wards.byCode("")).toBeUndefined();
   });
+
+  test("byCode and byProvinceCode trim surrounding whitespace", () => {
+    expect(wards.byCode(`  ${WARD_BA_DINH.code}  `)).toEqual(WARD_BA_DINH);
+    expect(wards.byProvinceCode("  01  ")).toContainEqual(WARD_BA_DINH);
+  });
 });
 
 describe("pre wards", () => {
@@ -80,5 +85,10 @@ describe("pre wards", () => {
 
   test("byCode returns undefined for unknown keys", () => {
     expect(preWards.byCode("99999")).toBeUndefined();
+  });
+
+  test("byCode and byDistrictCode trim surrounding whitespace", () => {
+    expect(preWards.byCode(`  ${PRE_WARD_CONG_VI.code}  `)).toEqual(PRE_WARD_CONG_VI);
+    expect(preWards.byDistrictCode("  001  ")).toContainEqual(PRE_WARD_CONG_VI);
   });
 });

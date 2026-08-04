@@ -14,12 +14,14 @@ export type DistrictSearchOptions = {
 
 export const districts = {
   all: () => PRE_MERGER_DISTRICTS,
-  byProvinceCode: (provinceCode: string) => PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE[provinceCode] ?? EMPTY_ARRAY,
-  byCode: (code: string) => PRE_MERGER_DISTRICTS_BY_CODE.get(code),
-  search: (query: string, options?: DistrictSearchOptions) =>
-    searchByName(
+  byProvinceCode: (provinceCode: string) => PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE[provinceCode.trim()] ?? EMPTY_ARRAY,
+  byCode: (code: string) => PRE_MERGER_DISTRICTS_BY_CODE.get(code.trim()),
+  search: (query: string, options?: DistrictSearchOptions) => {
+    const provinceCode = options?.provinceCode?.trim();
+    return searchByName(
       PRE_MERGER_DISTRICT_NAME_INDEX,
       query,
-      options?.provinceCode === undefined ? undefined : (district) => district.province_code === options.provinceCode,
-    ),
+      provinceCode === undefined ? undefined : (district) => district.province_code === provinceCode,
+    );
+  },
 };

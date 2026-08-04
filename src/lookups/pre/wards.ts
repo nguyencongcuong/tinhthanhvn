@@ -10,12 +10,14 @@ export type PreWardSearchOptions = {
 
 export const wards = {
   all: () => PRE_MERGER_WARDS,
-  byDistrictCode: (districtCode: string) => PRE_MERGER_WARDS_BY_DISTRICT_CODE[districtCode] ?? EMPTY_ARRAY,
-  byCode: (code: string) => PRE_MERGER_WARDS_BY_CODE.get(code),
-  search: (query: string, options?: PreWardSearchOptions) =>
-    searchByName(
+  byDistrictCode: (districtCode: string) => PRE_MERGER_WARDS_BY_DISTRICT_CODE[districtCode.trim()] ?? EMPTY_ARRAY,
+  byCode: (code: string) => PRE_MERGER_WARDS_BY_CODE.get(code.trim()),
+  search: (query: string, options?: PreWardSearchOptions) => {
+    const districtCode = options?.districtCode?.trim();
+    return searchByName(
       PRE_MERGER_WARD_NAME_INDEX,
       query,
-      options?.districtCode === undefined ? undefined : (ward) => ward.district_code === options.districtCode,
-    ),
+      districtCode === undefined ? undefined : (ward) => ward.district_code === districtCode,
+    );
+  },
 };
