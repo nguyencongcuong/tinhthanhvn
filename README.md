@@ -46,7 +46,7 @@ wards.byDistrictCode("001");
 | `./pre`           | `districts` | `all`, `byProvinceCode`, `byCode`, `byId` |
 | `./pre`           | `wards`     | `all`, `byDistrictCode`, `byCode`, `byId` |
 
-Types: `Province`, `Ward` from `.` / `./current`; `PreMergerProvince`, `PreMergerDistrict`, `PreMergerWard` from `./pre`.
+Types: `Province`, `Ward`, `ProvinceType`, `WardType` from `.` / `./current`; `PreMergerProvince`, `PreMergerDistrict`, `PreMergerWard`, `PreMergerProvinceType`, `PreMergerDistrictType`, `PreMergerWardType` from `./pre`.
 
 ## Notes
 
