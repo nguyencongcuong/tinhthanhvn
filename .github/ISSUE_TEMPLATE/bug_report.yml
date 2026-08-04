@@ -1,0 +1,53 @@
+name: Bug report
+description: Report incorrect behavior or incorrect data in tinhthanhvn
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report! Please fill out the sections below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, including what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal code snippet or steps that reproduce the issue. For data issues (wrong name/code/type), include the province/district/ward code involved and, if possible, a link to the official source.
+      render: ts
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: tinhthanhvn version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: entry-point
+    attributes:
+      label: Entry point
+      options:
+        - tinhthanhvn (current)
+        - tinhthanhvn/current
+        - tinhthanhvn/pre
+        - Not applicable
+    validations:
+      required: true
+
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      placeholder: "e.g. Bun 1.2.0, Node 22, browser + webpack"
+    validations:
+      required: false

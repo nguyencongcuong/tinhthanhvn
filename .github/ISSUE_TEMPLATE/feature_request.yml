@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest an idea or enhancement for tinhthanhvn
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an idea! Please fill out the sections below.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: What are you trying to do that isn't currently possible or is awkward today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe the API, data, or behavior you'd like to see. A code sketch of the desired usage is helpful.
+      render: ts
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any workarounds or other approaches you've considered.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This is a change to the public API (`provinces`/`districts`/`wards`/etc.)
+        - label: This is a change to the underlying data (new fields, corrections, additional timelines)
+        - label: This is tooling/DX (build, types, docs)
