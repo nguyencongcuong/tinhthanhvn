@@ -92,6 +92,7 @@ districts.byProvinceCode("01"); // readonly PreMergerDistrict[]
 wards.byDistrictCode("001"); // readonly PreMergerWard[]
 
 districts.search("cau giay", { provinceCode: "01" });
+wards.search("cong vi", { provinceCode: "01" });
 wards.search("cong vi", { districtCode: "001" });
 ```
 
@@ -128,19 +129,19 @@ All entry points return readonly, deeply-frozen arrays/objects - safe to store a
 
 ### `tinhthanhvn/pre`
 
-| Export      | Method                                                       | Returns                          |
-| ----------- | ------------------------------------------------------------ | -------------------------------- |
-| `provinces` | `all()`                                                      | `readonly PreMergerProvince[]`   |
-| `provinces` | `byCode(code: string)`                                       | `PreMergerProvince \| undefined` |
-| `provinces` | `search(query: string)`                                      | `readonly PreMergerProvince[]`   |
-| `districts` | `all()`                                                      | `readonly PreMergerDistrict[]`   |
-| `districts` | `byProvinceCode(provinceCode: string)`                       | `readonly PreMergerDistrict[]`   |
-| `districts` | `byCode(code: string)`                                       | `PreMergerDistrict \| undefined` |
-| `districts` | `search(query: string, options?: { provinceCode?: string })` | `readonly PreMergerDistrict[]`   |
-| `wards`     | `all()`                                                      | `readonly PreMergerWard[]`       |
-| `wards`     | `byDistrictCode(districtCode: string)`                       | `readonly PreMergerWard[]`       |
-| `wards`     | `byCode(code: string)`                                       | `PreMergerWard \| undefined`     |
-| `wards`     | `search(query: string, options?: { districtCode?: string })` | `readonly PreMergerWard[]`       |
+| Export      | Method                                                                              | Returns                          |
+| ----------- | ----------------------------------------------------------------------------------- | -------------------------------- |
+| `provinces` | `all()`                                                                             | `readonly PreMergerProvince[]`   |
+| `provinces` | `byCode(code: string)`                                                              | `PreMergerProvince \| undefined` |
+| `provinces` | `search(query: string)`                                                             | `readonly PreMergerProvince[]`   |
+| `districts` | `all()`                                                                             | `readonly PreMergerDistrict[]`   |
+| `districts` | `byProvinceCode(provinceCode: string)`                                              | `readonly PreMergerDistrict[]`   |
+| `districts` | `byCode(code: string)`                                                              | `PreMergerDistrict \| undefined` |
+| `districts` | `search(query: string, options?: { provinceCode?: string })`                        | `readonly PreMergerDistrict[]`   |
+| `wards`     | `all()`                                                                             | `readonly PreMergerWard[]`       |
+| `wards`     | `byDistrictCode(districtCode: string)`                                              | `readonly PreMergerWard[]`       |
+| `wards`     | `byCode(code: string)`                                                              | `PreMergerWard \| undefined`     |
+| `wards`     | `search(query: string, options?: { provinceCode?: string; districtCode?: string })` | `readonly PreMergerWard[]`       |
 
 ### Everywhere
 

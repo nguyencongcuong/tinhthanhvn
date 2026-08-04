@@ -93,4 +93,38 @@ describe("pre search", () => {
       type: "Phường",
     });
   });
+
+  test("pre wards search can scope by province", () => {
+    const results = preWards.search("cong vi", { provinceCode: "01" });
+
+    expect(results).toContainEqual({
+      code: "00007",
+      district_code: "001",
+      name: "Cống Vị",
+      province_code: "01",
+      type: "Phường",
+    });
+    expect(results.every((ward) => ward.province_code === "01")).toBe(true);
+  });
+
+  test("pre wards search ANDs provinceCode and districtCode", () => {
+    const both = preWards.search("cong vi", {
+      provinceCode: "01",
+      districtCode: "001",
+    });
+    expect(both).toContainEqual({
+      code: "00007",
+      district_code: "001",
+      name: "Cống Vị",
+      province_code: "01",
+      type: "Phường",
+    });
+
+    expect(
+      preWards.search("cong vi", {
+        provinceCode: "79",
+        districtCode: "001",
+      }),
+    ).toEqual([]);
+  });
 });
