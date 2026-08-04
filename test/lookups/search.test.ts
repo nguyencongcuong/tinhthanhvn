@@ -4,6 +4,8 @@ import { wards } from "../../src/lookups/current/wards";
 import { districts } from "../../src/lookups/pre/districts";
 import { provinces as preProvinces } from "../../src/lookups/pre/provinces";
 import { wards as preWards } from "../../src/lookups/pre/wards";
+import type { Province } from "../../src/types";
+import { EMPTY_ARRAY } from "../../src/utils/empty";
 
 describe("provinces.search", () => {
   test("matches accent-insensitive substrings", () => {
@@ -21,6 +23,18 @@ describe("provinces.search", () => {
   test("returns empty array for blank queries", () => {
     expect(provinces.search("")).toEqual([]);
     expect(provinces.search("   ")).toEqual([]);
+  });
+
+  test("returns frozen results and shared empty array for blank queries", () => {
+    const results = provinces.search("ha noi");
+
+    expect(Object.isFrozen(results)).toBe(true);
+    expect(() => {
+      (results as Province[]).push({} as Province);
+    }).toThrow();
+
+    expect(provinces.search("")).toBe(EMPTY_ARRAY);
+    expect(provinces.search("   ")).toBe(EMPTY_ARRAY);
   });
 });
 
@@ -41,6 +55,13 @@ describe("wards.search", () => {
 
   test("returns empty array when province filter has no matches", () => {
     expect(wards.search("ba dinh", { provinceCode: "96" })).toEqual([]);
+  });
+
+  test("returns frozen result arrays", () => {
+    const results = wards.search("ba dinh", { provinceCode: "01" });
+
+    expect(Object.isFrozen(results)).toBe(true);
+    expect(wards.search("ba dinh", { provinceCode: "96" })).toBe(EMPTY_ARRAY);
   });
 });
 
