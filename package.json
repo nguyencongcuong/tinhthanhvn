@@ -1,7 +1,10 @@
 {
   "name": "tinhthanhvn",
-  "version": "1.0.1",
+  "displayName": "Tỉnh Thành Việt Nam",
   "description": "Lookup Vietnam provinces, districts, and wards before and after the 2025 administrative merger.",
+  "version": "1.0.1",
+  "author": "Cuong Nguyen",
+  "license": "MIT",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
