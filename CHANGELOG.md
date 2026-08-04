@@ -1,5 +1,9 @@
 # tinhthanhvn
 
+## 1.0.1
+
+Patch release. No user-facing API or data changes — package version bumped to `1.0.1` for npm republish.
+
 ## 1.0.0
 
 Initial release.
