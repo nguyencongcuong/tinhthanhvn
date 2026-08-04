@@ -1,5 +1,19 @@
 # tinhthanhvn
 
+## 1.0.2
+
+### Patch Changes
+
+- [`6242486`](https://github.com/nguyencongcuong/tinhthanhvn/commit/624248657768014dc968c1d05a72903de32f6fd1) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Allow pre-merger wards.search to scope by provinceCode (AND with districtCode)
+
+- [`4243185`](https://github.com/nguyencongcuong/tinhthanhvn/commit/4243185661cbad082614480523e084a025a0d2af) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Update package information including display name, author, MIT license
+
+- [`6f36ab2`](https://github.com/nguyencongcuong/tinhthanhvn/commit/6f36ab28ae5349642591df6f8f99da6194690558) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Trim whitespace from byCode and related lookup arguments
+
+- [`6f78c4d`](https://github.com/nguyencongcuong/tinhthanhvn/commit/6f78c4d91d1db88e18091f17cfbbb03ddb91adf3) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Freeze search() result arrays to match immutability contract
+
+- [`999541b`](https://github.com/nguyencongcuong/tinhthanhvn/commit/999541b16bb15eda8d04717a9644ce9aa2af84ae) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - add repository homepage bugs and keywords for npm discovery
+
 ## 1.0.1
 
 Patch release. No user-facing API or data changes — package version bumped to `1.0.1` for npm republish.
