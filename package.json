@@ -1,6 +1,6 @@
 {
   "name": "tinhthanhvn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lookup Vietnam provinces, districts, and wards before and after the 2025 administrative merger.",
   "module": "dist/index.js",
   "main": "dist/index.js",
