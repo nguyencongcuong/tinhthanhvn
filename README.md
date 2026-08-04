@@ -18,28 +18,35 @@ bun add tinhthanhvn
 
 ## Usage
 
-Top-level APIs use **current** data (province → ward). Use `.pre` for the **pre-merger** hierarchy (province → district → ward).
+Default and `tinhthanhvn/current` use **current** data (province → ward). Import `tinhthanhvn/pre` for the **pre-merger** hierarchy (province → district → ward).
 
 ```ts
-import { provinces, wards, districts } from "tinhthanhvn";
+import { provinces, wards } from "tinhthanhvn";
+// or: import { provinces, wards } from "tinhthanhvn/current";
 
 provinces.byCode("01"); // Hà Nội
 wards.byProvinceCode("01");
+```
 
-provinces.pre.byCode("01");
-districts.pre.byProvinceCode("01");
-wards.pre.byDistrictCode("001");
+```ts
+import { provinces, districts, wards } from "tinhthanhvn/pre";
+
+provinces.byCode("01");
+districts.byProvinceCode("01");
+wards.byDistrictCode("001");
 ```
 
 ## API
 
-| Export      | Methods                                                                                       |
-| ----------- | --------------------------------------------------------------------------------------------- |
-| `provinces` | `all`, `byCode`, `byId` · `.pre` same                                                         |
-| `wards`     | `all`, `byProvinceCode`, `byCode`, `byId` · `.pre`: `all`, `byDistrictCode`, `byCode`, `byId` |
-| `districts` | `.pre` only: `all`, `byProvinceCode`, `byCode`, `byId`                                        |
+| Entry             | Export      | Methods                                   |
+| ----------------- | ----------- | ----------------------------------------- |
+| `.` / `./current` | `provinces` | `all`, `byCode`, `byId`                   |
+| `.` / `./current` | `wards`     | `all`, `byProvinceCode`, `byCode`, `byId` |
+| `./pre`           | `provinces` | `all`, `byCode`, `byId`                   |
+| `./pre`           | `districts` | `all`, `byProvinceCode`, `byCode`, `byId` |
+| `./pre`           | `wards`     | `all`, `byDistrictCode`, `byCode`, `byId` |
 
-Types: `Province`, `Ward`, `PreMergerProvince`, `PreMergerDistrict`, `PreMergerWard`.
+Types: `Province`, `Ward` from `.` / `./current`; `PreMergerProvince`, `PreMergerDistrict`, `PreMergerWard` from `./pre`.
 
 ## Notes
 

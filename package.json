@@ -6,11 +6,28 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./current": {
+      "types": "./dist/current.d.ts",
+      "import": "./dist/current.js",
+      "default": "./dist/current.js"
+    },
+    "./pre": {
+      "types": "./dist/pre.d.ts",
+      "import": "./dist/pre.js",
+      "default": "./dist/pre.js"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && bun build src/index.ts --outdir dist --target node && tsc -p tsconfig.build.json",
+    "build": "rm -rf dist && bun build src/index.ts src/current.ts src/pre.ts --outdir dist --target node && tsc -p tsconfig.build.json",
     "prepublishOnly": "bun run build",
     "test": "bun test",
     "format": "biome check --write .",

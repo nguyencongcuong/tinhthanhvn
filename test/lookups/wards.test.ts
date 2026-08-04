@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { wards } from "../../src/lookups/wards";
+import { wards } from "../../src/lookups/current/wards";
+import { wards as preWards } from "../../src/lookups/pre/wards";
 import { EMPTY_ARRAY } from "../../src/utils/empty";
 import { COUNTS, PRE_WARD_CONG_VI, WARD_BA_DINH } from "../fixtures";
 
@@ -47,36 +48,36 @@ describe("wards", () => {
   });
 });
 
-describe("wards.pre", () => {
+describe("pre wards", () => {
   test("all returns the frozen pre-merger ward list", () => {
-    const all = wards.pre.all();
+    const all = preWards.all();
 
     expect(all).toHaveLength(COUNTS.preWards);
     expect(all.length).toBeGreaterThan(COUNTS.wards);
     expect(all).toContainEqual(PRE_WARD_CONG_VI);
     expect(all[0]?.district_code).toBe("001");
-    expect(wards.pre.all()).toBe(all);
+    expect(preWards.all()).toBe(all);
     expect(Object.isFrozen(all)).toBe(true);
   });
 
   test("byDistrictCode returns frozen wards for a district", () => {
-    const list = wards.pre.byDistrictCode("001");
+    const list = preWards.byDistrictCode("001");
 
     expect(list.length).toBeGreaterThan(0);
     expect(list.every((ward) => ward.district_code === "001")).toBe(true);
     expect(list).toContainEqual(PRE_WARD_CONG_VI);
-    expect(wards.pre.byDistrictCode("001")).toBe(list);
+    expect(preWards.byDistrictCode("001")).toBe(list);
     expect(Object.isFrozen(list)).toBe(true);
   });
 
   test("byDistrictCode returns the shared empty array for unknown districts", () => {
-    expect(wards.pre.byDistrictCode("000")).toBe(EMPTY_ARRAY);
-    expect(wards.pre.byDistrictCode("missing")).toBe(EMPTY_ARRAY);
+    expect(preWards.byDistrictCode("000")).toBe(EMPTY_ARRAY);
+    expect(preWards.byDistrictCode("missing")).toBe(EMPTY_ARRAY);
   });
 
   test("byCode and byId look up the same pre-merger ward", () => {
-    const byCode = wards.pre.byCode(PRE_WARD_CONG_VI.code);
-    const byId = wards.pre.byId(PRE_WARD_CONG_VI.ward_id);
+    const byCode = preWards.byCode(PRE_WARD_CONG_VI.code);
+    const byId = preWards.byId(PRE_WARD_CONG_VI.ward_id);
 
     expect(byCode).toEqual(PRE_WARD_CONG_VI);
     expect(byId).toBe(byCode);
@@ -84,7 +85,7 @@ describe("wards.pre", () => {
   });
 
   test("byCode and byId return undefined for unknown keys", () => {
-    expect(wards.pre.byCode("99999")).toBeUndefined();
-    expect(wards.pre.byId(-1)).toBeUndefined();
+    expect(preWards.byCode("99999")).toBeUndefined();
+    expect(preWards.byId(-1)).toBeUndefined();
   });
 });

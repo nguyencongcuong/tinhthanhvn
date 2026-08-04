@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { provinces } from "../../src/lookups/provinces";
+import { provinces } from "../../src/lookups/current/provinces";
+import { provinces as preProvinces } from "../../src/lookups/pre/provinces";
 import { COUNTS, PROVINCE_HN } from "../fixtures";
 
 describe("provinces", () => {
@@ -28,9 +29,11 @@ describe("provinces", () => {
     expect(provinces.byId(-1)).toBeUndefined();
     expect(provinces.byId(0)).toBeUndefined();
   });
+});
 
-  test("pre.all returns the frozen pre-merger province list", () => {
-    const all = provinces.pre.all();
+describe("pre provinces", () => {
+  test("all returns the frozen pre-merger province list", () => {
+    const all = preProvinces.all();
 
     expect(all).toHaveLength(COUNTS.preProvinces);
     expect(all.length).toBeGreaterThan(COUNTS.provinces);
@@ -41,12 +44,12 @@ describe("provinces", () => {
         type: "Thành phố",
       }),
     );
-    expect(provinces.pre.all()).toBe(all);
+    expect(preProvinces.all()).toBe(all);
     expect(Object.isFrozen(all)).toBe(true);
   });
 
-  test("pre.byCode and pre.byId look up the same pre-merger province", () => {
-    const byCode = provinces.pre.byCode("01");
+  test("byCode and byId look up the same pre-merger province", () => {
+    const byCode = preProvinces.byCode("01");
 
     expect(byCode).toMatchObject({
       code: "01",
@@ -55,12 +58,12 @@ describe("provinces", () => {
     });
     expect(byCode).toBeDefined();
     expect(typeof byCode?.province_id).toBe("number");
-    expect(provinces.pre.byId(byCode?.province_id ?? Number.NaN)).toBe(byCode);
+    expect(preProvinces.byId(byCode?.province_id ?? Number.NaN)).toBe(byCode);
     expect(Object.isFrozen(byCode)).toBe(true);
   });
 
-  test("pre.byCode and pre.byId return undefined for unknown keys", () => {
-    expect(provinces.pre.byCode("00")).toBeUndefined();
-    expect(provinces.pre.byId(-1)).toBeUndefined();
+  test("byCode and byId return undefined for unknown keys", () => {
+    expect(preProvinces.byCode("00")).toBeUndefined();
+    expect(preProvinces.byId(-1)).toBeUndefined();
   });
 });
