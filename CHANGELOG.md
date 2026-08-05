@@ -1,5 +1,11 @@
 # tinhthanhvn
 
+## 1.1.0
+
+### Minor Changes
+
+- [`96a94f2`](https://github.com/nguyencongcuong/tinhthanhvn/commit/96a94f29250d5089956cd7c22f3ca7da5faeded0) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Add parent resolution helpers to traverse the administrative hierarchy upward: `provinces.byWardCode` (current and pre), `provinces.byDistrictCode` and `districts.byWardCode` (pre).
+
 ## 1.0.2
 
 ### Patch Changes
