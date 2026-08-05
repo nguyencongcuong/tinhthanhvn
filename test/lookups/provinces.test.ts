@@ -29,6 +29,23 @@ describe("provinces", () => {
   test("byCode trims surrounding whitespace", () => {
     expect(provinces.byCode(`  ${PROVINCE_HN.code}  `)).toEqual(PROVINCE_HN);
   });
+
+  test("byWardCode resolves the parent province", () => {
+    const byWardCode = provinces.byWardCode("00004");
+
+    expect(byWardCode).toEqual(PROVINCE_HN);
+    expect(Object.isFrozen(byWardCode)).toBe(true);
+    expect(provinces.byWardCode("00004")).toBe(provinces.byCode("01"));
+  });
+
+  test("byWardCode returns undefined for unknown ward codes", () => {
+    expect(provinces.byWardCode("99999")).toBeUndefined();
+    expect(provinces.byWardCode("")).toBeUndefined();
+  });
+
+  test("byWardCode trims surrounding whitespace", () => {
+    expect(provinces.byWardCode("  00004  ")).toEqual(PROVINCE_HN);
+  });
 });
 
 describe("pre provinces", () => {
@@ -61,5 +78,38 @@ describe("pre provinces", () => {
 
   test("byCode returns undefined for unknown keys", () => {
     expect(preProvinces.byCode("00")).toBeUndefined();
+  });
+
+  test("byDistrictCode resolves the parent province", () => {
+    const byDistrictCode = preProvinces.byDistrictCode("001");
+
+    expect(byDistrictCode).toEqual({
+      code: "01",
+      name: "Hà Nội",
+      type: "Thành phố",
+    });
+    expect(Object.isFrozen(byDistrictCode)).toBe(true);
+    expect(preProvinces.byDistrictCode("001")).toBe(preProvinces.byCode("01"));
+  });
+
+  test("byDistrictCode returns undefined for unknown district codes", () => {
+    expect(preProvinces.byDistrictCode("000")).toBeUndefined();
+    expect(preProvinces.byDistrictCode("")).toBeUndefined();
+  });
+
+  test("byWardCode resolves the parent province", () => {
+    const byWardCode = preProvinces.byWardCode("00007");
+
+    expect(byWardCode).toEqual({
+      code: "01",
+      name: "Hà Nội",
+      type: "Thành phố",
+    });
+    expect(Object.isFrozen(byWardCode)).toBe(true);
+    expect(preProvinces.byWardCode("00007")).toBe(preProvinces.byCode("01"));
+  });
+
+  test("byWardCode returns undefined for unknown ward codes", () => {
+    expect(preProvinces.byWardCode("99999")).toBeUndefined();
   });
 });

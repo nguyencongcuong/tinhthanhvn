@@ -49,4 +49,21 @@ describe("districts", () => {
     expect(districts.byCode(`  ${PRE_DISTRICT_BA_DINH.code}  `)).toEqual(PRE_DISTRICT_BA_DINH);
     expect(districts.byProvinceCode("  01  ")).toContainEqual(PRE_DISTRICT_BA_DINH);
   });
+
+  test("byWardCode resolves the parent district", () => {
+    const byWardCode = districts.byWardCode("00007");
+
+    expect(byWardCode).toEqual(PRE_DISTRICT_BA_DINH);
+    expect(Object.isFrozen(byWardCode)).toBe(true);
+    expect(districts.byWardCode("00007")).toBe(districts.byCode("001"));
+  });
+
+  test("byWardCode returns undefined for unknown ward codes", () => {
+    expect(districts.byWardCode("99999")).toBeUndefined();
+    expect(districts.byWardCode("")).toBeUndefined();
+  });
+
+  test("byWardCode trims surrounding whitespace", () => {
+    expect(districts.byWardCode("  00007  ")).toEqual(PRE_DISTRICT_BA_DINH);
+  });
 });

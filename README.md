@@ -6,6 +6,7 @@ Zero-dependency lookup for Vietnam's provinces, districts, and wards - both the 
 import { provinces, wards } from "tinhthanhvn";
 
 provinces.byCode("01"); // { code: "01", name: "Hà Nội", type: "Thành phố" }
+provinces.byWardCode("00004"); // → parent province of ward Ba Đình
 wards.search("hanoi"); // fuzzy, accent- and space-insensitive
 ```
 
@@ -70,6 +71,7 @@ import { provinces, wards } from "tinhthanhvn";
 
 provinces.all(); // readonly Province[] - all 34 provinces
 provinces.byCode("01"); // Province | undefined - Hà Nội
+provinces.byWardCode("00004"); // Province | undefined - parent of ward Ba Đình
 provinces.search("ha no"); // Province[] - accent-insensitive match
 
 wards.byProvinceCode("01"); // readonly Ward[] - wards in Hà Nội
@@ -83,7 +85,10 @@ wards.search("ba dinh", { provinceCode: "01" }); // scoped search
 import { provinces, districts, wards } from "tinhthanhvn/pre";
 
 provinces.byCode("01");
+provinces.byDistrictCode("001"); // PreMergerProvince | undefined - parent of Ba Đình district
+provinces.byWardCode("00007"); // PreMergerProvince | undefined - parent of ward Cống Vị
 districts.byProvinceCode("01"); // readonly PreMergerDistrict[]
+districts.byWardCode("00007"); // PreMergerDistrict | undefined - parent of ward Cống Vị
 wards.byDistrictCode("001"); // readonly PreMergerWard[]
 
 districts.search("cau giay", { provinceCode: "01" });
@@ -116,6 +121,7 @@ All entry points return readonly, deeply-frozen arrays/objects - safe to store a
 | ----------- | ------------------------------------------------------------ | ----------------------- |
 | `provinces` | `all()`                                                      | `readonly Province[]`   |
 | `provinces` | `byCode(code: string)`                                       | `Province \| undefined` |
+| `provinces` | `byWardCode(wardCode: string)`                               | `Province \| undefined` |
 | `provinces` | `search(query: string)`                                      | `readonly Province[]`   |
 | `wards`     | `all()`                                                      | `readonly Ward[]`       |
 | `wards`     | `byProvinceCode(provinceCode: string)`                       | `readonly Ward[]`       |
@@ -128,10 +134,13 @@ All entry points return readonly, deeply-frozen arrays/objects - safe to store a
 | ----------- | ----------------------------------------------------------------------------------- | -------------------------------- |
 | `provinces` | `all()`                                                                             | `readonly PreMergerProvince[]`   |
 | `provinces` | `byCode(code: string)`                                                              | `PreMergerProvince \| undefined` |
+| `provinces` | `byDistrictCode(districtCode: string)`                                              | `PreMergerProvince \| undefined` |
+| `provinces` | `byWardCode(wardCode: string)`                                                      | `PreMergerProvince \| undefined` |
 | `provinces` | `search(query: string)`                                                             | `readonly PreMergerProvince[]`   |
 | `districts` | `all()`                                                                             | `readonly PreMergerDistrict[]`   |
 | `districts` | `byProvinceCode(provinceCode: string)`                                              | `readonly PreMergerDistrict[]`   |
 | `districts` | `byCode(code: string)`                                                              | `PreMergerDistrict \| undefined` |
+| `districts` | `byWardCode(wardCode: string)`                                                      | `PreMergerDistrict \| undefined` |
 | `districts` | `search(query: string, options?: { provinceCode?: string })`                        | `readonly PreMergerDistrict[]`   |
 | `wards`     | `all()`                                                                             | `readonly PreMergerWard[]`       |
 | `wards`     | `byDistrictCode(districtCode: string)`                                              | `readonly PreMergerWard[]`       |
