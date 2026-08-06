@@ -9,4 +9,3 @@ export type {
   PreMergerWard,
   PreMergerWardType,
 } from "./types";
-export { normalizeVietnamese } from "./utils/normalize-vietnamese";

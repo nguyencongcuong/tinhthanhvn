@@ -66,9 +66,8 @@ wards.search("cong vi", { provinceCode: "01", districtCode: "001" });
 `search()` matches substrings without caring about diacritics or spaces. Blank queries return `[]`.
 
 ```ts
-import { normalizeVietnamese } from "tinhthanhvn";
-
-normalizeVietnamese("Hà Nội"); // "ha noi"
+provinces.search("hanoi"); // matches Hà Nội
+provinces.search("ha noi"); // same result
 ```
 
 ## Notes
