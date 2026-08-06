@@ -69,12 +69,12 @@ provinces.search("ha noi"); // → [Hà Nội]
 import { provinces, wards } from "tinhthanhvn";
 // equivalent: import { provinces, wards } from "tinhthanhvn/current";
 
-provinces.all(); // readonly Province[] - all 34 provinces
+provinces.all(); // Province[] - all 34 provinces
 provinces.byCode("01"); // Province | undefined - Hà Nội
 provinces.byWardCode("00004"); // Province | undefined - parent of ward Ba Đình
 provinces.search("ha no"); // Province[] - accent-insensitive match
 
-wards.byProvinceCode("01"); // readonly Ward[] - wards in Hà Nội
+wards.byProvinceCode("01"); // Ward[] - wards in Hà Nội
 wards.byCode("00004"); // Ward | undefined - Ba Đình
 wards.search("ba dinh", { provinceCode: "01" }); // scoped search
 ```
@@ -87,9 +87,9 @@ import { provinces, districts, wards } from "tinhthanhvn/pre";
 provinces.byCode("01");
 provinces.byDistrictCode("001"); // PreMergerProvince | undefined - parent of Ba Đình district
 provinces.byWardCode("00007"); // PreMergerProvince | undefined - parent of ward Cống Vị
-districts.byProvinceCode("01"); // readonly PreMergerDistrict[]
+districts.byProvinceCode("01"); // PreMergerDistrict[]
 districts.byWardCode("00007"); // PreMergerDistrict | undefined - parent of ward Cống Vị
-wards.byDistrictCode("001"); // readonly PreMergerWard[]
+wards.byDistrictCode("001"); // PreMergerWard[]
 
 districts.search("cau giay", { provinceCode: "01" });
 wards.search("cong vi", { provinceCode: "01" });
@@ -113,39 +113,39 @@ normalizeVietnamese("Hà Nội"); // → "ha noi"
 
 ## API reference
 
-All entry points return readonly, deeply-frozen arrays/objects - safe to store as React state, Redux state, etc. without accidental mutation.
+List methods return a fresh array on each call; single-item lookups return a reference to the bundled record.
 
 ### `tinhthanhvn` / `tinhthanhvn/current`
 
 | Export      | Method                                                       | Returns                 |
 | ----------- | ------------------------------------------------------------ | ----------------------- |
-| `provinces` | `all()`                                                      | `readonly Province[]`   |
+| `provinces` | `all()`                                                      | `Province[]`            |
 | `provinces` | `byCode(code: string)`                                       | `Province \| undefined` |
 | `provinces` | `byWardCode(wardCode: string)`                               | `Province \| undefined` |
-| `provinces` | `search(query: string)`                                      | `readonly Province[]`   |
-| `wards`     | `all()`                                                      | `readonly Ward[]`       |
-| `wards`     | `byProvinceCode(provinceCode: string)`                       | `readonly Ward[]`       |
+| `provinces` | `search(query: string)`                                      | `Province[]`            |
+| `wards`     | `all()`                                                      | `Ward[]`                |
+| `wards`     | `byProvinceCode(provinceCode: string)`                       | `Ward[]`                |
 | `wards`     | `byCode(code: string)`                                       | `Ward \| undefined`     |
-| `wards`     | `search(query: string, options?: { provinceCode?: string })` | `readonly Ward[]`       |
+| `wards`     | `search(query: string, options?: { provinceCode?: string })` | `Ward[]`                |
 
 ### `tinhthanhvn/pre`
 
 | Export      | Method                                                                              | Returns                          |
 | ----------- | ----------------------------------------------------------------------------------- | -------------------------------- |
-| `provinces` | `all()`                                                                             | `readonly PreMergerProvince[]`   |
+| `provinces` | `all()`                                                                             | `PreMergerProvince[]`            |
 | `provinces` | `byCode(code: string)`                                                              | `PreMergerProvince \| undefined` |
 | `provinces` | `byDistrictCode(districtCode: string)`                                              | `PreMergerProvince \| undefined` |
 | `provinces` | `byWardCode(wardCode: string)`                                                      | `PreMergerProvince \| undefined` |
-| `provinces` | `search(query: string)`                                                             | `readonly PreMergerProvince[]`   |
-| `districts` | `all()`                                                                             | `readonly PreMergerDistrict[]`   |
-| `districts` | `byProvinceCode(provinceCode: string)`                                              | `readonly PreMergerDistrict[]`   |
+| `provinces` | `search(query: string)`                                                             | `PreMergerProvince[]`            |
+| `districts` | `all()`                                                                             | `PreMergerDistrict[]`            |
+| `districts` | `byProvinceCode(provinceCode: string)`                                              | `PreMergerDistrict[]`            |
 | `districts` | `byCode(code: string)`                                                              | `PreMergerDistrict \| undefined` |
 | `districts` | `byWardCode(wardCode: string)`                                                      | `PreMergerDistrict \| undefined` |
-| `districts` | `search(query: string, options?: { provinceCode?: string })`                        | `readonly PreMergerDistrict[]`   |
-| `wards`     | `all()`                                                                             | `readonly PreMergerWard[]`       |
-| `wards`     | `byDistrictCode(districtCode: string)`                                              | `readonly PreMergerWard[]`       |
+| `districts` | `search(query: string, options?: { provinceCode?: string })`                        | `PreMergerDistrict[]`            |
+| `wards`     | `all()`                                                                             | `PreMergerWard[]`                |
+| `wards`     | `byDistrictCode(districtCode: string)`                                              | `PreMergerWard[]`                |
 | `wards`     | `byCode(code: string)`                                                              | `PreMergerWard \| undefined`     |
-| `wards`     | `search(query: string, options?: { provinceCode?: string; districtCode?: string })` | `readonly PreMergerWard[]`       |
+| `wards`     | `search(query: string, options?: { provinceCode?: string; districtCode?: string })` | `PreMergerWard[]`                |
 
 ### Everywhere
 
@@ -199,7 +199,7 @@ type PreMergerWard = {
 
 Current data follows [Quyết định số 19/2025/QĐ-TTg](https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-19-2025-qd-ttg-45430.htm) (effective 01/07/2025). "Ward" means a commune-level unit (`Phường` / `Xã` / `Đặc khu`).
 
-- 🧊 All returned lists and objects are deeply frozen - mutating them throws in strict mode / is a silent no-op otherwise.
+- 📋 `all()`, `byProvinceCode()`, `byDistrictCode()`, and `search()` return a new array each call.
 - ❓ `byCode` / `byProvinceCode` / `byDistrictCode` for an unknown code returns `undefined` (single item) or `[]` (list) - never `null` or a thrown error.
 - 🔎 `search` returns `[]` for blank queries; it never returns `undefined`.
 - 🚫 No network calls, no filesystem access - everything is static, in-memory data bundled at build time.

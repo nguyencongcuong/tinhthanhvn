@@ -1,5 +1,4 @@
 import type { Province } from "../../types";
-import { deepFreeze } from "../../utils/deep-freeze";
 
 export const PROVINCES: Province[] = [
   { code: "01", name: "Hà Nội", type: "Thành phố" },
@@ -39,6 +38,3 @@ export const PROVINCES: Province[] = [
 ];
 
 export const PROVINCES_BY_CODE = new Map<string, Province>(PROVINCES.map((province) => [province.code, province]));
-
-deepFreeze(PROVINCES);
-deepFreeze(PROVINCES_BY_CODE);

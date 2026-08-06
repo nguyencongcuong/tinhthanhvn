@@ -6,7 +6,7 @@ import { wards } from "./wards";
 const PRE_MERGER_PROVINCE_NAME_INDEX = buildNameSearchIndex(PRE_MERGER_PROVINCES);
 
 export const provinces = {
-  all: () => PRE_MERGER_PROVINCES,
+  all: () => [...PRE_MERGER_PROVINCES],
   byCode: (code: string) => PRE_MERGER_PROVINCES_BY_CODE.get(code.trim()),
   byDistrictCode: (districtCode: string) => {
     const district = districts.byCode(districtCode);

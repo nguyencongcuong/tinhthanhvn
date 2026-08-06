@@ -1,5 +1,3 @@
-import { deepFreeze } from "./deep-freeze";
-import { EMPTY_ARRAY } from "./empty";
 import { normalizeVietnamese } from "./normalize-vietnamese";
 
 export type NameSearchEntry<T> = {
@@ -26,7 +24,7 @@ export function searchByName<T>(
 ): readonly T[] {
   const needle = normalizeVietnamese(query);
   if (!needle) {
-    return EMPTY_ARRAY;
+    return [];
   }
 
   const compactNeedle = needle.replace(/ /g, "");
@@ -42,5 +40,5 @@ export function searchByName<T>(
     }
     matches.push(entry.item);
   }
-  return matches.length === 0 ? EMPTY_ARRAY : deepFreeze(matches);
+  return [...matches];
 }

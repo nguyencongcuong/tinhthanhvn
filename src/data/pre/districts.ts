@@ -1,5 +1,4 @@
 import type { PreMergerDistrict } from "../../types";
-import { deepFreeze } from "../../utils/deep-freeze";
 import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDistrict[]> = {
@@ -4312,7 +4311,3 @@ export const PRE_MERGER_DISTRICTS = valuesSortedByKey(PRE_MERGER_DISTRICTS_BY_PR
 export const PRE_MERGER_DISTRICTS_BY_CODE = new Map<string, PreMergerDistrict>(
   PRE_MERGER_DISTRICTS.map((district) => [district.code, district]),
 );
-
-deepFreeze(PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE);
-deepFreeze(PRE_MERGER_DISTRICTS);
-deepFreeze(PRE_MERGER_DISTRICTS_BY_CODE);

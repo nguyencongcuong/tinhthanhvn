@@ -4,21 +4,21 @@ import { provinces as preProvinces } from "../../src/lookups/pre/provinces";
 import { COUNTS, PROVINCE_HN } from "../fixtures";
 
 describe("provinces", () => {
-  test("all returns the frozen province list", () => {
+  test("all returns a copy of the province list", () => {
     const all = provinces.all();
 
     expect(all).toHaveLength(COUNTS.provinces);
     expect(all).toContainEqual(PROVINCE_HN);
-    expect(provinces.all()).toBe(all);
-    expect(Object.isFrozen(all)).toBe(true);
-    expect(Object.isFrozen(all[0])).toBe(true);
+    expect(provinces.all()).not.toBe(all);
+    expect(provinces.all()).toEqual(all);
+    all.pop();
+    expect(provinces.all()).toHaveLength(COUNTS.provinces);
   });
 
   test("byCode looks up a province", () => {
     const byCode = provinces.byCode(PROVINCE_HN.code);
 
     expect(byCode).toEqual(PROVINCE_HN);
-    expect(Object.isFrozen(byCode)).toBe(true);
   });
 
   test("byCode returns undefined for unknown keys", () => {
@@ -34,7 +34,6 @@ describe("provinces", () => {
     const byWardCode = provinces.byWardCode("00004");
 
     expect(byWardCode).toEqual(PROVINCE_HN);
-    expect(Object.isFrozen(byWardCode)).toBe(true);
     expect(provinces.byWardCode("00004")).toBe(provinces.byCode("01"));
   });
 
@@ -49,7 +48,7 @@ describe("provinces", () => {
 });
 
 describe("pre provinces", () => {
-  test("all returns the frozen pre-merger province list", () => {
+  test("all returns a copy of the pre-merger province list", () => {
     const all = preProvinces.all();
 
     expect(all).toHaveLength(COUNTS.preProvinces);
@@ -61,8 +60,8 @@ describe("pre provinces", () => {
         type: "Thành phố",
       }),
     );
-    expect(preProvinces.all()).toBe(all);
-    expect(Object.isFrozen(all)).toBe(true);
+    expect(preProvinces.all()).not.toBe(all);
+    expect(preProvinces.all()).toEqual(all);
   });
 
   test("byCode looks up a pre-merger province", () => {
@@ -73,7 +72,6 @@ describe("pre provinces", () => {
       name: "Hà Nội",
       type: "Thành phố",
     });
-    expect(Object.isFrozen(byCode)).toBe(true);
   });
 
   test("byCode returns undefined for unknown keys", () => {
@@ -88,7 +86,6 @@ describe("pre provinces", () => {
       name: "Hà Nội",
       type: "Thành phố",
     });
-    expect(Object.isFrozen(byDistrictCode)).toBe(true);
     expect(preProvinces.byDistrictCode("001")).toBe(preProvinces.byCode("01"));
   });
 
@@ -105,7 +102,6 @@ describe("pre provinces", () => {
       name: "Hà Nội",
       type: "Thành phố",
     });
-    expect(Object.isFrozen(byWardCode)).toBe(true);
     expect(preProvinces.byWardCode("00007")).toBe(preProvinces.byCode("01"));
   });
 

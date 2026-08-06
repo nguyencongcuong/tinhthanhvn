@@ -1,41 +1,42 @@
 import { describe, expect, test } from "bun:test";
 import { wards } from "../../src/lookups/current/wards";
 import { wards as preWards } from "../../src/lookups/pre/wards";
-import { EMPTY_ARRAY } from "../../src/utils/empty";
 import { COUNTS, PRE_WARD_CONG_VI, WARD_BA_DINH } from "../fixtures";
 
 describe("wards", () => {
-  test("all returns the frozen ward list", () => {
+  test("all returns a copy of the ward list", () => {
     const all = wards.all();
 
     expect(all).toHaveLength(COUNTS.wards);
     expect(all).toContainEqual(WARD_BA_DINH);
     expect(all[0]?.province_code).toBe("01");
-    expect(wards.all()).toBe(all);
-    expect(Object.isFrozen(all)).toBe(true);
-    expect(Object.isFrozen(all[0])).toBe(true);
+    expect(wards.all()).not.toBe(all);
+    expect(wards.all()).toEqual(all);
+    all.pop();
+    expect(wards.all()).toHaveLength(COUNTS.wards);
   });
 
-  test("byProvinceCode returns frozen wards for a province", () => {
+  test("byProvinceCode returns a copy of wards for a province", () => {
     const list = wards.byProvinceCode("01");
 
     expect(list.length).toBeGreaterThan(0);
     expect(list.every((ward) => ward.province_code === "01")).toBe(true);
     expect(list).toContainEqual(WARD_BA_DINH);
-    expect(wards.byProvinceCode("01")).toBe(list);
-    expect(Object.isFrozen(list)).toBe(true);
+    expect(wards.byProvinceCode("01")).not.toBe(list);
+    expect(wards.byProvinceCode("01")).toEqual(list);
+    list.pop();
+    expect(wards.byProvinceCode("01").length).toBeGreaterThan(list.length);
   });
 
-  test("byProvinceCode returns the shared empty array for unknown provinces", () => {
-    expect(wards.byProvinceCode("00")).toBe(EMPTY_ARRAY);
-    expect(wards.byProvinceCode("missing")).toBe(EMPTY_ARRAY);
+  test("byProvinceCode returns an empty array for unknown provinces", () => {
+    expect(wards.byProvinceCode("00")).toEqual([]);
+    expect(wards.byProvinceCode("missing")).toEqual([]);
   });
 
   test("byCode looks up a ward", () => {
     const byCode = wards.byCode(WARD_BA_DINH.code);
 
     expect(byCode).toEqual(WARD_BA_DINH);
-    expect(Object.isFrozen(byCode)).toBe(true);
   });
 
   test("byCode returns undefined for unknown keys", () => {
@@ -50,37 +51,36 @@ describe("wards", () => {
 });
 
 describe("pre wards", () => {
-  test("all returns the frozen pre-merger ward list", () => {
+  test("all returns a copy of the pre-merger ward list", () => {
     const all = preWards.all();
 
     expect(all).toHaveLength(COUNTS.preWards);
     expect(all.length).toBeGreaterThan(COUNTS.wards);
     expect(all).toContainEqual(PRE_WARD_CONG_VI);
     expect(all[0]?.district_code).toBe("001");
-    expect(preWards.all()).toBe(all);
-    expect(Object.isFrozen(all)).toBe(true);
+    expect(preWards.all()).not.toBe(all);
+    expect(preWards.all()).toEqual(all);
   });
 
-  test("byDistrictCode returns frozen wards for a district", () => {
+  test("byDistrictCode returns a copy of wards for a district", () => {
     const list = preWards.byDistrictCode("001");
 
     expect(list.length).toBeGreaterThan(0);
     expect(list.every((ward) => ward.district_code === "001")).toBe(true);
     expect(list).toContainEqual(PRE_WARD_CONG_VI);
-    expect(preWards.byDistrictCode("001")).toBe(list);
-    expect(Object.isFrozen(list)).toBe(true);
+    expect(preWards.byDistrictCode("001")).not.toBe(list);
+    expect(preWards.byDistrictCode("001")).toEqual(list);
   });
 
-  test("byDistrictCode returns the shared empty array for unknown districts", () => {
-    expect(preWards.byDistrictCode("000")).toBe(EMPTY_ARRAY);
-    expect(preWards.byDistrictCode("missing")).toBe(EMPTY_ARRAY);
+  test("byDistrictCode returns an empty array for unknown districts", () => {
+    expect(preWards.byDistrictCode("000")).toEqual([]);
+    expect(preWards.byDistrictCode("missing")).toEqual([]);
   });
 
   test("byCode looks up a pre-merger ward", () => {
     const byCode = preWards.byCode(PRE_WARD_CONG_VI.code);
 
     expect(byCode).toEqual(PRE_WARD_CONG_VI);
-    expect(Object.isFrozen(byCode)).toBe(true);
   });
 
   test("byCode returns undefined for unknown keys", () => {

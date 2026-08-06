@@ -1,5 +1,4 @@
 import type { Ward } from "../../types";
-import { deepFreeze } from "../../utils/deep-freeze";
 import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
@@ -20002,7 +20001,3 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
 export const WARDS: Ward[] = valuesSortedByKey(WARDS_BY_PROVINCE_CODE);
 
 export const WARDS_BY_CODE = new Map<string, Ward>(WARDS.map((ward) => [ward.code, ward]));
-
-deepFreeze(WARDS_BY_PROVINCE_CODE);
-deepFreeze(WARDS);
-deepFreeze(WARDS_BY_CODE);

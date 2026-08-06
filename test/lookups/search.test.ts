@@ -4,8 +4,6 @@ import { wards } from "../../src/lookups/current/wards";
 import { districts } from "../../src/lookups/pre/districts";
 import { provinces as preProvinces } from "../../src/lookups/pre/provinces";
 import { wards as preWards } from "../../src/lookups/pre/wards";
-import type { Province } from "../../src/types";
-import { EMPTY_ARRAY } from "../../src/utils/empty";
 
 describe("provinces.search", () => {
   test("matches accent-insensitive substrings", () => {
@@ -25,16 +23,17 @@ describe("provinces.search", () => {
     expect(provinces.search("   ")).toEqual([]);
   });
 
-  test("returns frozen results and shared empty array for blank queries", () => {
+  test("returns copied results for each call", () => {
     const results = provinces.search("ha noi");
 
-    expect(Object.isFrozen(results)).toBe(true);
-    expect(() => {
-      (results as Province[]).push({} as Province);
-    }).toThrow();
+    expect(provinces.search("ha noi")).not.toBe(results);
+    expect(provinces.search("ha noi")).toEqual(results);
+    const lengthBefore = results.length;
+    results.pop();
+    expect(provinces.search("ha noi")).toHaveLength(lengthBefore);
 
-    expect(provinces.search("")).toBe(EMPTY_ARRAY);
-    expect(provinces.search("   ")).toBe(EMPTY_ARRAY);
+    expect(provinces.search("")).toEqual([]);
+    expect(provinces.search("   ")).toEqual([]);
   });
 });
 
@@ -57,11 +56,12 @@ describe("wards.search", () => {
     expect(wards.search("ba dinh", { provinceCode: "96" })).toEqual([]);
   });
 
-  test("returns frozen result arrays", () => {
+  test("returns copied result arrays", () => {
     const results = wards.search("ba dinh", { provinceCode: "01" });
 
-    expect(Object.isFrozen(results)).toBe(true);
-    expect(wards.search("ba dinh", { provinceCode: "96" })).toBe(EMPTY_ARRAY);
+    expect(wards.search("ba dinh", { provinceCode: "01" })).not.toBe(results);
+    expect(wards.search("ba dinh", { provinceCode: "01" })).toEqual(results);
+    expect(wards.search("ba dinh", { provinceCode: "96" })).toEqual([]);
   });
 });
 
