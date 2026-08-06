@@ -1,5 +1,17 @@
 # tinhthanhvn
 
+## 2.0.0
+
+### Major Changes
+
+- [`90eafc7`](https://github.com/nguyencongcuong/tinhthanhvn/commit/90eafc788c169df0fe4e05efb38a6722e2d6e2e4) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Replace deeply frozen lookup results with shallow array copies. `all()`, `byProvinceCode()`, `byDistrictCode()`, and `search()` now return fresh arrays via spread (`[...]`) or `[]` for empty results.
+
+### Patch Changes
+
+- [`1c7bb0f`](https://github.com/nguyencongcuong/tinhthanhvn/commit/1c7bb0f780675f01f792beb9288112958d375d8c) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Remove internal `valuesSortedByKey` helper. Flat list exports (`WARDS`, `PRE_MERGER_DISTRICTS`, `PRE_MERGER_WARDS`) now use `Object.values(...).flat()` — order follows bundled data, not lexicographic parent-code sort. Sort yourself when order matters.
+
+- [`7d565f6`](https://github.com/nguyencongcuong/tinhthanhvn/commit/7d565f65520573e0e5dbd7c00064bb9801646a7f) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Rewrite README for a shorter, usage-focused quick start.
+
 ## 1.1.0
 
 ### Minor Changes
