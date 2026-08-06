@@ -21,16 +21,10 @@ Tree clean + only asked to push → just `git push`.
 ## Workflow
 
 1. Parallel: `git status`, `git diff`, `git log --oneline -5`
-2. Changeset (below) if applicable
+2. **REQUIRED SUB-SKILL:** Use `changeset` when the change affects the published package
 3. Stage correct scope — never secrets
 4. Commit
 5. Push only if table says yes
-
-## Changeset
-
-If `.changeset/` exists and no unreleased changeset covers this change: run `bunx changeset add` (non-interactive: use PTY/`expect`), pick patch/minor/major, write summary, stage the new `.changeset/*.md` with the code.
-
-Skip only if a covering changeset already exists, or the change is docs-only with no package impact. Never skip for "small" or "hurry".
 
 ## Rationalizations
 
