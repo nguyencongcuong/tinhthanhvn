@@ -43,15 +43,21 @@ wards.search("ba dinh", { provinceCode: "01" });
 ```ts
 import { provinces, districts, wards } from "tinhthanhvn/pre";
 
+provinces.all();
 provinces.byCode("01");
 provinces.byDistrictCode("001");
 provinces.byWardCode("00007");
+provinces.search("ha noi");
 
+districts.all();
 districts.byProvinceCode("01");
+districts.byCode("001");
 districts.byWardCode("00007");
 districts.search("cau giay", { provinceCode: "01" });
 
+wards.all();
 wards.byDistrictCode("001");
+wards.byCode("00007");
 wards.search("cong vi", { provinceCode: "01", districtCode: "001" });
 ```
 
