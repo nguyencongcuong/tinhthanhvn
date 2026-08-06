@@ -1,5 +1,11 @@
 import { normalizeVietnamese } from "./normalize-vietnamese";
 
+/** Trim scope code; blank values are treated as unscoped. */
+export function optionalScopeCode(code: string | undefined): string | undefined {
+  const trimmed = code?.trim();
+  return trimmed ? trimmed : undefined;
+}
+
 export type NameSearchEntry<T> = {
   item: T;
   key: string;

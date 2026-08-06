@@ -3,7 +3,7 @@ import {
   PRE_MERGER_DISTRICTS_BY_CODE,
   PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE,
 } from "../../data/pre/districts";
-import { buildNameSearchIndex, searchByName } from "../../utils/search-by-name";
+import { buildNameSearchIndex, optionalScopeCode, searchByName } from "../../utils/search-by-name";
 import { wards } from "./wards";
 
 const PRE_MERGER_DISTRICT_NAME_INDEX = buildNameSearchIndex(PRE_MERGER_DISTRICTS);
@@ -24,7 +24,7 @@ export const districts = {
     return ward === undefined ? undefined : PRE_MERGER_DISTRICTS_BY_CODE.get(ward.district_code);
   },
   search: (query: string, options?: DistrictSearchOptions) => {
-    const provinceCode = options?.provinceCode?.trim();
+    const provinceCode = optionalScopeCode(options?.provinceCode);
     return searchByName(
       PRE_MERGER_DISTRICT_NAME_INDEX,
       query,

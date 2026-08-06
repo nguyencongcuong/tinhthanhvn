@@ -56,6 +56,12 @@ describe("wards.search", () => {
     expect(wards.search("ba dinh", { provinceCode: "96" })).toEqual([]);
   });
 
+  test("treats blank province filter as unscoped", () => {
+    const nationwide = wards.search("ba dinh");
+    expect(wards.search("ba dinh", { provinceCode: "" })).toEqual(nationwide);
+    expect(wards.search("ba dinh", { provinceCode: "   " })).toEqual(nationwide);
+  });
+
   test("returns copied result arrays", () => {
     const results = wards.search("ba dinh", { provinceCode: "01" });
 
@@ -80,6 +86,12 @@ describe("pre search", () => {
       type: "Quận",
     });
     expect(results.every((district) => district.province_code === "01")).toBe(true);
+  });
+
+  test("pre districts search treats blank province filter as unscoped", () => {
+    const nationwide = districts.search("ba dinh");
+    expect(districts.search("ba dinh", { provinceCode: "" })).toEqual(nationwide);
+    expect(districts.search("ba dinh", { provinceCode: "   " })).toEqual(nationwide);
   });
 
   test("pre wards search can scope by district", () => {
@@ -126,5 +138,15 @@ describe("pre search", () => {
         districtCode: "001",
       }),
     ).toEqual([]);
+  });
+
+  test("pre wards search treats blank scope codes as unscoped", () => {
+    const nationwide = preWards.search("cong vi");
+    expect(preWards.search("cong vi", { provinceCode: "" })).toEqual(nationwide);
+    expect(preWards.search("cong vi", { districtCode: "   " })).toEqual(nationwide);
+    expect(preWards.search("cong vi", { provinceCode: "", districtCode: "" })).toEqual(nationwide);
+
+    const byDistrict = preWards.search("cong vi", { districtCode: "001" });
+    expect(preWards.search("cong vi", { provinceCode: "   ", districtCode: "001" })).toEqual(byDistrict);
   });
 });
