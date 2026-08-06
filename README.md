@@ -56,6 +56,7 @@ districts.byWardCode("00007");
 districts.search("cau giay", { provinceCode: "01" });
 
 wards.all();
+wards.byProvinceCode("01");
 wards.byDistrictCode("001");
 wards.byCode("00007");
 wards.search("cong vi", { provinceCode: "01", districtCode: "001" });

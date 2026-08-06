@@ -71637,6 +71637,18 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
 
 export const PRE_MERGER_WARDS = Object.values(PRE_MERGER_WARDS_BY_DISTRICT_CODE).flat();
 
+export const PRE_MERGER_WARDS_BY_PROVINCE_CODE: Record<string, PreMergerWard[]> = PRE_MERGER_WARDS.reduce<
+  Record<string, PreMergerWard[]>
+>((byProvinceCode, ward) => {
+  const list = byProvinceCode[ward.province_code];
+  if (list === undefined) {
+    byProvinceCode[ward.province_code] = [ward];
+  } else {
+    list.push(ward);
+  }
+  return byProvinceCode;
+}, {});
+
 export const PRE_MERGER_WARDS_BY_CODE = new Map<string, PreMergerWard>(
   PRE_MERGER_WARDS.map((ward) => [ward.code, ward]),
 );

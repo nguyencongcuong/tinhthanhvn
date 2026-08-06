@@ -60,6 +60,23 @@ describe("pre wards", () => {
     expect(preWards.all()).toEqual(all);
   });
 
+  test("byProvinceCode returns a copy of wards for a province", () => {
+    const list = preWards.byProvinceCode("01");
+
+    expect(list.length).toBeGreaterThan(0);
+    expect(list.every((ward) => ward.province_code === "01")).toBe(true);
+    expect(list).toContainEqual(PRE_WARD_CONG_VI);
+    expect(preWards.byProvinceCode("01")).not.toBe(list);
+    expect(preWards.byProvinceCode("01")).toEqual(list);
+    list.pop();
+    expect(preWards.byProvinceCode("01").length).toBeGreaterThan(list.length);
+  });
+
+  test("byProvinceCode returns an empty array for unknown provinces", () => {
+    expect(preWards.byProvinceCode("00")).toEqual([]);
+    expect(preWards.byProvinceCode("missing")).toEqual([]);
+  });
+
   test("byDistrictCode returns a copy of wards for a district", () => {
     const list = preWards.byDistrictCode("001");
 
@@ -85,8 +102,9 @@ describe("pre wards", () => {
     expect(preWards.byCode("99999")).toBeUndefined();
   });
 
-  test("byCode and byDistrictCode trim surrounding whitespace", () => {
+  test("byCode, byProvinceCode, and byDistrictCode trim surrounding whitespace", () => {
     expect(preWards.byCode(`  ${PRE_WARD_CONG_VI.code}  `)).toEqual(PRE_WARD_CONG_VI);
+    expect(preWards.byProvinceCode("  01  ")).toContainEqual(PRE_WARD_CONG_VI);
     expect(preWards.byDistrictCode("  001  ")).toContainEqual(PRE_WARD_CONG_VI);
   });
 });

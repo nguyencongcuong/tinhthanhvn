@@ -1,4 +1,9 @@
-import { PRE_MERGER_WARDS, PRE_MERGER_WARDS_BY_CODE, PRE_MERGER_WARDS_BY_DISTRICT_CODE } from "../../data/pre/wards";
+import {
+  PRE_MERGER_WARDS,
+  PRE_MERGER_WARDS_BY_CODE,
+  PRE_MERGER_WARDS_BY_DISTRICT_CODE,
+  PRE_MERGER_WARDS_BY_PROVINCE_CODE,
+} from "../../data/pre/wards";
 import { buildNameSearchIndex, optionalScopeCode, searchByName } from "../../utils/search-by-name";
 
 const PRE_MERGER_WARD_NAME_INDEX = buildNameSearchIndex(PRE_MERGER_WARDS);
@@ -10,6 +15,10 @@ export type PreWardSearchOptions = {
 
 export const wards = {
   all: () => [...PRE_MERGER_WARDS],
+  byProvinceCode: (provinceCode: string) => {
+    const list = PRE_MERGER_WARDS_BY_PROVINCE_CODE[provinceCode.trim()];
+    return list === undefined ? [] : [...list];
+  },
   byDistrictCode: (districtCode: string) => {
     const list = PRE_MERGER_WARDS_BY_DISTRICT_CODE[districtCode.trim()];
     return list === undefined ? [] : [...list];
