@@ -1,5 +1,4 @@
 import type { PreMergerDistrict } from "../../types";
-import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDistrict[]> = {
   "01": [
@@ -4306,7 +4305,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
   ],
 };
 
-export const PRE_MERGER_DISTRICTS = valuesSortedByKey(PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE);
+export const PRE_MERGER_DISTRICTS = Object.values(PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE).flat();
 
 export const PRE_MERGER_DISTRICTS_BY_CODE = new Map<string, PreMergerDistrict>(
   PRE_MERGER_DISTRICTS.map((district) => [district.code, district]),

@@ -1,5 +1,4 @@
 import type { PreMergerWard } from "../../types";
-import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> = {
   "001": [
@@ -71636,7 +71635,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
   ],
 };
 
-export const PRE_MERGER_WARDS = valuesSortedByKey(PRE_MERGER_WARDS_BY_DISTRICT_CODE);
+export const PRE_MERGER_WARDS = Object.values(PRE_MERGER_WARDS_BY_DISTRICT_CODE).flat();
 
 export const PRE_MERGER_WARDS_BY_CODE = new Map<string, PreMergerWard>(
   PRE_MERGER_WARDS.map((ward) => [ward.code, ward]),

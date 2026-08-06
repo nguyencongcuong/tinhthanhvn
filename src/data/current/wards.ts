@@ -1,5 +1,4 @@
 import type { Ward } from "../../types";
-import { valuesSortedByKey } from "../../utils/values-sorted-by-key";
 
 export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
   "01": [
@@ -19998,6 +19997,6 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
   ],
 };
 
-export const WARDS: Ward[] = valuesSortedByKey(WARDS_BY_PROVINCE_CODE);
+export const WARDS: Ward[] = Object.values(WARDS_BY_PROVINCE_CODE).flat();
 
 export const WARDS_BY_CODE = new Map<string, Ward>(WARDS.map((ward) => [ward.code, ward]));

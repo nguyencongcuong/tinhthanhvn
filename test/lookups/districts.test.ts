@@ -8,7 +8,6 @@ describe("districts", () => {
 
     expect(all).toHaveLength(COUNTS.preDistricts);
     expect(all).toContainEqual(PRE_DISTRICT_BA_DINH);
-    expect(all[0]?.province_code).toBe("01");
     expect(districts.all()).not.toBe(all);
     expect(districts.all()).toEqual(all);
     all.pop();

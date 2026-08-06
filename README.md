@@ -67,9 +67,9 @@ normalizeVietnamese("Hà Nội"); // "ha noi"
 
 ## Notes
 
-- Look up by `code` (e.g. `"01"`, `"00004"`) - not by name or array index.
+- Look up by `code` (e.g. `"01"`, `"00004"`) — not by name or array order.
 - Unknown codes → `undefined` (single lookup) or `[]` (lists). No throws.
-- `all()`, scoped lists, and `search()` return a new array each call.
+- `all()`, scoped lists, and `search()` return a new array each call; sort yourself when order matters.
 
 ## License
 
