@@ -1,215 +1,75 @@
 # tinhthanhvn
 
-Zero-dependency lookup for Vietnam's provinces, districts, and wards - both the **current** (post-2025 merger) and **pre-merger** administrative hierarchies, with accent-insensitive search and full TypeScript types.
-
-```ts
-import { provinces, wards } from "tinhthanhvn";
-
-provinces.byCode("01"); // { code: "01", name: "Hà Nội", type: "Thành phố" }
-provinces.byWardCode("00004"); // → parent province of ward Ba Đình
-wards.search("hanoi"); // fuzzy, accent- and space-insensitive
-```
-
-## Table of contents
-
-- [Why](#why)
-- [Install](#install)
-- [Data model](#data-model)
-- [Quick start](#quick-start)
-- [Usage](#usage)
-  - [Current structure](#current-structure-province--ward)
-  - [Pre-merger structure](#pre-merger-structure-province--district--ward)
-  - [Search](#search)
-- [API reference](#api-reference)
-- [Types](#types)
-- [Behavior notes](#behavior-notes)
-- [Data stats](#data-stats)
-
-## Why
-
-Vietnam's 2025 administrative merger collapsed districts and reduced the number of provinces. This package ships both timelines so address UIs, migrations, and reporting can resolve either era without juggling raw datasets or writing your own diacritic-folding search.
-
-## Install
+Zero-dependency lookup for Vietnam provinces, districts, and wards — **current** (post-2025 merger) and **pre-merger** hierarchies. Accent-insensitive search, full TypeScript types. Works in Node, Bun, and browsers.
 
 ```bash
 npm install tinhthanhvn
 ```
 
-```bash
-bun add tinhthanhvn
+```ts
+import { provinces, wards } from "tinhthanhvn";
+
+provinces.byCode("01"); // Hà Nội
+provinces.byWardCode("00004"); // parent province of ward Ba Đình
+wards.byProvinceCode("01"); // wards in Hà Nội
+provinces.search("hanoi"); // accent- & space-insensitive
 ```
 
-Works in Node, Bun, and the browser (pure ESM, no runtime dependencies).
+## Entry points
 
-## Data model
+| Import                                 | Hierarchy                  | When             |
+| -------------------------------------- | -------------------------- | ---------------- |
+| `tinhthanhvn` or `tinhthanhvn/current` | Province → Ward            | After 01/07/2025 |
+| `tinhthanhvn/pre`                      | Province → District → Ward | Before merger    |
 
-| Timeline                           | Hierarchy                    | Entry point                            |
-| ---------------------------------- | ---------------------------- | -------------------------------------- |
-| **Current** (effective 01/07/2025) | `Province → Ward`            | `tinhthanhvn` or `tinhthanhvn/current` |
-| **Pre-merger** (before 01/07/2025) | `Province → District → Ward` | `tinhthanhvn/pre`                      |
-
-Pick the entry point that matches the era you need - the default export (`tinhthanhvn`) is an alias for `tinhthanhvn/current`.
-
-## Quick start
+## Current (`tinhthanhvn`)
 
 ```ts
 import { provinces, wards } from "tinhthanhvn";
 
-const hanoi = provinces.byCode("01");
-const hanoiWards = wards.byProvinceCode("01");
+provinces.all();
+provinces.byCode("01");
+provinces.byWardCode("00004");
+provinces.search("ha noi");
 
-provinces.search("ha noi"); // → [Hà Nội]
+wards.all();
+wards.byCode("00004");
+wards.byProvinceCode("01");
+wards.search("ba dinh", { provinceCode: "01" });
 ```
 
-## Usage
-
-### Current structure (`Province → Ward`)
-
-```ts
-import { provinces, wards } from "tinhthanhvn";
-// equivalent: import { provinces, wards } from "tinhthanhvn/current";
-
-provinces.all(); // Province[] - all 34 provinces
-provinces.byCode("01"); // Province | undefined - Hà Nội
-provinces.byWardCode("00004"); // Province | undefined - parent of ward Ba Đình
-provinces.search("ha no"); // Province[] - accent-insensitive match
-
-wards.byProvinceCode("01"); // Ward[] - wards in Hà Nội
-wards.byCode("00004"); // Ward | undefined - Ba Đình
-wards.search("ba dinh", { provinceCode: "01" }); // scoped search
-```
-
-### Pre-merger structure (`Province → District → Ward`)
+## Pre-merger (`tinhthanhvn/pre`)
 
 ```ts
 import { provinces, districts, wards } from "tinhthanhvn/pre";
 
 provinces.byCode("01");
-provinces.byDistrictCode("001"); // PreMergerProvince | undefined - parent of Ba Đình district
-provinces.byWardCode("00007"); // PreMergerProvince | undefined - parent of ward Cống Vị
-districts.byProvinceCode("01"); // PreMergerDistrict[]
-districts.byWardCode("00007"); // PreMergerDistrict | undefined - parent of ward Cống Vị
-wards.byDistrictCode("001"); // PreMergerWard[]
+provinces.byDistrictCode("001");
+provinces.byWardCode("00007");
 
+districts.byProvinceCode("01");
+districts.byWardCode("00007");
 districts.search("cau giay", { provinceCode: "01" });
-wards.search("cong vi", { provinceCode: "01" });
-wards.search("cong vi", { districtCode: "001" });
+
+wards.byDistrictCode("001");
+wards.search("cong vi", { provinceCode: "01", districtCode: "001" });
 ```
 
-### Search
+## Search
 
-`search()` is a fuzzy, diacritic- and whitespace-insensitive substring match, powered by the exported `normalizeVietnamese` helper:
+`search()` matches substrings without caring about diacritics or spaces. Blank queries return `[]`.
 
 ```ts
 import { normalizeVietnamese } from "tinhthanhvn";
 
-normalizeVietnamese("Hà Nội"); // → "ha noi"
+normalizeVietnamese("Hà Nội"); // "ha noi"
 ```
 
-- Matches ignore case and Vietnamese diacritics: `"ha noi"` matches `Hà Nội`.
-- Matches also ignore whitespace: `"hanoi"` matches `Hà Nội` just like `"ha noi"` does.
-- Source `name` fields are left untouched (official Vietnamese spelling) - this is unaccented _search_, not an English/ASCII display name.
-- Blank or whitespace-only queries return `[]` rather than every record.
+## Notes
 
-## API reference
-
-List methods return a fresh array on each call; single-item lookups return a reference to the bundled record.
-
-### `tinhthanhvn` / `tinhthanhvn/current`
-
-| Export      | Method                                                       | Returns                 |
-| ----------- | ------------------------------------------------------------ | ----------------------- |
-| `provinces` | `all()`                                                      | `Province[]`            |
-| `provinces` | `byCode(code: string)`                                       | `Province \| undefined` |
-| `provinces` | `byWardCode(wardCode: string)`                               | `Province \| undefined` |
-| `provinces` | `search(query: string)`                                      | `Province[]`            |
-| `wards`     | `all()`                                                      | `Ward[]`                |
-| `wards`     | `byProvinceCode(provinceCode: string)`                       | `Ward[]`                |
-| `wards`     | `byCode(code: string)`                                       | `Ward \| undefined`     |
-| `wards`     | `search(query: string, options?: { provinceCode?: string })` | `Ward[]`                |
-
-### `tinhthanhvn/pre`
-
-| Export      | Method                                                                              | Returns                          |
-| ----------- | ----------------------------------------------------------------------------------- | -------------------------------- |
-| `provinces` | `all()`                                                                             | `PreMergerProvince[]`            |
-| `provinces` | `byCode(code: string)`                                                              | `PreMergerProvince \| undefined` |
-| `provinces` | `byDistrictCode(districtCode: string)`                                              | `PreMergerProvince \| undefined` |
-| `provinces` | `byWardCode(wardCode: string)`                                                      | `PreMergerProvince \| undefined` |
-| `provinces` | `search(query: string)`                                                             | `PreMergerProvince[]`            |
-| `districts` | `all()`                                                                             | `PreMergerDistrict[]`            |
-| `districts` | `byProvinceCode(provinceCode: string)`                                              | `PreMergerDistrict[]`            |
-| `districts` | `byCode(code: string)`                                                              | `PreMergerDistrict \| undefined` |
-| `districts` | `byWardCode(wardCode: string)`                                                      | `PreMergerDistrict \| undefined` |
-| `districts` | `search(query: string, options?: { provinceCode?: string })`                        | `PreMergerDistrict[]`            |
-| `wards`     | `all()`                                                                             | `PreMergerWard[]`                |
-| `wards`     | `byDistrictCode(districtCode: string)`                                              | `PreMergerWard[]`                |
-| `wards`     | `byCode(code: string)`                                                              | `PreMergerWard \| undefined`     |
-| `wards`     | `search(query: string, options?: { provinceCode?: string; districtCode?: string })` | `PreMergerWard[]`                |
-
-### Everywhere
-
-| Export                | Signature                   |
-| --------------------- | --------------------------- |
-| `normalizeVietnamese` | `(input: string) => string` |
-
-## Types
-
-```ts
-// tinhthanhvn / tinhthanhvn/current
-type ProvinceType = "Thành phố" | "Tỉnh";
-type WardType = "Phường" | "Xã" | "Đặc khu";
-
-type Province = { code: string; name: string; type: ProvinceType };
-type Ward = {
-  code: string;
-  name: string;
-  type: WardType;
-  province_code: string;
-};
-
-// tinhthanhvn/pre
-type PreMergerProvinceType = ProvinceType;
-type PreMergerDistrictType = "Huyện" | "Quận" | "Thành phố" | "Thị xã";
-type PreMergerWardType = "Phường" | "Thị trấn" | "Xã";
-
-type PreMergerProvince = {
-  code: string;
-  name: string;
-  type: PreMergerProvinceType;
-};
-type PreMergerDistrict = {
-  code: string;
-  name: string;
-  type: PreMergerDistrictType;
-  province_code: string;
-};
-type PreMergerWard = {
-  code: string;
-  name: string;
-  type: PreMergerWardType;
-  district_code: string;
-  province_code: string;
-};
-```
-
-`code` is the stable, official administrative identifier (e.g. `"01"`, `"00004"`) - use it for lookups, React `key`s, and persistence. Don't rely on array order or `name` for identity.
-
-## Behavior notes
-
-Current data follows [Quyết định số 19/2025/QĐ-TTg](https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-19-2025-qd-ttg-45430.htm) (effective 01/07/2025). "Ward" means a commune-level unit (`Phường` / `Xã` / `Đặc khu`).
-
-- 📋 `all()`, `byProvinceCode()`, `byDistrictCode()`, and `search()` return a new array each call.
-- ❓ `byCode` / `byProvinceCode` / `byDistrictCode` for an unknown code returns `undefined` (single item) or `[]` (list) - never `null` or a thrown error.
-- 🔎 `search` returns `[]` for blank queries; it never returns `undefined`.
-- 🚫 No network calls, no filesystem access - everything is static, in-memory data bundled at build time.
-
-## Data stats
-
-| Timeline   | Provinces                 | Districts | Wards                                    |
-| ---------- | ------------------------- | --------- | ---------------------------------------- |
-| Current    | 34 (6 thành phố, 28 tỉnh) | -         | 3,321 (687 phường, 2,621 xã, 13 đặc khu) |
-| Pre-merger | 63                        | 696       | 10,035                                   |
+- Look up by `code` (e.g. `"01"`, `"00004"`) - not by name or array index.
+- Unknown codes → `undefined` (single lookup) or `[]` (lists). No throws.
+- `all()`, scoped lists, and `search()` return a new array each call.
 
 ## License
 
