@@ -46,5 +46,5 @@ export function searchByName<T>(
     }
     matches.push(entry.item);
   }
-  return [...matches];
+  return matches;
 }
