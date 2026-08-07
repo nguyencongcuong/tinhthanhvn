@@ -1,5 +1,15 @@
 # tinhthanhvn
 
+## 3.0.2
+
+### Patch Changes
+
+- [`4b529fa`](https://github.com/nguyencongcuong/tinhthanhvn/commit/4b529fa8deb8552418f15cbdbe9a5c295756071a) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Export `WardSearchOptions` from `tinhthanhvn`/`tinhthanhvn/current`, and `DistrictSearchOptions`/`PreWardSearchOptions` from `tinhthanhvn`/`tinhthanhvn/pre`. These types already shaped the second argument of `wards.search()`/`districts.search()`; consumers can now name them instead of relying on `Parameters<...>` workarounds.
+
+- [`08eadde`](https://github.com/nguyencongcuong/tinhthanhvn/commit/08eadde2a3a2fd258b90b8c83e466b1a8f280604) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix `wards.byProvinceCode`, `wards.byDistrictCode` (pre-merger), and `districts.byProvinceCode` throwing `TypeError` for keys that collide with `Object.prototype` members (e.g. `"constructor"`, `"__proto__"`, `"toString"`, `"hasOwnProperty"`). These now return `[]` like any other unknown code, matching the documented "no throws" contract.
+
+- [`a0060d9`](https://github.com/nguyencongcuong/tinhthanhvn/commit/a0060d94f0d1d1cd2a1a04547d2ad081fc20cb0d) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Remove a redundant array copy in `searchByName`. `matches` was already a fresh local array; no behavior change.
+
 ## 3.0.1
 
 ### Patch Changes
