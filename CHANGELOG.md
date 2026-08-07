@@ -1,5 +1,11 @@
 # tinhthanhvn
 
+## 3.0.1
+
+### Patch Changes
+
+- [`2d7224e`](https://github.com/nguyencongcuong/tinhthanhvn/commit/2d7224eb80bee76416a6376f05ba1c2ff4ccfe1e) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Remove `sideEffects: false` so bun build no longer tree-shakes lookup data out of dist.
+
 ## 3.0.0
 
 ### Major Changes
