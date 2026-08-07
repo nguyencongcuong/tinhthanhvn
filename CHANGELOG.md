@@ -1,5 +1,11 @@
 # tinhthanhvn
 
+## 3.0.1
+
+### Patch Changes
+
+- Fix broken dist bundles that caused `provinces is not defined` at runtime. `sideEffects: false` let bun tree-shake away all lookup data during build.
+
 ## 3.0.0
 
 ### Major Changes
