@@ -1,5 +1,21 @@
 # tinhthanhvn
 
+## 3.0.0
+
+### Major Changes
+
+- [`aa6f0e8`](https://github.com/nguyencongcuong/tinhthanhvn/commit/aa6f0e8f210275617b21a7e1703641c8f6232e72) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Remove `normalizeVietnamese` from the public API. Accent-insensitive normalization remains available through `search()` on all lookup exports.
+
+### Minor Changes
+
+- [`c4e4283`](https://github.com/nguyencongcuong/tinhthanhvn/commit/c4e4283a13cb1b5f715e658cdfe2dbd3c7b6321a) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Add `wards.byProvinceCode()` to the pre-merger entry point so wards can be listed by province without iterating districts.
+
+### Patch Changes
+
+- [`0b1cd33`](https://github.com/nguyencongcuong/tinhthanhvn/commit/0b1cd33009ddc2f17146b89270087186617ac703) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Treat blank `provinceCode` and `districtCode` in scoped `search()` as unscoped instead of returning no results.
+
+- [`4c8bc30`](https://github.com/nguyencongcuong/tinhthanhvn/commit/4c8bc30169ea796a69f730b7680f38845810b762) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Mark the package as side-effect free so bundlers can tree-shake unused exports.
+
 ## 2.0.0
 
 ### Major Changes
