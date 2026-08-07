@@ -32,6 +32,13 @@ describe("wards", () => {
     expect(wards.byProvinceCode("missing")).toEqual([]);
   });
 
+  test("byProvinceCode returns an empty array for Object.prototype keys", () => {
+    expect(wards.byProvinceCode("constructor")).toEqual([]);
+    expect(wards.byProvinceCode("__proto__")).toEqual([]);
+    expect(wards.byProvinceCode("toString")).toEqual([]);
+    expect(wards.byProvinceCode("hasOwnProperty")).toEqual([]);
+  });
+
   test("byCode looks up a ward", () => {
     const byCode = wards.byCode(WARD_BA_DINH.code);
 
@@ -77,6 +84,13 @@ describe("pre wards", () => {
     expect(preWards.byProvinceCode("missing")).toEqual([]);
   });
 
+  test("byProvinceCode returns an empty array for Object.prototype keys", () => {
+    expect(preWards.byProvinceCode("constructor")).toEqual([]);
+    expect(preWards.byProvinceCode("__proto__")).toEqual([]);
+    expect(preWards.byProvinceCode("toString")).toEqual([]);
+    expect(preWards.byProvinceCode("hasOwnProperty")).toEqual([]);
+  });
+
   test("byDistrictCode returns a copy of wards for a district", () => {
     const list = preWards.byDistrictCode("001");
 
@@ -90,6 +104,13 @@ describe("pre wards", () => {
   test("byDistrictCode returns an empty array for unknown districts", () => {
     expect(preWards.byDistrictCode("000")).toEqual([]);
     expect(preWards.byDistrictCode("missing")).toEqual([]);
+  });
+
+  test("byDistrictCode returns an empty array for Object.prototype keys", () => {
+    expect(preWards.byDistrictCode("constructor")).toEqual([]);
+    expect(preWards.byDistrictCode("__proto__")).toEqual([]);
+    expect(preWards.byDistrictCode("toString")).toEqual([]);
+    expect(preWards.byDistrictCode("hasOwnProperty")).toEqual([]);
   });
 
   test("byCode looks up a pre-merger ward", () => {

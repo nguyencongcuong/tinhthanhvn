@@ -32,6 +32,13 @@ describe("districts", () => {
     expect(districts.byProvinceCode("missing")).toEqual([]);
   });
 
+  test("byProvinceCode returns an empty array for Object.prototype keys", () => {
+    expect(districts.byProvinceCode("constructor")).toEqual([]);
+    expect(districts.byProvinceCode("__proto__")).toEqual([]);
+    expect(districts.byProvinceCode("toString")).toEqual([]);
+    expect(districts.byProvinceCode("hasOwnProperty")).toEqual([]);
+  });
+
   test("byCode looks up a district", () => {
     const byCode = districts.byCode(PRE_DISTRICT_BA_DINH.code);
 

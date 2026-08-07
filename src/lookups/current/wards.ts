@@ -1,4 +1,5 @@
 import { WARDS, WARDS_BY_CODE, WARDS_BY_PROVINCE_CODE } from "../../data/current/wards";
+import type { Ward } from "../../types";
 import { buildNameSearchIndex, optionalScopeCode, searchByName } from "../../utils/search-by-name";
 
 const WARD_NAME_INDEX = buildNameSearchIndex(WARDS);
@@ -10,8 +11,9 @@ export type WardSearchOptions = {
 export const wards = {
   all: () => [...WARDS],
   byProvinceCode: (provinceCode: string) => {
-    const list = WARDS_BY_PROVINCE_CODE[provinceCode.trim()];
-    return list === undefined ? [] : [...list];
+    const code = provinceCode.trim();
+    if (!Object.hasOwn(WARDS_BY_PROVINCE_CODE, code)) return [];
+    return [...(WARDS_BY_PROVINCE_CODE[code] as Ward[])];
   },
   byCode: (code: string) => WARDS_BY_CODE.get(code.trim()),
   search: (query: string, options?: WardSearchOptions) => {
