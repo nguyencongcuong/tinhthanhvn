@@ -23,7 +23,7 @@ jobs:
       - run: bun run build
 
       - name: Create Release PR or Publish
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
           title: "🚀 Release: version bump"
           commit: "chore(release): version packages"
