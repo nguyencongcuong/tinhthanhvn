@@ -1,111 +1,60 @@
----
-description: Use Bun instead of Node.js, npm, pnpm, or vite.
-globs: "*.ts, *.tsx, *.html, *.css, *.js, *.jsx, package.json"
-alwaysApply: false
----
+# CLAUDE.md
 
-Default to using Bun instead of Node.js.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-- Use `bun <file>` instead of `node <file>` or `ts-node <file>`
-- Use `bun test` instead of `jest` or `vitest`
-- Use `bun build <file.html|file.ts|file.css>` instead of `webpack` or `esbuild`
-- Use `bun install` instead of `npm install` or `yarn install` or `pnpm install`
-- Use `bun run <script>` instead of `npm run <script>` or `yarn run <script>` or `pnpm run <script>`
-- Use `bunx <package> <command>` instead of `npx <package> <command>`
-- Bun automatically loads .env, so don't use dotenv.
+## Project overview
 
-## APIs
+`tinhthanhvn` is a zero-dependency npm package (Bun-based, TypeScript) that provides lookup tables for Vietnam's administrative divisions — provinces, districts, wards — both before and after the 2025 administrative merger. It is a data/library package: no server, no frontend, no database. The published artifact is just `dist/` (bundled JS + `.d.ts`).
 
-- `Bun.serve()` supports WebSockets, HTTPS, and routes. Don't use `express`.
-- `bun:sqlite` for SQLite. Don't use `better-sqlite3`.
-- `Bun.redis` for Redis. Don't use `ioredis`.
-- `Bun.sql` for Postgres. Don't use `pg` or `postgres.js`.
-- `WebSocket` is built-in. Don't use `ws`.
-- Prefer `Bun.file` over `node:fs`'s readFile/writeFile
-- Bun.$`ls` instead of execa.
+## Commands
 
-## Testing
+| Command | What it does |
+| --- | --- |
+| `bun install` | Install dependencies |
+| `bun test` | Run the full test suite |
+| `bun test test/lookups/current/wards.test.ts` | Run a single test file |
+| `bun test -t "byProvinceCode"` | Run only tests whose name matches a pattern |
+| `bun run lint` | Check formatting/lint with Biome |
+| `bun run format` | Auto-fix formatting/lint with Biome |
+| `bun run build` | Emit `dist/` for all three entry points (`index`, `current`, `pre`) |
+| `bunx tsc --noEmit -p tsconfig.json` | Type-check the whole project (src + test) — **not run by CI**, see gotcha below |
+| `bunx changeset` | Add a changeset before committing a consumer-facing change |
 
-Use `bun test` to run tests.
+CI (`.github/workflows/ci.yml`) runs `bun install && bun run lint && bun test && bun run build` on every push/PR to `master`. Releases (`.github/workflows/release.yml`) are changesets-driven: merges to `master` open a release PR or publish to npm automatically — there is no manual `npm publish`.
 
-```ts#index.test.ts
-import { test, expect } from "bun:test";
+## Architecture
 
-test("hello world", () => {
-  expect(1).toBe(1);
-});
-```
+### Dual hierarchy, three entry points
 
-## Frontend
+The package exposes two parallel data hierarchies because the 2025 merger flattened districts out of the provincial structure. Consumers pick the entry point matching the date they care about (mapped via `package.json` `exports`):
 
-Use HTML imports with `Bun.serve()`. Don't use `vite`. HTML imports fully support React, CSS, Tailwind.
+- `tinhthanhvn` / `tinhthanhvn/current` → `src/current.ts` → **Province → Ward** (post-merger, no districts)
+- `tinhthanhvn/pre` → `src/pre.ts` → **Province → District → Ward** (pre-merger)
 
-Server:
+`src/index.ts` re-exports the current hierarchy plus pre-merger types, for consumers who want both hierarchies' types from one import.
 
-```ts#index.ts
-import index from "./index.html"
+### Layered structure: data → lookups → utils
 
-Bun.serve({
-  routes: {
-    "/": index,
-    "/api/users/:id": {
-      GET: (req) => {
-        return new Response(JSON.stringify({ id: req.params.id }));
-      },
-    },
-  },
-  // optional websocket support
-  websocket: {
-    open: (ws) => {
-      ws.send("Hello, world!");
-    },
-    message: (ws, message) => {
-      ws.send(message);
-    },
-    close: (ws) => {
-      // handle close
-    }
-  },
-  development: {
-    hmr: true,
-    console: true,
-  }
-})
-```
+- **`src/data/{current,pre}/*.ts`** — large, effectively generated literal arrays, each paired with a `_BY_CODE` `Map` and, for province/district-scoped entities, a `_BY_PROVINCE_CODE` / `_BY_DISTRICT_CODE` plain-object grouping index, all built once at module load.
+- **`src/lookups/{current,pre}/*.ts`** — the public API surface (`all`, `byCode`, `by*Code`, `search`), thin wrappers over the data layer. Every list-returning method returns a **fresh array copy** (`[...x]`) on each call, never a live reference, so a caller mutating a result can't corrupt internal state. Singular `byCode`/`by*Code` lookups return `undefined` for unknown keys — nothing throws.
+- **`src/utils/`** — `normalizeVietnamese` (accent/case/whitespace-insensitive normalization) and `search-by-name.ts` (`buildNameSearchIndex`, `searchByName`, `optionalScopeCode`), shared across all five lookup modules.
 
-HTML files can import .tsx, .jsx or .js files directly and Bun's bundler will transpile & bundle automatically. `<link>` tags can point to stylesheets and Bun's CSS bundler will bundle.
+Grouping-object lookups (`byProvinceCode`, `byDistrictCode`) guard with `Object.hasOwn()` before indexing — a plain `obj[code]` would resolve `Object.prototype` members for codes like `"constructor"`/`"__proto__"`/`"toString"` and misbehave instead of returning `[]`. This was a real shipped bug (CHANGELOG `08eadde`); keep the guard when touching these.
 
-```html#index.html
-<html>
-  <body>
-    <h1>Hello, world!</h1>
-    <script type="module" src="./frontend.tsx"></script>
-  </body>
-</html>
-```
+`search()` matches accent- and space-insensitive substrings (not whole words) via `normalizeVietnamese`; blank/whitespace-only queries return `[]`. Scoped variants (current `wards.search(q, {provinceCode})`; pre `wards.search(q, {provinceCode, districtCode})`) AND all provided filters together and treat blank/whitespace scope values as unscoped, via `optionalScopeCode`.
 
-With the following `frontend.tsx`:
+### Type-checking gotcha: CI doesn't run `tsc`
 
-```tsx#frontend.tsx
-import React from "react";
-import { createRoot } from "react-dom/client";
+`tsconfig.json` sets `noUncheckedIndexedAccess: true`, so `array[i]` types as `T | undefined`. `bun test` transpiles but does not type-check, and `bunx biome check` doesn't either — only `bunx tsc --noEmit -p tsconfig.json` catches this, and CI never runs it. Run it manually before pushing test or lookup changes. When writing test fixtures, avoid indexing into arrays (`ITEMS[0]`) — use named constants instead, per the pattern in `test/fixtures.ts`.
 
-// import .css files directly and it works
-import './index.css';
+### Test layout mirrors src layout
 
-const root = createRoot(document.body);
+`test/lookups/{current,pre}/*.test.ts` mirrors `src/lookups/{current,pre}/*.ts` file-for-file, and `test/utils/*.test.ts` mirrors `src/utils/*.ts`. Keep new lookup/util modules and their tests in the same relative position.
 
-export default function Frontend() {
-  return <h1>Hello, world!</h1>;
-}
+### Data integrity invariants
 
-root.render(<Frontend />);
-```
+The `_BY_CODE` maps and `_BY_PROVINCE_CODE`/`_BY_DISTRICT_CODE` grouping objects are all derived from the same literal arrays in `src/data/`, so when editing that data: no code may repeat within a dataset (or the `Map` silently drops the earlier entry), every item's own `province_code`/`district_code` must match the group key it's filed under, and a pre-merger ward's `district_code` must resolve to a district whose `province_code` equals the ward's own `province_code`. None of this is type-checked — verify with a throwaway script importing the data if you touch `src/data/`.
 
-Then, run index.ts
+## Changesets
 
-```sh
-bun --hot ./index.ts
-```
-
-For more information, read the Bun API docs in `node_modules/bun-types/docs/**.mdx`.
+Add a changeset (`bunx changeset`) for any change that affects the published package — bug fixes, new lookups/options, data updates. Skip it for docs/CI/test-only changes (see `CONTRIBUTING.md` for the full contribution workflow, including commit message conventions).
