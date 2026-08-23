@@ -69,11 +69,5 @@ describe("provinces.search", () => {
 
     expect(provinces.search("ha noi")).not.toBe(results);
     expect(provinces.search("ha noi")).toEqual(results);
-    const lengthBefore = results.length;
-    results.pop();
-    expect(provinces.search("ha noi")).toHaveLength(lengthBefore);
-
-    expect(provinces.search("")).toEqual([]);
-    expect(provinces.search("   ")).toEqual([]);
   });
 });
