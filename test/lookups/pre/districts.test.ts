@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { districts } from "../../src/lookups/pre/districts";
-import { COUNTS, PRE_DISTRICT_BA_DINH } from "../fixtures";
+import { districts } from "../../../src/lookups/pre/districts";
+import { COUNTS, PRE_DISTRICT_BA_DINH } from "../../fixtures";
 
 describe("districts", () => {
   test("all returns a copy of the pre-merger district list", () => {
@@ -69,5 +69,25 @@ describe("districts", () => {
 
   test("byWardCode trims surrounding whitespace", () => {
     expect(districts.byWardCode("  00007  ")).toEqual(PRE_DISTRICT_BA_DINH);
+  });
+});
+
+describe("pre districts.search", () => {
+  test("pre districts search can scope by province", () => {
+    const results = districts.search("ba dinh", { provinceCode: "01" });
+
+    expect(results).toContainEqual({
+      code: "001",
+      name: "Ba Đình",
+      province_code: "01",
+      type: "Quận",
+    });
+    expect(results.every((district) => district.province_code === "01")).toBe(true);
+  });
+
+  test("pre districts search treats blank province filter as unscoped", () => {
+    const nationwide = districts.search("ba dinh");
+    expect(districts.search("ba dinh", { provinceCode: "" })).toEqual(nationwide);
+    expect(districts.search("ba dinh", { provinceCode: "   " })).toEqual(nationwide);
   });
 });
