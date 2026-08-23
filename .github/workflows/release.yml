@@ -25,8 +25,8 @@ jobs:
       - name: Create Release PR or Publish
         uses: changesets/action@v2
         with:
-          title: "🚀 Release: version bump"
-          commit: "chore(release): version packages"
-          publish: bunx changeset publish
+          pr-title: "🚀 Release: version bump"
+          commit-message: "chore(release): version packages"
+          publish-script: bunx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
