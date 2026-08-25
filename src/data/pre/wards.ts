@@ -71512,7 +71512,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "32191",
       district_code: "971",
-      name: "Thị Trấn Năm Căn",
+      name: "Năm Căn",
       province_code: "96",
       type: "Thị trấn",
     },
