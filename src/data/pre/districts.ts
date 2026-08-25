@@ -284,7 +284,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "051",
-      name: "Hoà An",
+      name: "Hòa An",
       province_code: "04",
       type: "Huyện",
     },
@@ -1048,7 +1048,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "231",
-      name: "Hạ Hoà",
+      name: "Hạ Hòa",
       province_code: "25",
       type: "Huyện",
     },
@@ -1096,7 +1096,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "239",
-      name: "Thanh Thuỷ",
+      name: "Thanh Thủy",
       province_code: "25",
       type: "Huyện",
     },
@@ -1350,7 +1350,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "314",
-      name: "Kiến Thuỵ",
+      name: "Kiến Thụy",
       province_code: "31",
       type: "Huyện",
     },
@@ -1368,7 +1368,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "311",
-      name: "Thuỷ Nguyên",
+      name: "Thủy Nguyên",
       province_code: "31",
       type: "Thành phố",
     },
@@ -1886,7 +1886,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "414",
-      name: "Thái Hoà",
+      name: "Thái Hòa",
       province_code: "40",
       type: "Thị xã",
     },
@@ -2474,7 +2474,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "563",
-      name: "Phú Hoà",
+      name: "Phú Hòa",
       province_code: "54",
       type: "Huyện",
     },
@@ -2498,7 +2498,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "562",
-      name: "Tây Hoà",
+      name: "Tây Hòa",
       province_code: "54",
       type: "Huyện",
     },
@@ -2510,7 +2510,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "555",
-      name: "Tuy Hoà",
+      name: "Tuy Hòa",
       province_code: "54",
       type: "Thành phố",
     },
@@ -4032,7 +4032,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
   "92": [
     {
       code: "918",
-      name: "Bình Thuỷ",
+      name: "Bình Thủy",
       province_code: "92",
       type: "Quận",
     },
@@ -4130,7 +4130,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "935",
-      name: "Vị Thuỷ",
+      name: "Vị Thủy",
       province_code: "93",
       type: "Huyện",
     },
@@ -4224,7 +4224,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "961",
-      name: "Hoà Bình",
+      name: "Hòa Bình",
       province_code: "95",
       type: "Huyện",
     },

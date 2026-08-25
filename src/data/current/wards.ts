@@ -18930,7 +18930,7 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
     },
     {
       code: "31027",
-      name: "u Minh Thượng",
+      name: "U Minh Thượng",
       type: "Xã",
       province_code: "91",
     },

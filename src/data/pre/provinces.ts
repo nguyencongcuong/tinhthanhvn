@@ -143,7 +143,7 @@ export const PRE_MERGER_PROVINCES: PreMergerProvince[] = [
   },
   {
     code: "17",
-    name: "Hoà Bình",
+    name: "Hòa Bình",
     type: "Tỉnh",
   },
   {
