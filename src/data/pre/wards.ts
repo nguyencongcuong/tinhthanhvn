@@ -419,14 +419,14 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "00175",
       district_code: "005",
-      name: "Trung Hoà",
+      name: "Trung Hòa",
       province_code: "01",
       type: "Phường",
     },
     {
       code: "00172",
       district_code: "005",
-      name: "Yên Hoà",
+      name: "Yên Hòa",
       province_code: "01",
       type: "Phường",
     },
@@ -849,7 +849,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "00430",
       district_code: "016",
-      name: "Đức Hoà",
+      name: "Đức Hòa",
       province_code: "01",
       type: "Xã",
     },
@@ -1110,7 +1110,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "00460",
       district_code: "017",
-      name: "Thuỵ Lâm",
+      name: "Thụy Lâm",
       province_code: "01",
       type: "Xã",
     },
@@ -1396,7 +1396,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "00652",
       district_code: "020",
-      name: "Hữu Hoà",
+      name: "Hữu Hòa",
       province_code: "01",
       type: "Xã",
     },
@@ -2243,7 +2243,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "00922",
       district_code: "030",
-      name: "Thuận Hoà",
+      name: "Thuận Hòa",
       province_code: "02",
       type: "Xã",
     },
@@ -2976,7 +2976,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "01285",
       district_code: "040",
-      name: "Hoà Chung",
+      name: "Hòa Chung",
       province_code: "04",
       type: "Phường",
     },
@@ -3418,7 +3418,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "01495",
       district_code: "047",
-      name: "Đàm Thuỷ",
+      name: "Đàm Thủy",
       province_code: "04",
       type: "Xã",
     },
@@ -3688,7 +3688,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "01648",
       district_code: "049",
-      name: "Hoà Thuận",
+      name: "Hòa Thuận",
       province_code: "04",
       type: "Thị trấn",
     },
@@ -4395,7 +4395,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "01948",
       district_code: "062",
-      name: "Trung Hoà",
+      name: "Trung Hòa",
       province_code: "06",
       type: "Xã",
     },
@@ -4674,7 +4674,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "02098",
       district_code: "065",
-      name: "Hoà Mục",
+      name: "Hòa Mục",
       province_code: "06",
       type: "Xã",
     },
@@ -4802,7 +4802,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "02197",
       district_code: "066",
-      name: "Liêm Thuỷ",
+      name: "Liêm Thủy",
       province_code: "06",
       type: "Xã",
     },
@@ -5952,7 +5952,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "02665",
       district_code: "080",
-      name: "Vạn Hoà",
+      name: "Vạn Hòa",
       province_code: "10",
       type: "Xã",
     },
@@ -6629,7 +6629,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "02962",
       district_code: "087",
-      name: "Xuân Hoà",
+      name: "Xuân Hòa",
       province_code: "10",
       type: "Xã",
     },
@@ -6787,7 +6787,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "03097",
       district_code: "089",
-      name: "Hoà Mạc",
+      name: "Hòa Mạc",
       province_code: "10",
       type: "Xã",
     },
@@ -6885,7 +6885,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "03064",
       district_code: "089",
-      name: "Sơn Thuỷ",
+      name: "Sơn Thủy",
       province_code: "10",
       type: "Xã",
     },
@@ -8173,7 +8173,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "03527",
       district_code: "108",
-      name: "Pa Khoá",
+      name: "Pa Khóa",
       province_code: "12",
       type: "Xã",
     },
@@ -9948,7 +9948,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "04009",
       district_code: "128",
-      name: "Liên Hoà",
+      name: "Liên Hòa",
       province_code: "14",
       type: "Xã",
     },
@@ -10255,7 +10255,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "04342",
       district_code: "135",
-      name: "Khánh Hoà",
+      name: "Khánh Hòa",
       province_code: "15",
       type: "Xã",
     },
@@ -15147,7 +15147,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "06742",
       district_code: "194",
-      name: "Hải Hoà",
+      name: "Hải Hòa",
       province_code: "22",
       type: "Phường",
     },
@@ -16028,7 +16028,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "07165",
       district_code: "206",
-      name: "Nam Hoà",
+      name: "Nam Hòa",
       province_code: "22",
       type: "Phường",
     },
@@ -17829,7 +17829,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "08053",
       district_code: "231",
-      name: "Hạ Hoà",
+      name: "Hạ Hòa",
       province_code: "25",
       type: "Thị trấn",
     },
@@ -18455,7 +18455,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "08434",
       district_code: "236",
-      name: "Hưng Hoá",
+      name: "Hưng Hóa",
       province_code: "25",
       type: "Thị trấn",
     },
@@ -19083,7 +19083,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "08746",
       district_code: "244",
-      name: "Xuân Hoà",
+      name: "Xuân Hòa",
       province_code: "26",
       type: "Phường",
     },
@@ -19734,7 +19734,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "09106",
       district_code: "252",
-      name: "Lũng Hoà",
+      name: "Lũng Hòa",
       province_code: "26",
       type: "Xã",
     },
@@ -21826,7 +21826,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "09988",
       district_code: "276",
-      name: "Thạch Hoà",
+      name: "Thạch Hòa",
       province_code: "01",
       type: "Xã",
     },
@@ -23016,7 +23016,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "10543",
       district_code: "288",
-      name: "Việt Hoà",
+      name: "Việt Hòa",
       province_code: "30",
       type: "Phường",
     },
@@ -23060,7 +23060,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "10570",
       district_code: "290",
-      name: "Cộng Hoà",
+      name: "Cộng Hòa",
       province_code: "30",
       type: "Phường",
     },
@@ -24184,7 +24184,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11161",
       district_code: "299",
-      name: "Ứng Hoè",
+      name: "Ứng Hòe",
       province_code: "30",
       type: "Xã",
     },
@@ -24581,7 +24581,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11431",
       district_code: "307",
-      name: "Đồng Hoà",
+      name: "Đồng Hòa",
       province_code: "31",
       type: "Phường",
     },
@@ -24683,7 +24683,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11707",
       district_code: "309",
-      name: "Hoà Nghĩa",
+      name: "Hòa Nghĩa",
       province_code: "31",
       type: "Phường",
     },
@@ -24727,7 +24727,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11527",
       district_code: "311",
-      name: "Hoà Bình",
+      name: "Hòa Bình",
       province_code: "31",
       type: "Phường",
     },
@@ -24832,7 +24832,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11560",
       district_code: "311",
-      name: "Thuỷ Đường",
+      name: "Thủy Đường",
       province_code: "31",
       type: "Phường",
     },
@@ -24869,7 +24869,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11590",
       district_code: "312",
-      name: "An Hoà",
+      name: "An Hòa",
       province_code: "31",
       type: "Phường",
     },
@@ -25318,7 +25318,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11890",
       district_code: "316",
-      name: "Hoà Bình",
+      name: "Hòa Bình",
       province_code: "31",
       type: "Xã",
     },
@@ -25367,7 +25367,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11833",
       district_code: "316",
-      name: "Thắng Thuỷ",
+      name: "Thắng Thủy",
       province_code: "31",
       type: "Xã",
     },
@@ -25423,7 +25423,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "11848",
       district_code: "316",
-      name: "Vĩnh Hoà",
+      name: "Vĩnh Hòa",
       province_code: "31",
       type: "Xã",
     },
@@ -35108,7 +35108,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "16717",
       district_code: "412",
-      name: "Nghi Thuỷ",
+      name: "Nghi Thủy",
       province_code: "40",
       type: "Phường",
     },
@@ -35143,7 +35143,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "16723",
       district_code: "412",
-      name: "Thu Thuỷ",
+      name: "Thu Thủy",
       province_code: "40",
       type: "Phường",
     },
@@ -35180,7 +35180,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "16939",
       district_code: "414",
-      name: "Hoà Hiếu",
+      name: "Hòa Hiếu",
       province_code: "40",
       type: "Phường",
     },
@@ -41318,7 +41318,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "19807",
       district_code: "474",
-      name: "Thuỷ Biều",
+      name: "Thủy Biều",
       province_code: "46",
       type: "Phường",
     },
@@ -41332,7 +41332,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "19813",
       district_code: "474",
-      name: "Thuỷ Xuân",
+      name: "Thủy Xuân",
       province_code: "46",
       type: "Phường",
     },
@@ -42373,14 +42373,14 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "20290",
       district_code: "494",
-      name: "Hoà Hải",
+      name: "Hòa Hải",
       province_code: "48",
       type: "Phường",
     },
     {
       code: "20287",
       district_code: "494",
-      name: "Hoà Quý",
+      name: "Hòa Quý",
       province_code: "48",
       type: "Phường",
     },
@@ -42562,7 +42562,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "20375",
       district_code: "502",
-      name: "Hoà Thuận",
+      name: "Hòa Thuận",
       province_code: "49",
       type: "Phường",
     },
@@ -43469,7 +43469,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "20729",
       district_code: "511",
-      name: "Phước Hoà",
+      name: "Phước Hòa",
       province_code: "49",
       type: "Xã",
     },
@@ -46298,7 +46298,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "21943",
       district_code: "549",
-      name: "Nhơn Hoà",
+      name: "Nhơn Hòa",
       province_code: "52",
       type: "Phường",
     },
@@ -47193,7 +47193,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "22319",
       district_code: "563",
-      name: "Thị Trấn Phú Hoà",
+      name: "Thị Trấn Phú Hòa",
       province_code: "54",
       type: "Thị trấn",
     },
@@ -47216,7 +47216,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "22261",
       district_code: "564",
-      name: "Hoà Hiệp Trung",
+      name: "Hòa Hiệp Trung",
       province_code: "54",
       type: "Phường",
     },
@@ -47244,7 +47244,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "22258",
       district_code: "564",
-      name: "Hoà Vinh",
+      name: "Hòa Vinh",
       province_code: "54",
       type: "Phường",
     },
@@ -49427,7 +49427,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "23218",
       district_code: "600",
-      name: "Vũ Hoà",
+      name: "Vũ Hòa",
       province_code: "60",
       type: "Xã",
     },
@@ -51816,7 +51816,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "23942",
       district_code: "639",
-      name: "Nhơn Hoà",
+      name: "Nhơn Hòa",
       province_code: "64",
       type: "Thị trấn",
     },
@@ -52239,7 +52239,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24244",
       district_code: "647",
-      name: "Tân Hoà",
+      name: "Tân Hòa",
       province_code: "66",
       type: "Xã",
     },
@@ -53201,7 +53201,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24620",
       district_code: "661",
-      name: "Quảng Hoà",
+      name: "Quảng Hòa",
       province_code: "67",
       type: "Xã",
     },
@@ -56096,7 +56096,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "25759",
       district_code: "718",
-      name: "Định Hoà",
+      name: "Định Hòa",
       province_code: "74",
       type: "Phường",
     },
@@ -56117,7 +56117,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "25760",
       district_code: "718",
-      name: "Hoà Phú",
+      name: "Hòa Phú",
       province_code: "74",
       type: "Phường",
     },
@@ -56268,7 +56268,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "25792",
       district_code: "720",
-      name: "Long Hoà",
+      name: "Long Hòa",
       province_code: "74",
       type: "Xã",
     },
@@ -56282,7 +56282,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "25780",
       district_code: "720",
-      name: "Minh Hoà",
+      name: "Minh Hòa",
       province_code: "74",
       type: "Xã",
     },
@@ -56405,7 +56405,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "25885",
       district_code: "722",
-      name: "Phước Hoà",
+      name: "Phước Hòa",
       province_code: "74",
       type: "Xã",
     },
@@ -56447,7 +56447,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "25882",
       district_code: "722",
-      name: "Vĩnh Hoà",
+      name: "Vĩnh Hòa",
       province_code: "74",
       type: "Xã",
     },
@@ -56984,7 +56984,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26083",
       district_code: "732",
-      name: "Xuân Hoà",
+      name: "Xuân Hòa",
       province_code: "75",
       type: "Phường",
     },
@@ -57335,7 +57335,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26266",
       district_code: "737",
-      name: "Đông Hoà",
+      name: "Đông Hòa",
       province_code: "75",
       type: "Xã",
     },
@@ -57384,7 +57384,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26275",
       district_code: "737",
-      name: "Tây Hoà",
+      name: "Tây Hòa",
       province_code: "75",
       type: "Xã",
     },
@@ -57405,7 +57405,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26281",
       district_code: "737",
-      name: "Trung Hoà",
+      name: "Trung Hòa",
       province_code: "75",
       type: "Xã",
     },
@@ -57679,7 +57679,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26464",
       district_code: "741",
-      name: "Bảo Hoà",
+      name: "Bảo Hòa",
       province_code: "75",
       type: "Xã",
     },
@@ -57993,7 +57993,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26572",
       district_code: "748",
-      name: "Hoà Long",
+      name: "Hòa Long",
       province_code: "77",
       type: "Xã",
     },
@@ -58379,7 +58379,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26713",
       district_code: "754",
-      name: "Phước Hoà",
+      name: "Phước Hòa",
       province_code: "77",
       type: "Phường",
     },
@@ -58400,7 +58400,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26707",
       district_code: "754",
-      name: "Tân Hoà",
+      name: "Tân Hòa",
       province_code: "77",
       type: "Phường",
     },
@@ -59805,14 +59805,14 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "27439",
       district_code: "777",
-      name: "Bình Hưng Hoà A",
+      name: "Bình Hưng Hòa A",
       province_code: "79",
       type: "Phường",
     },
     {
       code: "27442",
       district_code: "777",
-      name: "Bình Hưng Hoà B",
+      name: "Bình Hưng Hòa B",
       province_code: "79",
       type: "Phường",
     },
@@ -60767,7 +60767,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "27844",
       district_code: "799",
-      name: "Nhơn Hoà",
+      name: "Nhơn Hòa",
       province_code: "80",
       type: "Xã",
     },
@@ -62060,7 +62060,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "28333",
       district_code: "818",
-      name: "Thạnh Hoà",
+      name: "Thạnh Hòa",
       province_code: "82",
       type: "Xã",
     },
@@ -62821,7 +62821,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "28705",
       district_code: "824",
-      name: "Tăng Hoà",
+      name: "Tăng Hòa",
       province_code: "82",
       type: "Xã",
     },
@@ -63274,7 +63274,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "29017",
       district_code: "834",
-      name: "Bình Hoà",
+      name: "Bình Hòa",
       province_code: "83",
       type: "Xã",
     },
@@ -64121,7 +64121,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "29320",
       district_code: "845",
-      name: "Hoà Tân",
+      name: "Hòa Tân",
       province_code: "84",
       type: "Xã",
     },
@@ -64307,7 +64307,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "29386",
       district_code: "847",
-      name: "Lương Hoà A",
+      name: "Lương Hòa A",
       province_code: "84",
       type: "Xã",
     },
@@ -65102,7 +65102,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "29734",
       district_code: "860",
-      name: "Hoà Lộc",
+      name: "Hòa Lộc",
       province_code: "86",
       type: "Xã",
     },
@@ -65446,7 +65446,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "29892",
       district_code: "866",
-      name: "Hoà Thuận",
+      name: "Hòa Thuận",
       province_code: "87",
       type: "Phường",
     },
@@ -65532,7 +65532,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "29919",
       district_code: "867",
-      name: "An Hoà",
+      name: "An Hòa",
       province_code: "87",
       type: "Phường",
     },
@@ -65771,7 +65771,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30004",
       district_code: "871",
-      name: "Hoà Bình",
+      name: "Hòa Bình",
       province_code: "87",
       type: "Xã",
     },
@@ -66450,7 +66450,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30313",
       district_code: "883",
-      name: "Mỹ Hoà Hưng",
+      name: "Mỹ Hòa Hưng",
       province_code: "89",
       type: "Xã",
     },
@@ -66780,14 +66780,14 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30430",
       district_code: "888",
-      name: "Hoà Lạc",
+      name: "Hòa Lạc",
       province_code: "89",
       type: "Xã",
     },
     {
       code: "30415",
       district_code: "888",
-      name: "Long Hoà",
+      name: "Long Hòa",
       province_code: "89",
       type: "Xã",
     },
@@ -66957,7 +66957,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30475",
       district_code: "889",
-      name: "Ô Long Vỹ",
+      name: "Ô Long Vĩ",
       province_code: "89",
       type: "Xã",
     },
@@ -67450,7 +67450,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30685",
       district_code: "894",
-      name: "Phú Hoà",
+      name: "Phú Hòa",
       province_code: "89",
       type: "Thị trấn",
     },
@@ -67471,7 +67471,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30688",
       district_code: "894",
-      name: "Thị Trấn Óc Eo",
+      name: "Óc Eo",
       province_code: "89",
       type: "Thị trấn",
     },
@@ -67845,7 +67845,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30860",
       district_code: "904",
-      name: "Tân Hoà",
+      name: "Tân Hòa",
       province_code: "91",
       type: "Xã",
     },
@@ -67959,7 +67959,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30893",
       district_code: "905",
-      name: "Vĩnh Hoà Phú",
+      name: "Vĩnh Hòa Phú",
       province_code: "91",
       type: "Xã",
     },
@@ -67989,7 +67989,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30940",
       district_code: "906",
-      name: "Hoà An",
+      name: "Hòa An",
       province_code: "91",
       type: "Xã",
     },
@@ -68003,7 +68003,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30937",
       district_code: "906",
-      name: "Hoà Lợi",
+      name: "Hòa Lợi",
       province_code: "91",
       type: "Xã",
     },
@@ -68031,7 +68031,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30950",
       district_code: "906",
-      name: "Ngọc Hoà",
+      name: "Ngọc Hòa",
       province_code: "91",
       type: "Xã",
     },
@@ -68296,7 +68296,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "31021",
       district_code: "909",
-      name: "Thuận Hoà",
+      name: "Thuận Hòa",
       province_code: "91",
       type: "Xã",
     },
@@ -68486,7 +68486,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "31057",
       district_code: "913",
-      name: "Hoà Chánh",
+      name: "Hòa Chánh",
       province_code: "91",
       type: "Xã",
     },
@@ -68792,7 +68792,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "31217",
       district_code: "923",
-      name: "Thạnh Hoà",
+      name: "Thạnh Hòa",
       province_code: "92",
       type: "Phường",
     },
@@ -69138,14 +69138,14 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "31336",
       district_code: "930",
-      name: "Hoả Lựu",
+      name: "Hỏa Lựu",
       province_code: "93",
       type: "Xã",
     },
     {
       code: "31339",
       district_code: "930",
-      name: "Hoả Tiến",
+      name: "Hỏa Tiến",
       province_code: "93",
       type: "Xã",
     },
@@ -69282,7 +69282,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "31345",
       district_code: "932",
-      name: "Tân Hoà",
+      name: "Tân Hòa",
       province_code: "93",
       type: "Xã",
     },
@@ -69519,7 +69519,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "31447",
       district_code: "935",
-      name: "Vị Thuỷ",
+      name: "Vị Thủy",
       province_code: "93",
       type: "Xã",
     },
@@ -71291,7 +71291,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "32141",
       district_code: "969",
-      name: "Hoà Mỹ",
+      name: "Hòa Mỹ",
       province_code: "96",
       type: "Xã",
     },
