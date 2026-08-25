@@ -83,7 +83,19 @@ provinces.search("ha noi"); // same result
 
 ## Legal References
 
-The ward-level (commune-level) merger behind the post-2025 `current` hierarchy in this package is defined by 34 separate resolutions of the Standing Committee of the National Assembly (Uy ban Thuong vu Quoc hoi), one per new province/city, all issued 2025-06-18. Each resolution's appendix lists exactly which old wards/communes merged into which new ward. Signed PDF originals below are hosted on the Government e-Portal (chinhphu.vn).
+The 2025 administrative merger rests on two tiers of legal documents, both issued by the National Assembly and hosted as signed PDF originals on the Government e-Portal (chinhphu.vn).
+
+### Province-level merger
+
+A single resolution of the National Assembly (Quoc Hoi) merged the country's provinces/cities down to 34, effective 2025-06-12.
+
+| Resolution | Scope | PDF |
+| --- | --- | --- |
+| 202/2025/QH15 | Merger of provincial-level administrative units nationwide (63 -> 34) | [PDF](https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/6/202qh.signed.pdf) |
+
+### Ward-level (commune) mergers
+
+The ward-level merger behind the post-2025 `current` hierarchy in this package is defined by 34 separate resolutions of the Standing Committee of the National Assembly (Uy ban Thuong vu Quoc hoi), one per new province/city, all issued 2025-06-18. Each resolution's appendix lists exactly which old wards/communes merged into which new ward.
 
 | No. | Resolution | Province / City | PDF |
 | --- | --- | --- | --- |
