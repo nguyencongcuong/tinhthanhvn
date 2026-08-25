@@ -1,5 +1,15 @@
 # tinhthanhvn
 
+## 3.1.0
+
+### Minor Changes
+
+- [`6751af2`](https://github.com/nguyencongcuong/tinhthanhvn/commit/6751af2e176584932b1e179a19e84a206788a78e) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Add `tinhthanhvn/merge`, a new entry point exposing `wardMerges` to cross-walk the 2025 ward merger: `byOldWardCode(code)` resolves a pre-merger ward code to every current `Ward` its area was folded into, and `byNewWardCode(code)` resolves a current ward code back to every pre-merger `Ward` that merged into it. Both return arrays — usually one entry, but a merger resolution can split an old ward's area across multiple new wards. The underlying merge data isn't populated yet, so both currently return no matches — this ships the API surface ahead of the data.
+
+### Patch Changes
+
+- [`523e977`](https://github.com/nguyencongcuong/tinhthanhvn/commit/523e977375e66012cb23ffb06b760992efb3ab97) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix three ward name data errors: `tinhthanhvn/current` ward `31027` was `"u Minh Thượng"` (lowercase u), now `"U Minh Thượng"`; `tinhthanhvn/pre` ward `30475` was `"Ô Long Vỹ"`, now `"Ô Long Vĩ"` to match the official spelling; `tinhthanhvn/pre` ward `30688` was `"Thị Trấn Óc Eo"` (the administrative type baked into the name), now `"Óc Eo"` — its `type` field already correctly says `"Thị trấn"`. Also normalize `tinhthanhvn/pre` province, district, and ward names that used old-style diacritic placement (`Hoà`, `Thuỷ`) to the new style (`Hòa`, `Thủy`), matching `tinhthanhvn/current`. `byCode`, `search`, and any exact-name comparison against these names will see the corrected spelling.
+
 ## 3.0.2
 
 ### Patch Changes
