@@ -1,5 +1,11 @@
 # tinhthanhvn
 
+## 3.0.4
+
+### Patch Changes
+
+- [`c0e3cea`](https://github.com/nguyencongcuong/tinhthanhvn/commit/c0e3cea089c84638c00acfbd43aa543b61652dc7) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix `tinhthanhvn/pre` ward `32191` from `"Thị Trấn Năm Căn"` to `"Năm Căn"` — the administrative type was baked into the name field, while `type` already correctly says `"Thị trấn"`. Exact-name lookups against this ward now match the official spelling.
+
 ## 3.0.3
 
 ### Patch Changes
