@@ -1382,7 +1382,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "00679",
       district_code: "020",
-      name: "Đại áng",
+      name: "Đại Áng",
       province_code: "01",
       type: "Xã",
     },
@@ -3481,7 +3481,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "01483",
       district_code: "047",
-      name: "Phong Nậm",
+      name: "Phong Nặm",
       province_code: "04",
       type: "Xã",
     },
