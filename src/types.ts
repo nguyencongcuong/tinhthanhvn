@@ -41,3 +41,13 @@ export type Ward = {
   type: WardType;
   province_code: string;
 };
+
+/**
+ * Maps a pre-merger ward code to the current ward code it was folded into by
+ * the 2025 merger. Total over every pre-merger ward code, including wards
+ * whose boundaries didn't change — for those, `old_ward_code === new_ward_code`.
+ */
+export type WardMerge = {
+  old_ward_code: string;
+  new_ward_code: string;
+};

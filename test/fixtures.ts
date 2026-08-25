@@ -26,6 +26,13 @@ export const WARD_BA_DINH = {
   type: "Phường",
 } as const;
 
+export const WARD_NGOC_HA = {
+  code: "00008",
+  name: "Ngọc Hà",
+  province_code: "01",
+  type: "Phường",
+} as const;
+
 export const PRE_WARD_CONG_VI = {
   code: "00007",
   district_code: "001",

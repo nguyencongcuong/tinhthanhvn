@@ -42,13 +42,18 @@
       "types": "./dist/pre.d.ts",
       "import": "./dist/pre.js",
       "default": "./dist/pre.js"
+    },
+    "./merge": {
+      "types": "./dist/merge.d.ts",
+      "import": "./dist/merge.js",
+      "default": "./dist/merge.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && bun build src/index.ts src/current.ts src/pre.ts --outdir dist --target node && tsc -p tsconfig.build.json",
+    "build": "rm -rf dist && bun build src/index.ts src/current.ts src/pre.ts src/merge.ts --outdir dist --target node && tsc -p tsconfig.build.json",
     "prepublishOnly": "bun run build",
     "test": "bun test",
     "format": "biome check --write .",
