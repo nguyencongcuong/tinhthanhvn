@@ -7643,7 +7643,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "03370",
       district_code: "101",
-      name: "Pú Nhi",
+      name: "Pu Nhi",
       province_code: "11",
       type: "Xã",
     },
@@ -47193,7 +47193,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "22319",
       district_code: "563",
-      name: "Thị Trấn Phú Hòa",
+      name: "Phú Hòa",
       province_code: "54",
       type: "Thị trấn",
     },
@@ -51825,7 +51825,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24160",
       district_code: "643",
-      name: "Cư ÊBur",
+      name: "Cư Êbur",
       province_code: "66",
       type: "Xã",
     },
@@ -52081,7 +52081,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24202",
       district_code: "645",
-      name: "Ea Khal",
+      name: "Ea Khăl",
       province_code: "66",
       type: "Xã",
     },
@@ -52125,7 +52125,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24226",
       district_code: "646",
-      name: "Cư KBang",
+      name: "Cư Kbang",
       province_code: "66",
       type: "Xã",
     },
@@ -52167,7 +52167,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24215",
       district_code: "646",
-      name: "Ia JLơi",
+      name: "Ia Jlơi",
       province_code: "66",
       type: "Xã",
     },
@@ -52181,7 +52181,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24221",
       district_code: "646",
-      name: "Ia RVê",
+      name: "Ia Rvê",
       province_code: "66",
       type: "Xã",
     },
@@ -52197,7 +52197,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24247",
       district_code: "647",
-      name: "Cuôr KNia",
+      name: "Cuôr Knia",
       province_code: "66",
       type: "Xã",
     },
@@ -52269,7 +52269,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24301",
       district_code: "648",
-      name: "Cuor Đăng",
+      name: "Cuôr Đăng",
       province_code: "66",
       type: "Xã",
     },
@@ -52297,7 +52297,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24280",
       district_code: "648",
-      name: "Ea KPam",
+      name: "Ea Kpam",
       province_code: "66",
       type: "Xã",
     },
@@ -52318,7 +52318,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24283",
       district_code: "648",
-      name: "Ea M’Droh",
+      name: "Ea M'Droh",
       province_code: "66",
       type: "Xã",
     },
@@ -52369,7 +52369,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24310",
       district_code: "649",
-      name: "Chư KBô",
+      name: "Chư Kbô",
       province_code: "66",
       type: "Xã",
     },
@@ -52427,7 +52427,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24346",
       district_code: "650",
-      name: "ĐLiê Ya",
+      name: "Dliê Ya",
       province_code: "66",
       type: "Xã",
     },
@@ -52513,7 +52513,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24404",
       district_code: "651",
-      name: "Cư ELang",
+      name: "Cư Elang",
       province_code: "66",
       type: "Xã",
     },
@@ -52620,7 +52620,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24439",
       district_code: "652",
-      name: "Cư K Róa",
+      name: "Cư Króa",
       province_code: "66",
       type: "Xã",
     },
@@ -52648,7 +52648,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24424",
       district_code: "652",
-      name: "Ea H'MLay",
+      name: "Ea H'Mlay",
       province_code: "66",
       type: "Xã",
     },
@@ -52720,7 +52720,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24454",
       district_code: "653",
-      name: "Cư KTy",
+      name: "Cư Kty",
       province_code: "66",
       type: "Xã",
     },
@@ -52827,7 +52827,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24505",
       district_code: "654",
-      name: "Ea KNuec",
+      name: "Ea Knuếc",
       province_code: "66",
       type: "Xã",
     },
@@ -52890,7 +52890,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24493",
       district_code: "654",
-      name: "KRông Búk",
+      name: "Krông Búk",
       province_code: "66",
       type: "Xã",
     },
@@ -52948,7 +52948,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24571",
       district_code: "655",
-      name: "Dur KMăl",
+      name: "Dur Kmăl",
       province_code: "66",
       type: "Xã",
     },
@@ -53057,7 +53057,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24541",
       district_code: "657",
-      name: "Cư Ê Wi",
+      name: "Cư Êwi",
       province_code: "66",
       type: "Xã",
     },
@@ -53071,7 +53071,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "24550",
       district_code: "657",
-      name: "Ea BHốk",
+      name: "Ea Bhốk",
       province_code: "66",
       type: "Xã",
     },
@@ -54781,7 +54781,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "25225",
       district_code: "691",
-      name: "Đak Ơ",
+      name: "Đăk Ơ",
       province_code: "70",
       type: "Xã",
     },
@@ -57007,7 +57007,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "26119",
       district_code: "734",
-      name: "Dak Lua",
+      name: "Đak Lua",
       province_code: "75",
       type: "Xã",
     },
@@ -65892,7 +65892,7 @@ export const PRE_MERGER_WARDS_BY_DISTRICT_CODE: Record<string, PreMergerWard[]> 
     {
       code: "30055",
       district_code: "872",
-      name: "Mỹ Quý",
+      name: "Mỹ Quí",
       province_code: "87",
       type: "Xã",
     },
