@@ -12762,7 +12762,7 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
     },
     {
       code: "23710",
-      name: "la Băng",
+      name: "Ia Băng",
       type: "Xã",
       province_code: "52",
     },
@@ -12996,7 +12996,7 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
     },
     {
       code: "23954",
-      name: "AI Bá",
+      name: "Al Bá",
       type: "Xã",
       province_code: "52",
     },
