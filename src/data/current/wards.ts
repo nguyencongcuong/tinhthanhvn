@@ -13756,7 +13756,7 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
     },
     {
       code: "24184",
-      name: "Ea H'Leo",
+      name: "Ea H'leo",
       type: "Xã",
       province_code: "66",
     },
@@ -13846,13 +13846,13 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
     },
     {
       code: "24280",
-      name: "Cư M’gar",
+      name: "Cư M'gar",
       type: "Xã",
       province_code: "66",
     },
     {
       code: "24286",
-      name: "Ea M’Droh",
+      name: "Ea M'Droh",
       type: "Xã",
       province_code: "66",
     },
@@ -13942,7 +13942,7 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
     },
     {
       code: "24412",
-      name: "M’Drắk",
+      name: "M'Đrắk",
       type: "Xã",
       province_code: "66",
     },
@@ -13960,7 +13960,7 @@ export const WARDS_BY_PROVINCE_CODE: Record<string, Ward[]> = {
     },
     {
       code: "24436",
-      name: "Cư M’ta",
+      name: "Cư M'ta",
       type: "Xã",
       province_code: "66",
     },
