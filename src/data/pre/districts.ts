@@ -2808,7 +2808,7 @@ export const PRE_MERGER_DISTRICTS_BY_PROVINCE_CODE: Record<string, PreMergerDist
     },
     {
       code: "625",
-      name: "KBang",
+      name: "Kbang",
       province_code: "64",
       type: "Huyện",
     },
