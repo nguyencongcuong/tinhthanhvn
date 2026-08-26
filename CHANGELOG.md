@@ -1,5 +1,37 @@
 # tinhthanhvn
 
+## 3.0.5
+
+### Patch Changes
+
+- [`b6bb022`](https://github.com/nguyencongcuong/tinhthanhvn/commit/b6bb0222af6bc5f5e84972939f33a1dd453e025c) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix current ward `20458` (Tây Giang, Đà Nẵng): the name was misspelled `"A vương"` (lowercase v); it should be `"A Vương"`.
+
+- [`b6bb022`](https://github.com/nguyencongcuong/tinhthanhvn/commit/b6bb0222af6bc5f5e84972939f33a1dd453e025c) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix current ward `20364` (Phú Ninh, Đà Nẵng): the name was misspelled `"Chiến Đàn"` (extra sắc tone mark); the official Đà Nẵng city portal and the ward's own merger resolution spell it `"Chiên Đàn"`.
+
+- [`efc61ba`](https://github.com/nguyencongcuong/tinhthanhvn/commit/efc61baf8182930329795310b7792f43f897d9a4) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix `tinhthanhvn/pre` ward `00679` (Đại Áng, Thanh Trì, Hà Nội) from `"Đại áng"` to `"Đại Áng"` — the second syllable's capital was lowercased. Exact-name lookups against this ward now match the official spelling.
+
+- [`c829ae3`](https://github.com/nguyencongcuong/tinhthanhvn/commit/c829ae39d73788c47ceb528f2e30d3c08133d277) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix five current-ward names in Đắk Lắk: `"Ea H'Leo"` → `"Ea H'leo"`, `"M’Drắk"` → `"M'Đrắk"`, and curly apostrophes on `"Cư M'gar"`, `"Ea M'Droh"`, and `"Cư M'ta"` (straight `'` so exact-name lookups match the rest of the dataset).
+
+- [`01c5041`](https://github.com/nguyencongcuong/tinhthanhvn/commit/01c5041fe070865d6d93adb8ad18d3b0f2438829) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix misspelled pre-merger ward names in old Đắk Lắk and Phú Yên, found while transcribing resolution 1660/NQ-UBTVQH15. Some are strongly evidenced — a second, independent spelling of the same code already exists in `current/wards.ts` or elsewhere in `pre/wards.ts` (e.g. `"KRông Búk"` → `"Krông Búk"`, `"Ea Knuếc"`, `"Cuôr Đăng"`, `"Dliê Ya"`, `"Ia Rvê"`) or a curly apostrophe (`’`) silently broke exact-name lookups (`"Ea M'Droh"`); one thị trấn had "Thị Trấn" baked into its `name` instead of living in `type` (`"Thị Trấn Phú Hòa"` → `"Phú Hòa"`). The remaining fixes rest only on matching the resolution text's own rendering — see `src/data/resolutions/CHECKLIST.md` → "Notes from resolution 1660" for the full per-code breakdown by evidence tier.
+
+- [`01c5041`](https://github.com/nguyencongcuong/tinhthanhvn/commit/01c5041fe070865d6d93adb8ad18d3b0f2438829) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix two pre-merger ward name quirks in `pre/wards.ts`, both in old Bình Phước: code `25225` was misspelled `"Đak Ơ"` (missing the breve on the ă), and code `26119` was misspelled `"Dak Lua"` (missing the stroke on the Đ); `current/wards.ts` already had the correct spellings, `"Đăk Ơ"` and `"Đak Lua"`, on the same codes.
+
+- [`03be850`](https://github.com/nguyencongcuong/tinhthanhvn/commit/03be8500dd7a9cb769c8029491abe9e6b42d1f8d) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix two current-ward names in Gia Lai caused by an l/I confusion: `"la Băng"` → `"Ia Băng"` (`23710`) and `"AI Bá"` → `"Al Bá"` (`23954`).
+
+- [`6d06969`](https://github.com/nguyencongcuong/tinhthanhvn/commit/6d06969c45e4c014833f6acdc13e16d1382dba99) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix five pre-merger ward/district name quirks in Gia Lai, found while transcribing resolution 1664/NQ-UBTVQH15, all confirmed against a same-code (or same-file) comparator plus the resolution text:
+  
+  - `pre/wards.ts` `23638` (Kbang, thị trấn) and `pre/districts.ts` `625` (the huyện itself): `"KBang"` → `"Kbang"`.
+  - `pre/wards.ts` `23650` (Kbang, xã): `"KRong"` → `"Krong"`.
+  - `pre/wards.ts` `23776` (Ia Grai, xã): `"Ia KRai"` → `"Ia Krái"`.
+  - `pre/wards.ts` `23956` (Chư Sê, xã): `"AYun"` → `"Ayun"`.
+  - `pre/wards.ts` `23644` (Kbang, xã): `"Đăk Roong"` → `"Đak Rong"`.
+
+- [`01c5041`](https://github.com/nguyencongcuong/tinhthanhvn/commit/01c5041fe070865d6d93adb8ad18d3b0f2438829) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix pre-merger ward `30055` (Tháp Mười, Đồng Tháp): the name was misspelled `"Mỹ Quý"` (dấu ngã); `current/wards.ts` already had the correct spelling, `"Mỹ Quí"` (dấu sắc), on the same code.
+
+- [`efc61ba`](https://github.com/nguyencongcuong/tinhthanhvn/commit/efc61baf8182930329795310b7792f43f897d9a4) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix `tinhthanhvn/pre` ward `01483` (Phong Nặm, Trùng Khánh, Cao Bằng) from `"Phong Nậm"` to `"Phong Nặm"` — the second syllable's vowel was misspelled (â instead of ă). Exact-name lookups against this ward now match the official spelling.
+
+- [`01c5041`](https://github.com/nguyencongcuong/tinhthanhvn/commit/01c5041fe070865d6d93adb8ad18d3b0f2438829) Thanks [@nguyencongcuong](https://github.com/nguyencongcuong)! - Fix pre-merger ward `03370` (Điện Biên Đông, Điện Biên): the name was misspelled `"Pú Nhi"` (with an extra sắc tone mark); `current/wards.ts` already had the correct spelling, `"Pu Nhi"`, on the same code.
+
 ## 3.0.4
 
 ### Patch Changes
